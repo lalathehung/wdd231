@@ -31,11 +31,11 @@
         <div class="contenedor">
             <img class="avatar" src="images/profile.jpg" alt="Lok Yin Arthur Leung photo">
         </div>
-        <button id="menu" title="Menu"></button>
+        <button id="menu" title="Menu" aria-label="Toggle Navigation"></button>
     </header>
     <nav>
-        <ul>
-            <li><a class="active" href="/index.html">Home</a></li>
+        <ul id="nav-list">
+            <li><a class="active" href="index.html">Home</a></li>
             <li><a href="https://github.com/lalathehung" target="_blank">GitHub Profile</a></li>
             <li><a href="https://www.linkedin.com" target="_blank">LinkedIn Profile</a></li>
             <li><a href="chamber/index.html" target="_blank">Chamber</a></li>
@@ -60,29 +60,26 @@
             <picture>
                 <source media="(min-width: 768px)" srcset="images/hongkong_small.jpg">
                 <source media="(min-width: 1024px)" srcset="images/hongkong_medium.jpg">
-
-                <img src="images/hongkong_small.jpg" alt="Hong Kong" width="300" height="225">
+                <img src="images/hongkong_small.jpg" alt="Hong Kong Skyline" width="300" height="225">
             </picture>
             <p>Hong Kong</p>
         </section>
         <section class="certificate-box">
             <h2>Web and Computer Programming Certificate</h2>
             <div class="boxButton">
-                <button class="courseButton" value="all" title="Filter button">All</button>
-                <button class="courseButton" value="cse" title="Filter button">CSE</button>
-                <button class="courseButton" value="wdd" title="Filter button">WDD</button>
+                <button class="courseButton" value="all">All</button>
+                <button class="courseButton" value="cse">CSE</button>
+                <button class="courseButton" value="wdd">WDD</button>
             </div>
             <div class="boxcertificate01 boxCourse"></div>
             <dialog id="courses-details"></dialog>
             <p id="totalCreditsCert01">Total Credits for Certificate 1: 0</p>
         </section>
-
     </main>
     <footer>
-        <p>&copy;<span id="currentyear">Lorem</span> Lok Yin Arthur Leung |
-            Hong Kong</p>
-        <p id="lastModified">Lorem ipsum</p>
-        
+        <p>&copy;<span id="currentyear"></span> Lok Yin Arthur Leung | Hong Kong</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 </html>
+

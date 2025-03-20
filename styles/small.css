@@ -1,21 +1,7 @@
 :root {
-    --true-blue: #0466c8ff;
-    --sapphire: #0353a4ff;
-    --yale-blue: #023e7dff;
-    --oxford-blue: #002855ff;
-    --alice-blue: #edf6f9ff;
-    --slate-gray: #7d8597ff;
-    --cool-gray: #979dacff;
-    --headline-color-on-white: var(--oxford-blue);
-    --headline-color-on-color: var(--alice-blue);
-    --paragraph-background-color: var(--alice-blue);
-    --nav-link-color: var(--oxford-blue);
-    --nav-background-color: var(--cool-gray);
-    --nav-hover-link-color: var(--alice-blue);
-    --nav-hover-background-color: var(--sapphire);
-    --font-size-small: 16px;
-    --font-size-base: 18px;
-    --font-size-large: 24px;
+    --nav-hover-background-color: #014f86; /* Improved for contrast */
+    --headline-color-on-white: #001233;
+    --paragraph-background-color: #edf6f9;
 }
 
 body {
@@ -47,11 +33,12 @@ nav a {
     color: var(--alice-blue);
     text-decoration: none;
     padding: 10px;
+    transition: background-color 0.3s ease;
 }
 
-nav a:hover, nav a.active {
+nav a:hover, nav a.active, nav a:focus {
     background-color: var(--nav-hover-background-color);
-    color: var(--nav-hover-link-color);
+    color: var(--alice-blue);
 }
 
 #menu {
@@ -74,66 +61,12 @@ main {
     gap: 1rem;
 }
 
-section {
-    background-color: var(--paragraph-background-color);
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-h1, h2 {
-    font-size: var(--font-size-large);
-    margin-bottom: 0.5rem;
-}
-
-h2 {
-    border-bottom: 2px solid var(--oxford-blue);
-    padding-bottom: 0.5rem;
-}
-
-.courseButton {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--slate-gray);
-    color: var(--alice-blue);
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.courseButton:hover {
-    background-color: var(--nav-hover-background-color);
-}
-
-.course {
-    padding: 1rem;
-    border: 1px solid var(--oxford-blue);
-    border-radius: 5px;
-    margin-bottom: 1rem;
-}
-
-.courseComplete {
-    background-color: var(--yale-blue);
-    color: var(--alice-blue);
-}
-
-.courseNoComplete {
-    background-color: var(--alice-blue);
-    color: var(--oxford-blue);
-}
-
-footer p {
-    margin: 0;
-    padding: 0.5rem;
-    font-size: var(--font-size-small);
-}
-
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
         display: none;
     }
-    
+
     nav ul.open {
         display: flex;
     }
@@ -147,7 +80,7 @@ footer p {
     nav ul {
         display: flex;
     }
-    
+
     #menu {
         display: none;
     }
