@@ -1,5 +1,5 @@
 :root {
-    --nav-hover-background-color: #014f86; /* Improved for contrast */
+    --nav-hover-background-color: #1A73E8; /* Lighter blue for better contrast (was #014f86) */
     --headline-color-on-white: #001233;
     --paragraph-background-color: #edf6f9;
 }
@@ -61,7 +61,8 @@ main {
     gap: 1rem;
 }
 
-@media (max-width: 768px) {
+/* Mobile view (default): Stack sections vertically */
+@media (max-width: 767px) {
     nav ul {
         flex-direction: column;
         display: none;
@@ -74,8 +75,13 @@ main {
     nav li {
         border-bottom: 1px solid var(--slate-gray);
     }
+
+    main {
+        grid-template-columns: 1fr; /* Single column for mobile */
+    }
 }
 
+/* Desktop view: Two-column layout for Course Work and Country Box, full-width for Certificate */
 @media (min-width: 768px) {
     nav ul {
         display: flex;
@@ -87,7 +93,12 @@ main {
 
     main {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
         gap: 1rem;
+    }
+
+    /* Ensure the certificate section spans both columns */
+    .certificate-box {
+        grid-column: 1 / -1; /* Span from first to last column */
     }
 }
