@@ -7,7 +7,7 @@
     --cool-gray: #1f2937ff; /* Darker gray (almost black) for navigation background */
     --slate-gray: #1f2937ff; /* Darker gray (almost black) for buttons */
     --brown: #8b4513ff; /* Brown for completed courses */
-    --section-background: #f5f9fcff; /* Light blue-gray for section background */
+    --section-background: #f7fafcff; /* Adjusted light blue-gray for section background */
     --headline-color-on-white: var(--oxford-blue);
     --headline-color-on-color: var(--alice-blue);
     --paragraph-background-color: var(--alice-blue);
@@ -96,7 +96,7 @@ nav a:hover, nav a.active {
 
 .page-title {
     text-align: left;
-    margin: 1rem;
+    margin: 0.5rem 10%; /* Adjusted margin to match the example */
     font-size: var(--font-size-large);
     color: var(--oxford-blue);
 }
@@ -153,11 +153,16 @@ h2 {
     background-color: var(--nav-hover-background-color);
 }
 
+.boxcertificate01 {
+    display: grid;
+    grid-template-columns: 1fr; /* Default: single column */
+    gap: 0.5rem;
+}
+
 .course {
     padding: 0.5rem;
     border: 1px solid var(--oxford-blue);
     border-radius: 5px;
-    margin-bottom: 0.5rem;
     text-align: center;
 }
 
@@ -208,6 +213,10 @@ footer p {
     header .contenedor {
         flex-direction: column; /* Stack avatar and name on mobile */
     }
+
+    .page-title {
+        margin: 0.5rem 5%; /* Adjusted for mobile */
+    }
 }
 
 @media (min-width: 768px) {
@@ -227,6 +236,10 @@ footer p {
 
     .certificate-box {
         grid-column: 1 / -1; /* Certificate section spans full width */
+    }
+
+    .boxcertificate01 {
+        grid-template-columns: repeat(3, 1fr); /* Three columns for course list on desktop */
     }
 
     section {
