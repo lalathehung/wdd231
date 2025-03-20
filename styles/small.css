@@ -4,8 +4,9 @@
     --yale-blue: #023e7dff;
     --oxford-blue: #002855ff;
     --alice-blue: #edf6f9ff;
-    --cool-gray: #6b7280ff; /* Darkened for better contrast */
-    --slate-gray: #4b5563ff; /* Darkened for better contrast */
+    --cool-gray: #4b5563ff; /* Darker gray for navigation background */
+    --slate-gray: #1f2937ff; /* Darker gray (almost black) for buttons */
+    --brown: #8b4513ff; /* Brown for completed courses */
     --headline-color-on-white: var(--oxford-blue);
     --headline-color-on-color: var(--alice-blue);
     --paragraph-background-color: var(--alice-blue);
@@ -65,11 +66,12 @@ nav a {
     color: var(--alice-blue);
     text-decoration: none;
     padding: 10px;
+    display: block; /* Ensure the entire link area is clickable */
 }
 
 nav a:hover, nav a.active {
-    background-color: var(--yale-blue); /* Darker blue for better wayfinding */
-    color: var(--nav-hover-link-color);
+    background-color: var(--yale-blue); /* Darker blue for active link */
+    color: #ffd700; /* Yellow for active link text */
 }
 
 #menu {
@@ -114,6 +116,17 @@ h2 {
     padding-bottom: 0.5rem;
 }
 
+.courseWork-box ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.boxButton {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
 .courseButton {
     padding: 0.5rem 1rem;
     border: none;
@@ -122,7 +135,6 @@ h2 {
     color: var(--alice-blue);
     cursor: pointer;
     transition: background-color 0.3s;
-    margin: 0.2rem;
 }
 
 .courseButton:hover {
@@ -130,19 +142,25 @@ h2 {
 }
 
 .course {
-    padding: 1rem;
+    padding: 0.5rem;
     border: 1px solid var(--oxford-blue);
     border-radius: 5px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.course h3 {
+    margin: 0;
+    font-size: var(--font-size-base);
 }
 
 .courseComplete {
-    background-color: var(--yale-blue);
+    background-color: var(--brown); /* Brown for completed courses */
     color: var(--alice-blue);
 }
 
 .courseNoComplete {
-    background-color: var(--alice-blue);
+    background-color: #f0f0f0; /* Light gray for incomplete courses */
     color: var(--oxford-blue);
 }
 
@@ -195,7 +213,7 @@ footer p {
     }
 
     section {
-        min-height: 200px; /* Ensure sections have a minimum height to align properly */
+        min-height: 250px; /* Adjusted to ensure consistent height */
         box-sizing: border-box;
     }
 }
