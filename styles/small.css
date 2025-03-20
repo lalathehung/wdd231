@@ -4,10 +4,10 @@
     --yale-blue: #023e7dff;
     --oxford-blue: #002855ff;
     --alice-blue: #edf6f9ff;
-    --cool-gray: #1f2937ff; /* Darker gray (almost black) for navigation background */
-    --slate-gray: #1f2937ff; /* Darker gray (almost black) for buttons */
-    --brown: #8b4513ff; /* Brown for completed courses */
-    --section-background: #f7fafcff; /* Light blue-gray for section background */
+    --cool-gray: #1f2937ff; 
+    --slate-gray: #1f2937ff; 
+    --brown: #8b4513ff; 
+    --section-background: #f7fafcff; 
     --headline-color-on-white: var(--oxford-blue);
     --headline-color-on-color: var(--alice-blue);
     --nav-link-color: var(--oxford-blue);
