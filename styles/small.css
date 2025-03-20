@@ -4,10 +4,10 @@
     --yale-blue: #023e7dff;
     --oxford-blue: #002855ff;
     --alice-blue: #edf6f9ff;
-    --cool-gray: #1f2937ff; 
-    --slate-gray: #1f2937ff;
-    --brown: #8b4513ff; 
-    --section-background: #f7fafcff; 
+    --cool-gray: #1f2937ff; /* Darker gray (almost black) for navigation background */
+    --slate-gray: #1f2937ff; /* Darker gray (almost black) for buttons */
+    --brown: #8b4513ff; /* Brown for completed courses */
+    --section-background: #f7fafcff; /* Light blue-gray for section background */
     --headline-color-on-white: var(--oxford-blue);
     --headline-color-on-color: var(--alice-blue);
     --nav-link-color: var(--oxford-blue);
@@ -118,9 +118,9 @@ section {
 }
 
 section h2 {
-    background-color: var(--oxford-blue) !important; /* Dark blue background for section titles */
-    color: var(--alice-blue) !important; /* White text */
-    text-align: center; /* Center the section titles */
+    background-color: var(--oxford-blue); /* Dark blue background for section titles */
+    color: var(--alice-blue); /* White text */
+    text-align: center !important; /* Center the section titles */
     padding: 0.5rem;
     margin: -1rem -1rem 1rem -1rem; /* Extend background to edges of section */
     border-top-left-radius: 8px;
@@ -141,9 +141,12 @@ h1 {
 
 .boxButton {
     display: flex;
-    justify-content: center; /* Center the buttons */
+    justify-content: center !important; /* Center the buttons */
+    align-items: center; /* Vertically center the buttons */
     gap: 0.5rem;
     margin-bottom: 1rem;
+    width: 100%; /* Ensure the container spans the full width */
+    text-align: center; /* Fallback for centering */
 }
 
 .courseButton {
