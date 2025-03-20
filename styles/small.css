@@ -7,10 +7,9 @@
     --cool-gray: #1f2937ff; /* Darker gray (almost black) for navigation background */
     --slate-gray: #1f2937ff; /* Darker gray (almost black) for buttons */
     --brown: #8b4513ff; /* Brown for completed courses */
-    --section-background: #f7fafcff; /* Adjusted light blue-gray for section background */
+    --section-background: #f7fafcff; /* Light blue-gray for section background */
     --headline-color-on-white: var(--oxford-blue);
     --headline-color-on-color: var(--alice-blue);
-    --paragraph-background-color: var(--alice-blue);
     --nav-link-color: var(--oxford-blue);
     --nav-background-color: var(--cool-gray);
     --nav-hover-link-color: var(--alice-blue);
@@ -118,14 +117,20 @@ section {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-h1, h2 {
+section h2 {
+    background-color: var(--oxford-blue); /* Dark blue background for section titles */
+    color: var(--alice-blue); /* White text */
+    padding: 0.5rem;
+    margin: -1rem -1rem 1rem -1rem; /* Extend background to edges of section */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 2px solid var(--oxford-blue);
     font-size: var(--font-size-large);
-    margin-bottom: 0.5rem;
 }
 
-h2 {
-    border-bottom: 2px solid var(--oxford-blue);
-    padding-bottom: 0.5rem;
+h1 {
+    font-size: var(--font-size-large);
+    margin-bottom: 0.5rem;
 }
 
 .courseWork-box ul {
@@ -216,6 +221,10 @@ footer p {
 
     .page-title {
         margin: 0.5rem 5%; /* Adjusted for mobile */
+    }
+
+    .boxcertificate01 {
+        grid-template-columns: 1fr; /* Single column on mobile */
     }
 }
 
