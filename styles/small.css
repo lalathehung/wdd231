@@ -120,6 +120,7 @@ section {
 section h2 {
     background-color: var(--oxford-blue) !important; /* Dark blue background for section titles */
     color: var(--alice-blue) !important; /* White text */
+    text-align: center; /* Center the section titles */
     padding: 0.5rem;
     margin: -1rem -1rem 1rem -1rem; /* Extend background to edges of section */
     border-top-left-radius: 8px;
@@ -140,6 +141,7 @@ h1 {
 
 .boxButton {
     display: flex;
+    justify-content: center; /* Center the buttons */
     gap: 0.5rem;
     margin-bottom: 1rem;
 }
