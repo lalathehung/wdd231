@@ -118,8 +118,8 @@ section {
 }
 
 section h2 {
-    background-color: var(--oxford-blue); /* Dark blue background for section titles */
-    color: var(--alice-blue); /* White text */
+    background-color: var(--oxford-blue) !important; /* Dark blue background for section titles */
+    color: var(--alice-blue) !important; /* White text */
     padding: 0.5rem;
     margin: -1rem -1rem 1rem -1rem; /* Extend background to edges of section */
     border-top-left-radius: 8px;
@@ -247,8 +247,10 @@ footer p {
         grid-column: 1 / -1; /* Certificate section spans full width */
     }
 
-    .boxcertificate01 {
-        grid-template-columns: repeat(3, 1fr); /* Three columns for course list on desktop */
+    section.certificate-box .boxcertificate01 {
+        display: grid !important; /* Ensure grid is applied */
+        grid-template-columns: repeat(3, 1fr) !important; /* Three columns for course list on desktop */
+        gap: 0.5rem;
     }
 
     section {
