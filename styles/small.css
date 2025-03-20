@@ -37,9 +37,9 @@ header, footer {
 
 header .contenedor {
     display: flex;
+    flex-direction: column; /* Stack avatar and name vertically */
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 header h1 {
@@ -204,7 +204,7 @@ footer p {
 
     main {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        grid-template-columns: 1fr 1fr; /* Two equal columns for Course Work and Hong Kong */
         gap: 1rem;
     }
 
@@ -213,7 +213,7 @@ footer p {
     }
 
     section {
-        min-height: 250px; /* Adjusted to ensure consistent height */
+        min-height: 250px; /* Ensure consistent height for Course Work and Hong Kong */
         box-sizing: border-box;
     }
 }

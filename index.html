@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Home page">
     <meta name="author" content="Lok Yin Arthur Leung">
     <link rel="icon" href="images/bear-face.png">
-    <!--  Essential META Tags -->
+    <!-- Essential META Tags -->
     <meta property="og:title" content="Home | Lok Yin Arthur Leung">
     <meta property="og:type" content="website" />
     <meta property="og:image" content="images/hongkong-card.jpg">
@@ -23,26 +22,24 @@
     <link rel="stylesheet" href="styles/large.css">
     <script src="scripts/main.js" defer></script>
     <script src="scripts/courses.js" defer></script>
-
 </head>
-
 <body>
     <header>
         <div class="contenedor">
             <img class="avatar" src="images/profile.jpg" alt="Lok Yin Arthur Leung photo">
+            <h1>Lok Yin Arthur Leung</h1>
         </div>
-        <button id="menu" title="Menu" aria-label="Toggle Navigation"></button>
+        <button id="menu" title="Menu"></button>
     </header>
     <nav>
-        <ul id="nav-list">
-            <li><a class="active" href="index.html">Home</a></li>
+        <ul>
+            <li><a class="active" href="/index.html">Home</a></li>
+            <li><a href="chamber/index.html" target="_blank">Chamber</a></li>
             <li><a href="https://github.com/lalathehung" target="_blank">GitHub Profile</a></li>
             <li><a href="https://www.linkedin.com" target="_blank">LinkedIn Profile</a></li>
-            <li><a href="chamber/index.html" target="_blank">Chamber</a></li>
         </ul>
     </nav>
     <main>
-        <h1>Home | Lok Yin Arthur Leung</h1>
         <section class="courseWork-box">
             <h2>Course Work</h2>
             <ul>
@@ -60,16 +57,16 @@
             <picture>
                 <source media="(min-width: 768px)" srcset="images/hongkong_small.jpg">
                 <source media="(min-width: 1024px)" srcset="images/hongkong_medium.jpg">
-                <img src="images/hongkong_small.jpg" alt="Hong Kong Skyline" width="300" height="225">
+                <img src="images/hongkong_small.jpg" alt="Hong Kong" width="300" height="225">
             </picture>
             <p>Hong Kong</p>
         </section>
         <section class="certificate-box">
             <h2>Web and Computer Programming Certificate</h2>
             <div class="boxButton">
-                <button class="courseButton" value="all">All</button>
-                <button class="courseButton" value="cse">CSE</button>
-                <button class="courseButton" value="wdd">WDD</button>
+                <button class="courseButton" value="all" title="Filter button">ALL</button>
+                <button class="courseButton" value="cse" title="Filter button">CSE</button>
+                <button class="courseButton" value="wdd" title="Filter button">WDD</button>
             </div>
             <div class="boxcertificate01 boxCourse"></div>
             <dialog id="courses-details"></dialog>
@@ -77,8 +74,8 @@
         </section>
     </main>
     <footer>
-        <p>&copy;<span id="currentyear"></span> Lok Yin Arthur Leung | Hong Kong</p>
-        <p id="lastModified"></p>
+        <p>©<span id="currentyear">2025</span> Lok Yin Arthur Leung | Hong Kong <span class="flag">🇭🇰</span></p>
+        <p id="lastModified">Last Update: 01/01/1970 12:00:00</p>
     </footer>
 </body>
 </html>
