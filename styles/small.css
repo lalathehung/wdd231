@@ -4,9 +4,10 @@
     --yale-blue: #023e7dff;
     --oxford-blue: #002855ff;
     --alice-blue: #edf6f9ff;
-    --cool-gray: #4b5563ff; /* Darker gray for navigation background */
+    --cool-gray: #1f2937ff; /* Darker gray (almost black) for navigation background */
     --slate-gray: #1f2937ff; /* Darker gray (almost black) for buttons */
     --brown: #8b4513ff; /* Brown for completed courses */
+    --section-background: #f5f9fcff; /* Light blue-gray for section background */
     --headline-color-on-white: var(--oxford-blue);
     --headline-color-on-color: var(--alice-blue);
     --paragraph-background-color: var(--alice-blue);
@@ -37,9 +38,10 @@ header, footer {
 
 header .contenedor {
     display: flex;
-    flex-direction: column; /* Stack avatar and name vertically */
+    flex-direction: row; /* Horizontal layout: avatar on left, name on right */
     align-items: center;
-    gap: 0.5rem;
+    justify-content: center;
+    gap: 1rem;
 }
 
 header h1 {
@@ -92,15 +94,25 @@ nav a:hover, nav a.active {
     content: 'X';
 }
 
+.page-title {
+    text-align: left;
+    margin: 1rem;
+    font-size: var(--font-size-large);
+    color: var(--oxford-blue);
+}
+
 main {
     padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    width: 80%; /* Center the content */
+    max-width: 1200px; /* Match the example's max-width */
+    margin: 0 auto; /* Center horizontally */
 }
 
 section {
-    background-color: var(--paragraph-background-color);
+    background-color: var(--section-background); /* Light blue-gray background */
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -190,6 +202,11 @@ footer p {
 
     main {
         grid-template-columns: 1fr; /* Stack sections vertically on mobile */
+        width: 90%; /* Slightly wider on mobile */
+    }
+
+    header .contenedor {
+        flex-direction: column; /* Stack avatar and name on mobile */
     }
 }
 
