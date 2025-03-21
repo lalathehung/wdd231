@@ -43,7 +43,7 @@ header .contenedor {
     gap: 1rem;
 }
 
-header h1 {
+header .contenedor div { /* Updated to target <div> instead of <h1> */
     margin: 0;
     font-size: var(--font-size-large);
 }
@@ -101,7 +101,13 @@ nav a.active {
     content: 'X';
 }
 
-.page-title {
+main h1 { /* Added styling for the new <h1> in main */
+    font-size: var(--font-size-large);
+    color: var(--oxford-blue);
+    margin: 0.5rem 10%;
+}
+
+.page-title { /* Kept this, but you could remove it if redundant */
     text-align: left;
     margin: 0.5rem 10%;
     font-size: var(--font-size-large);
@@ -233,6 +239,10 @@ footer p {
     }
 
     .page-title {
+        margin: 0.5rem 5%;
+    }
+
+    main h1 { /* Adjusted for smaller screens */
         margin: 0.5rem 5%;
     }
 
