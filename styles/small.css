@@ -37,13 +37,13 @@ header, footer {
 
 header .contenedor {
     display: flex;
-    flex-direction: row; /* Horizontal layout: avatar on left, name on right */
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 1rem;
 }
 
-header h1 {
+header .contenedor div {
     margin: 0;
     font-size: var(--font-size-large);
 }
@@ -67,12 +67,12 @@ nav a {
     color: var(--alice-blue);
     text-decoration: none;
     padding: 10px;
-    display: block; /* Ensure the entire link area is clickable */
+    display: block;
 }
 
 nav a:hover, nav a.active {
-    background-color: var(--yale-blue); /* Darker blue for active link */
-    color: #ffd700; /* Yellow for active link text */
+    background-color: var(--yale-blue);
+    color: #ffd700;
 }
 
 #menu {
@@ -93,9 +93,9 @@ nav a:hover, nav a.active {
     content: 'X';
 }
 
-.page-title {
+main h1 {
     text-align: left;
-    margin: 0.5rem 10%; /* Adjusted margin to match the example */
+    margin: 0.5rem 10%; /* Matches .page-title styling */
     font-size: var(--font-size-large);
     color: var(--oxford-blue);
 }
@@ -105,24 +105,24 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: 80%; /* Center the content */
-    max-width: 1200px; /* Match the example's max-width */
-    margin: 0 auto; /* Center horizontally */
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 section {
-    background-color: var(--section-background); /* Light blue-gray background */
+    background-color: var(--section-background);
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 section h2 {
-    background-color: var(--oxford-blue); /* Dark blue background for section titles */
-    color: var(--alice-blue); /* White text */
-    text-align: center !important; /* Center the section titles */
+    background-color: var(--oxford-blue);
+    color: var(--alice-blue);
+    text-align: center !important;
     padding: 0.5rem;
-    margin: -1rem -1rem 1rem -1rem; /* Extend background to edges of section */
+    margin: -1rem -1rem 1rem -1rem;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom: 2px solid var(--oxford-blue);
@@ -141,12 +141,12 @@ h1 {
 
 .boxButton {
     display: flex;
-    justify-content: center !important; /* Center the buttons */
-    align-items: center; /* Vertically center the buttons */
+    justify-content: center !important;
+    align-items: center;
     gap: 0.5rem;
     margin-bottom: 1rem;
-    width: 100%; /* Ensure the container spans the full width */
-    text-align: center; /* Fallback for centering */
+    width: 100%;
+    text-align: center;
 }
 
 .courseButton {
@@ -165,7 +165,7 @@ h1 {
 
 .boxcertificate01 {
     display: grid;
-    grid-template-columns: 1fr; /* Default: single column */
+    grid-template-columns: 1fr;
     gap: 0.5rem;
 }
 
@@ -182,12 +182,12 @@ h1 {
 }
 
 .courseComplete {
-    background-color: var(--brown); /* Brown for completed courses */
+    background-color: var(--brown);
     color: var(--alice-blue);
 }
 
 .courseNoComplete {
-    background-color: #f0f0f0; /* Light gray for incomplete courses */
+    background-color: #f0f0f0;
     color: var(--oxford-blue);
 }
 
@@ -216,20 +216,20 @@ footer p {
     }
 
     main {
-        grid-template-columns: 1fr; /* Stack sections vertically on mobile */
-        width: 90%; /* Slightly wider on mobile */
+        grid-template-columns: 1fr;
+        width: 90%;
     }
 
     header .contenedor {
-        flex-direction: column; /* Stack avatar and name on mobile */
+        flex-direction: column;
     }
 
-    .page-title {
-        margin: 0.5rem 5%; /* Adjusted for mobile */
+    main h1 {
+        margin: 0.5rem 5%; /* Matches .page-title mobile styling */
     }
 
     .boxcertificate01 {
-        grid-template-columns: 1fr; /* Single column on mobile */
+        grid-template-columns: 1fr;
     }
 }
 
@@ -244,22 +244,22 @@ footer p {
 
     main {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Two equal columns for Course Work and Hong Kong */
+        grid-template-columns: 1fr 1fr;
         gap: 1rem;
     }
 
     .certificate-box {
-        grid-column: 1 / -1; /* Certificate section spans full width */
+        grid-column: 1 / -1;
     }
 
     section.certificate-box .boxcertificate01 {
-        display: grid !important; /* Ensure grid is applied */
-        grid-template-columns: repeat(3, 1fr) !important; /* Three columns for course list on desktop */
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
         gap: 0.5rem;
     }
 
     section {
-        min-height: 250px; /* Ensure consistent height for Course Work and Hong Kong */
+        min-height: 250px;
         box-sizing: border-box;
     }
 }
