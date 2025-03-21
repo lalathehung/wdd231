@@ -37,13 +37,13 @@ header, footer {
 
 header .contenedor {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* Horizontal layout: avatar on left, name on right */
     align-items: center;
     justify-content: center;
     gap: 1rem;
 }
 
-header .contenedor div {
+header h1 {
     margin: 0;
     font-size: var(--font-size-large);
 }
@@ -67,19 +67,12 @@ nav a {
     color: var(--alice-blue);
     text-decoration: none;
     padding: 10px;
-    display: block;
+    display: block; /* Ensure the entire link area is clickable */
 }
 
-nav a:hover {
-    background-color: var(--nav-hover-background-color);
-    color: var(--nav-hover-link-color);
-}
-
-nav a.active {
-    background-color: var(--yale-blue);
-    color: #ffd700;
-    font-weight: bold;
-    border-bottom: 2px solid #ffd700;
+nav a:hover, nav a.active {
+    background-color: var(--yale-blue); /* Darker blue for active link */
+    color: #ffd700; /* Yellow for active link text */
 }
 
 #menu {
@@ -90,7 +83,6 @@ nav a.active {
     color: var(--alice-blue);
     border: none;
     cursor: pointer;
-    width: 100%;
 }
 
 #menu::before {
@@ -101,10 +93,11 @@ nav a.active {
     content: 'X';
 }
 
-main h1 {
+.page-title {
+    text-align: left;
+    margin: 0.5rem 10%; /* Adjusted margin to match the example */
     font-size: var(--font-size-large);
     color: var(--oxford-blue);
-    margin: 0.5rem 10%;
 }
 
 main {
@@ -112,24 +105,24 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 80%; /* Center the content */
+    max-width: 1200px; /* Match the example's max-width */
+    margin: 0 auto; /* Center horizontally */
 }
 
 section {
-    background-color: var(--section-background);
+    background-color: var(--section-background); /* Light blue-gray background */
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 section h2 {
-    background-color: var(--oxford-blue);
-    color: var(--alice-blue);
-    text-align: center !important;
+    background-color: var(--oxford-blue); /* Dark blue background for section titles */
+    color: var(--alice-blue); /* White text */
+    text-align: center !important; /* Center the section titles */
     padding: 0.5rem;
-    margin: -1rem -1rem 1rem -1rem;
+    margin: -1rem -1rem 1rem -1rem; /* Extend background to edges of section */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom: 2px solid var(--oxford-blue);
@@ -148,12 +141,12 @@ h1 {
 
 .boxButton {
     display: flex;
-    justify-content: center !important;
-    align-items: center;
+    justify-content: center !important; /* Center the buttons */
+    align-items: center; /* Vertically center the buttons */
     gap: 0.5rem;
     margin-bottom: 1rem;
-    width: 100%;
-    text-align: center;
+    width: 100%; /* Ensure the container spans the full width */
+    text-align: center; /* Fallback for centering */
 }
 
 .courseButton {
@@ -172,7 +165,7 @@ h1 {
 
 .boxcertificate01 {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Default: single column */
     gap: 0.5rem;
 }
 
@@ -189,12 +182,12 @@ h1 {
 }
 
 .courseComplete {
-    background-color: var(--brown);
+    background-color: var(--brown); /* Brown for completed courses */
     color: var(--alice-blue);
 }
 
 .courseNoComplete {
-    background-color: #f0f0f0;
+    background-color: #f0f0f0; /* Light gray for incomplete courses */
     color: var(--oxford-blue);
 }
 
@@ -214,7 +207,7 @@ footer p {
         display: none;
     }
     
-    nav.open ul {
+    nav ul.open {
         display: flex;
     }
 
@@ -223,20 +216,20 @@ footer p {
     }
 
     main {
-        grid-template-columns: 1fr;
-        width: 90%;
+        grid-template-columns: 1fr; /* Stack sections vertically on mobile */
+        width: 90%; /* Slightly wider on mobile */
     }
 
     header .contenedor {
-        flex-direction: column;
+        flex-direction: column; /* Stack avatar and name on mobile */
     }
 
-    main h1 {
-        margin: 0.5rem 5%;
+    .page-title {
+        margin: 0.5rem 5%; /* Adjusted for mobile */
     }
 
     .boxcertificate01 {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column on mobile */
     }
 }
 
@@ -251,22 +244,22 @@ footer p {
 
     main {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr; /* Two equal columns for Course Work and Hong Kong */
         gap: 1rem;
     }
 
     .certificate-box {
-        grid-column: 1 / -1;
+        grid-column: 1 / -1; /* Certificate section spans full width */
     }
 
     section.certificate-box .boxcertificate01 {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
+        display: grid !important; /* Ensure grid is applied */
+        grid-template-columns: repeat(3, 1fr) !important; /* Three columns for course list on desktop */
         gap: 0.5rem;
     }
 
     section {
-        min-height: 250px;
+        min-height: 250px; /* Ensure consistent height for Course Work and Hong Kong */
         box-sizing: border-box;
     }
 }
