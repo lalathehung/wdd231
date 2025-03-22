@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <h3>${member.name}</h3>
                 <p>${member.address}</p>
                 <p>${member.phone}</p>
-                <p><a href="${member.website}" target="_blank">${member.website}</a></p>
+                <p><a href="${member.website}" target="_blank" aria-label="Visit ${member.name} website">${member.website}</a></p>
                 <p>Membership: ${membershipLabels[member.membership]}</p>
             `;
             memberList.appendChild(card);

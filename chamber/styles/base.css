@@ -1,7 +1,7 @@
 :root {
     --king-kong: #1a1a1a;
     --white: #ffffff;
-    --oxford-blue: #002147;
+    --oxford-blue: #001a36; 
     --yale-blue: #0f4d92;
     --headline-color-on-white: #333333;
     --font-size-large: 2rem;
@@ -72,6 +72,12 @@ nav ul li {
 
 .nav-a:hover {
     color: var(--yale-blue);
+}
+
+.nav-a.active {
+    background-color: var(--yale-blue);
+    color: var(--white);
+    border-radius: 5px;
 }
 
 #menu {
