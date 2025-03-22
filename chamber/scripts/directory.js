@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!response.ok) throw new Error(`Failed to fetch members.json: ${response.status}`);
         const members = await response.json();
 
-        // Map numerical membership levels to labels (updated to Bronze, Silver, Gold)
         const membershipLabels = {
             1: "Bronze",
             2: "Silver",
@@ -29,7 +28,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             memberList.appendChild(card);
         });
 
-        // Default to list view (matching reference site)
         memberList.classList.add('list');
         listBtn.classList.add('activebtn');
 
