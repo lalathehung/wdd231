@@ -1,58 +1,58 @@
 [
     {
-        "name": "Idaho Websites",
-        "address": "2115 S Vista Avenue Boise ID 83705",
-        "phone": "(208) 342-9386",
-        "website": "https://idahowebsites.com/",
-        "image": "https://lalathehung.github.io/wdd231/chamber/images/idweblogo.webp",
+        "name": "Tom Lee Music",
+        "address": "City Centre Building, 144-149 Gloucester Rd",
+        "phone": "(852) 2762 6900",
+        "website": "https://www.tomleemusic.com.hk",
+        "image": "https://lalathehung.github.io/wdd231/chamber/images/tomlee.jpg",
         "membership": 1
     },
     {
-        "name": "Surge Web Design",
-        "address": "4072 E Arch Drive Meridian ID 83646",
-        "phone": "(208) 631-0640",
-        "website": "https://www.surgewebdesign.com/",
-        "image": "https://lalathehung.github.io/wdd231/chamber/images/surge-logo.webp",
+        "name": "Television Broadcasts Limited",
+        "address": "77 Chun Choi Street, Tseung Kwan O",
+        "phone": "(852) 2335 2288",
+        "website": "https://www.tvb.com",
+        "image": "https://lalathehung.github.io/wdd231/chamber/images/tvb.png",
         "membership": 2
     },
     {
-        "name": "Graphic Zen",
-        "address": "1788 E Summerplace Court Meridian ID 83646",
-        "phone": "(208) 631-4984",
-        "website": "https://graphiczen.com/",
-        "image": "https://lalathehung.github.io/wdd231/chamber/images/graphiczen-logo.webp",
+        "name": "Vita Green",
+        "address": "18 Dai Hei Street, Tai Po",
+        "phone": "(852) 2901 6000",
+        "website": "https://www.vitagreen.com",
+        "image": "https://lalathehung.github.io/wdd231/chamber/images/vitagreen.png",
         "membership": 3
     },
     {
-        "name": "Peppershock Media",
-        "address": "1215 3rd Street Nampa ID 83651",
-        "phone": "(208) 461-5070",
-        "website": "https://www.peppershock.com/",
-        "image": "https://lalathehung.github.io/wdd231/chamber/images/peppershock-logo.webp",
+        "name": "Vitasoy",
+        "address": "1 Kin Wong Street, Tuen Mun",
+        "phone": "(852) 2468 9645",
+        "website": "https://www.vitasoy.com",
+        "image": "https://lalathehung.github.io/wdd231/chamber/images/vitasoy.png",
         "membership": 1
     },
     {
-        "name": "Flash Tech Services",
-        "address": "Star Idaho 83669",
-        "phone": "(208) 488-5810",
-        "website": "https://flashtechnicalservices.com/",
-        "image": "https://lalathehung.github.io/wdd231/chamber/images/flashtech-logo.webp",
+        "name": "VTech Electronics (HK) Limited",
+        "address": "Room B1, 6/F Tai Ping Industrial Centre Block 1, 57 Ting Kok Road, Tai Po",
+        "phone": "(852) 2666 5558",
+        "website": "https://hktoys.vtech.com",
+        "image": "https://lalathehung.github.io/wdd231/chamber/images/vtech.png",
         "membership": 2
     },
     {
-        "name": "Metro Express Car Wash",
-        "address": "1725 E Overland Road Meridian ID 83642",
-        "phone": "(208) 888-4073",
-        "website": "https://www.metroexpresscarwash.com/",
-        "image": "https://lalathehung.github.io/wdd231/chamber/images/metroexpress-logo.webp",
+        "name": "CMB Wing Lung Bank",
+        "address": "45 Des Voeux Road Central",
+        "phone": "(852) 2530 5798",
+        "website": "https://www.cmbwinglungbank.com",
+        "image": "https://lalathehung.github.io/wdd231/chamber/images/winglungbank.png",
         "membership": 3
     },
     {
-        "name": "Panama Tech Solutions",
-        "address": "1234 Tech Lane Panama City",
-        "phone": "(507) 555-1234",
-        "website": "https://panamatechsolutions.com/",
-        "image": "https://lalathehung.github.io/wdd231/chamber/images/panamatech-logo.webp",
+        "name": "Hong Kong Wing Wah Cake Shop",
+        "address": "5/F, Flourish Food Manufactory Centre, 18 Tai Lee Street, Yuen Long",
+        "phone": "(852) 2477 9947",
+        "website": "https://www.wingwah.com/en/",
+        "image": "https://lalathehung.github.io/wdd231/chamber/images/wingwah.png",
         "membership": 1
     }
 ]
