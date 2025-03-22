@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!response.ok) throw new Error(`Failed to fetch members.json: ${response.status}`);
         const members = await response.json();
 
-        // Map numerical membership levels to labels
+        // Map numerical membership levels to labels (updated to Bronze, Silver, Gold)
         const membershipLabels = {
-            1: "Member",
+            1: "Bronze",
             2: "Silver",
             3: "Gold"
         };
