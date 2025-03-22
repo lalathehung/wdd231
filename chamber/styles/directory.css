@@ -48,12 +48,18 @@
     color: inherit;
 }
 
-/* Grid View (Matches Reference Site) */
+/* Grid View (Updated to Show 3 Cards per Row on Desktop) */
 #member-list.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: 1fr; /* Default: 1 card per row on mobile */
     gap: 25px;
     margin: 25px 0;
+}
+
+@media (min-width: 860px) {
+    #member-list.grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row on desktop */
+    }
 }
 
 #member-list.grid .card-box {
@@ -91,7 +97,7 @@
     line-height: 1.5;
 }
 
-/* List View (Matches Reference Site) */
+/* List View (Unchanged) */
 #member-list.list {
     display: flex;
     flex-direction: column;
