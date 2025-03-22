@@ -48,35 +48,37 @@
     color: inherit;
 }
 
-/* Grid View (Updated to Show 3 Cards per Row on Desktop) */
+/* Grid View (Ensure 3 Cards per Row on Desktop) */
 #member-list.grid {
     display: grid;
     grid-template-columns: 1fr; /* Default: 1 card per row on mobile */
-    gap: 25px;
-    margin: 25px 0;
+    gap: 20px; /* Tighter gap for mobile */
+    margin: 30px 0;
+    padding: 0 15px; /* Add padding to prevent cards from touching the edges */
 }
 
 @media (min-width: 860px) {
     #member-list.grid {
         grid-template-columns: repeat(3, 1fr); /* 3 cards per row on desktop */
+        gap: 30px; /* Larger gap on desktop for balance */
     }
 }
 
 #member-list.grid .card-box {
-    padding: 20px;
+    padding: 25px;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: var(--white);
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-height: 250px;
+    min-height: 280px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 #member-list.grid .card-box img {
-    width: 100px;
+    width: 90px;
     height: auto;
     margin: 0 auto 15px;
     display: block;
@@ -85,16 +87,17 @@
 #member-list.grid .card-box h3 {
     color: var(--king-kong);
     font-family: 'Poppins', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     font-weight: 700;
     margin: 5px 0;
 }
 
 #member-list.grid .card-box p {
     color: var(--headline-color-on-white);
-    font-size: 0.9rem;
-    margin: 5px 0;
-    line-height: 1.5;
+    font-size: 0.95rem;
+    margin: 4px 0;
+    line-height: 1.6;
+    word-wrap: break-word;
 }
 
 /* List View (Unchanged) */
@@ -109,15 +112,15 @@
     display: flex;
     flex-direction: column;
     padding: 15px;
-    background-color: #f9f9f9; /* Light background for odd rows */
+    background-color: #f9f9f9;
 }
 
 #member-list.list .card-box:nth-child(even) {
-    background-color: #e6e6e6; /* Slightly darker for even rows (zebra striping) */
+    background-color: #e6e6e6;
 }
 
 #member-list.list .card-box img {
-    display: none; /* Hide images in list view */
+    display: none;
 }
 
 #member-list.list .card-box h3 {
