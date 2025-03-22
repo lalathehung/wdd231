@@ -4,41 +4,55 @@
         "address": "2115 S Vista Avenue Boise ID 83705",
         "phone": "(208) 342-9386",
         "website": "https://idahowebsites.com/",
-        "image": "https://lalathehung.github.io/wdd231/chamber/images/idweblogo.webp"
+        "image": "https://lalathehung.github.io/wdd231/chamber/images/idweblogo.webp",
+        "membership": 1
     },
     {
         "name": "Surge Web Design",
         "address": "4072 E Arch Drive Meridian ID 83646",
         "phone": "(208) 631-0640",
         "website": "https://www.surgewebdesign.com/",
-        "image": "https://lalathehung.github.io/wdd231/chamber/images/surge-logo.webp"
+        "image": "https://lalathehung.github.io/wdd231/chamber/images/surge-logo.webp",
+        "membership": 2
     },
     {
         "name": "Graphic Zen",
         "address": "1788 E Summerplace Court Meridian ID 83646",
         "phone": "(208) 631-4984",
         "website": "https://graphiczen.com/",
-        "image": "https://lalathehung.github.io/wdd231/chamber/images/graphiczen-logo.webp"
+        "image": "https://lalathehung.github.io/wdd231/chamber/images/graphiczen-logo.webp",
+        "membership": 3
     },
     {
         "name": "Peppershock Media",
         "address": "1215 3rd Street Nampa ID 83651",
         "phone": "(208) 461-5070",
         "website": "https://www.peppershock.com/",
-        "image": "https://lalathehung.github.io/wdd231/chamber/images/peppershock-logo.webp"
+        "image": "https://lalathehung.github.io/wdd231/chamber/images/peppershock-logo.webp",
+        "membership": 1
     },
     {
         "name": "Flash Tech Services",
         "address": "Star Idaho 83669",
         "phone": "(208) 488-5810",
         "website": "https://flashtechnicalservices.com/",
-        "image": "https://lalathehung.github.io/wdd231/chamber/images/flashtech-logo.webp"
+        "image": "https://lalathehung.github.io/wdd231/chamber/images/flashtech-logo.webp",
+        "membership": 2
     },
     {
         "name": "Metro Express Car Wash",
         "address": "1725 E Overland Road Meridian ID 83642",
         "phone": "(208) 888-4073",
         "website": "https://www.metroexpresscarwash.com/",
-        "image": "https://lalathehung.github.io/wdd231/chamber/images/metroexpress-logo.webp"
+        "image": "https://lalathehung.github.io/wdd231/chamber/images/metroexpress-logo.webp",
+        "membership": 3
+    },
+    {
+        "name": "Panama Tech Solutions",
+        "address": "1234 Tech Lane Panama City",
+        "phone": "(507) 555-1234",
+        "website": "https://panamatechsolutions.com/",
+        "image": "https://lalathehung.github.io/wdd231/chamber/images/panamatech-logo.webp",
+        "membership": 1
     }
 ]

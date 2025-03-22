@@ -48,7 +48,7 @@
     color: inherit;
 }
 
-/* Grid View (Matches Screenshot) */
+/* Grid View (Matches A.png with Membership Level) */
 #member-list.grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -63,7 +63,7 @@
     background-color: var(--white);
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    min-height: 200px;
+    min-height: 220px; /* Increased to accommodate membership level */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -90,7 +90,7 @@
     line-height: 1.4;
 }
 
-/* List View (Unchanged - Matches B.png) */
+/* List View (Matches B.png with Membership Level) */
 #member-list.list {
     display: flex;
     flex-direction: column;

@@ -8,6 +8,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!response.ok) throw new Error(`Failed to fetch members.json: ${response.status}`);
         const members = await response.json();
 
+        // Map numerical membership levels to labels
+        const membershipLabels = {
+            1: "Member",
+            2: "Silver",
+            3: "Gold"
+        };
+
         members.forEach(member => {
             const card = document.createElement('div');
             card.classList.add('card-box');
@@ -17,6 +24,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <p>${member.address}</p>
                 <p>${member.phone}</p>
                 <p><a href="${member.website}" target="_blank">${member.website}</a></p>
+                <p>Membership: ${membershipLabels[member.membership]}</p>
             `;
             memberList.appendChild(card);
         });
