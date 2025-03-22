@@ -5,19 +5,20 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     try {
         const response = await fetch('data/members.json');
+        if (!response.ok) throw new Error('Network response was not ok');
         const members = await response.json();
 
         members.forEach(member => {
             const card = document.createElement('div');
             card.classList.add('card-box');
             card.innerHTML = `
-                <img src="${member.image}" alt="${member.name} logo">
-                <h3>${member.name}</h3>
+                <img src="${member.logo}" alt="${member.Name} logo">
+                <h3>${member.Name}</h3>
                 <ul>
-                    <li>${member.address}</li>
-                    <li>${member.phone}</li>
-                    <li><a href="${member.website}" target="_blank">${member.website}</a></li>
-                    <li>Membership: ${member.membership}</li>
+                    <li>${member["Physical Address"]}</li>
+                    <li>${member.Phone}</li>
+                    <li><a href="${member.Website}" target="_blank">${member.Website}</a></li>
+                    <li>Membership: ${member.Membership}</li>
                 </ul>
             `;
             directoryBox.appendChild(card);
