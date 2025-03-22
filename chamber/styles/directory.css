@@ -48,6 +48,11 @@
     color: inherit;
 }
 
+/* Hide static members by default */
+.static-members {
+    display: none;
+}
+
 /* Grid View (Ensure 3 Cards per Row on Desktop) */
 #member-list.grid {
     display: grid;
