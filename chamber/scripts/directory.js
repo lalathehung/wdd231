@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const directoryBox = document.getElementById('directory-box');
+    const memberList = document.getElementById('member-list');
     const gridBtn = document.getElementById('grid-view-btn');
     const listBtn = document.getElementById('list-view-btn');
 
@@ -14,30 +14,28 @@ document.addEventListener('DOMContentLoaded', async () => {
             card.innerHTML = `
                 <img src="${member.image}" alt="${member.name} logo">
                 <h3>${member.name}</h3>
-                <ul>
-                    <li>${member.address}</li>
-                    <li>${member.phone}</li>
-                    <li><a href="${member.website}" target="_blank">${member.website}</a></li>
-                    <li>Membership: ${member.membership}</li>
-                </ul>
+                <p>${member.address}</p>
+                <p>${member.phone}</p>
+                <p><a href="${member.website}" target="_blank">${member.website}</a></p>
+                <p>Membership: ${member.membership}</p>
             `;
-            directoryBox.appendChild(card);
+            memberList.appendChild(card);
         });
 
         // Default to list view (matching reference site)
-        directoryBox.classList.add('list-view');
+        memberList.classList.add('list');
         listBtn.classList.add('activebtn');
 
         gridBtn.addEventListener('click', () => {
-            directoryBox.classList.remove('list-view');
-            directoryBox.classList.add('grid-view');
+            memberList.classList.remove('list');
+            memberList.classList.add('grid');
             gridBtn.classList.add('activebtn');
             listBtn.classList.remove('activebtn');
         });
 
         listBtn.addEventListener('click', () => {
-            directoryBox.classList.remove('grid-view');
-            directoryBox.classList.add('list-view');
+            memberList.classList.remove('grid');
+            memberList.classList.add('list');
             listBtn.classList.add('activebtn');
             gridBtn.classList.remove('activebtn');
         });
