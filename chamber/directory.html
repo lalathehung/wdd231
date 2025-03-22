@@ -10,7 +10,7 @@
     <!-- Facebook Open Graph Meta Tags -->
     <meta property="og:title" content="Directory | Panama City Chamber of E-commerce">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://demetrioaris.github.io/wdd231/chamber/images/logo-chamber.webp">
+    <meta property="og:image" content="https://demetrioaris.github.io/wdd231/chamber/images/logo-chamber-modified-small.webp">
     <meta property="og:url" content="https://demetrioaris.github.io/wdd231/chamber/directory.html">
     <meta property="og:description" content="Explore members of the Panama City Chamber of E-commerce">
 
@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="styles/directory.css">
 
     <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon-main-modified.ico" type="image/x-icon">
 
     <!-- Font Awesome for Icons -->
     <script src="https://kit.fontawesome.com/e0a574ddb0.js" crossorigin="anonymous"></script>
@@ -34,34 +34,34 @@
     <script src="scripts/dates.js" defer></script>
     <script src="scripts/directory.js" defer></script>
 </head>
-<body>
+<body id="directory-page">
     <header>
         <nav>
-            <div class="logo-box">
-                <img src="images/logo-chamber.webp" alt="Panama City Chamber Logo" class="logo">
-                <h1>Panama City<br>Chamber of E-commerce</h1>
-                <button id="menu" aria-label="Toggle navigation menu"><i class="fas fa-bars"></i></button>
+            <div class="box-logo-header">
+                <img class="logo-chamber" src="images/logo-chamber-modified-small.webp" alt="Panama City Chamber Logo">
+                <h1 class="nameHeader">Panamá City<br>Chamber of E-commerce</h1>
+                <button name="navigation button" id="menu" aria-label="Toggle menu"></button>
             </div>
-            <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
+            <ul>
+                <li><a class="nav-a" href="index.html">Home</a></li>
+                <li><a class="nav-a" href="discover.html">Discover</a></li>
+                <li><a class="nav-a" href="directory.html">Directory</a></li>
+                <li><a class="nav-a" href="join.html">Join</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h2>Directory</h2>
-        <div class="view-toggle">
-            <button id="grid-view" class="toggle-btn active" title="Grid View"><i class="fas fa-th"></i></button>
-            <button id="list-view" class="toggle-btn" title="List View"><i class="fas fa-list"></i></button>
+        <h2 class="Main-title">Directory</h2>
+        <div class="button-box">
+            <button title="List view" class="mybtn activebtn" id="list-view-btn"><i class="fas fa-list"></i></button>
+            <button title="Grid view" class="mybtn" id="grid-view-btn"><i class="fas fa-border-all"></i></button>
         </div>
-        <section id="member-list" class="grid"></section>
+        <div id="directory-box"></div>
     </main>
     <footer>
         <p>Contact: info@panamacitychamber.com | +507 123-4567</p>
-        <p>©<span id="current-year"></span> Demetrio Aris | WDD 231 | Panama</p>
-        <p>Last Modified: <span id="last-modified"></span></p>
+        <p>©<span id="currentyear"></span> Demetrio Aris | WDD 231 | Panama</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 </html>
