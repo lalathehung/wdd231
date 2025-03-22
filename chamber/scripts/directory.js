@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const directoryBox = document.getElementById('directory-box');
-    const gridBtn = document.getElementById('grid-view-btn');
-    const listBtn = document.getElementById('list-view-btn');
+    const memberList = document.getElementById('member-list');
+    const gridBtn = document.getElementById('grid-view');
+    const listBtn = document.getElementById('list-view');
 
     try {
         const response = await fetch('data/members.json');
@@ -10,35 +10,33 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         members.forEach(member => {
             const card = document.createElement('div');
-            card.classList.add('card-box');
+            card.classList.add('member-card');
             card.innerHTML = `
-                <img src="${member.logo}" alt="${member.Name} logo">
-                <h3>${member.Name}</h3>
-                <ul>
-                    <li>${member["Physical Address"]}</li>
-                    <li>${member.Phone}</li>
-                    <li><a href="${member.Website}" target="_blank">${member.Website}</a></li>
-                    <li>Membership: ${member.Membership}</li>
-                </ul>
+                <img src="${member.image}" alt="${member.name} logo">
+                <h3>${member.name}</h3>
+                <p>${member.address}</p>
+                <p>${member.phone}</p>
+                <p><a href="${member.website}" target="_blank">${member.website}</a></p>
+                <p>Membership: ${member.membership}</p>
             `;
-            directoryBox.appendChild(card);
+            memberList.appendChild(card);
         });
 
-        // Default to list view (matching working site)
-        directoryBox.classList.add('list-view');
+        // Default to grid view (matching course example)
+        memberList.classList.add('grid');
 
         gridBtn.addEventListener('click', () => {
-            directoryBox.classList.remove('list-view');
-            directoryBox.classList.add('grid-view');
-            gridBtn.classList.add('activebtn');
-            listBtn.classList.remove('activebtn');
+            memberList.classList.remove('list');
+            memberList.classList.add('grid');
+            gridBtn.classList.add('active');
+            listBtn.classList.remove('active');
         });
 
         listBtn.addEventListener('click', () => {
-            directoryBox.classList.remove('grid-view');
-            directoryBox.classList.add('list-view');
-            listBtn.classList.add('activebtn');
-            gridBtn.classList.remove('activebtn');
+            memberList.classList.remove('grid');
+            memberList.classList.add('list');
+            listBtn.classList.add('active');
+            gridBtn.classList.remove('active');
         });
     } catch (error) {
         console.error('Error fetching members:', error);

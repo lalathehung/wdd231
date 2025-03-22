@@ -1,25 +1,24 @@
 :root {
-    --king-kong: #1a1a1a;    /* Dark gray */
+    --primary: #1a3c34;    /* Dark teal */
+    --secondary: #f4a261;  /* Warm orange */
+    --accent: #e76f51;     /* Coral */
+    --background: #f9f9f9; /* Light gray */
+    --text: #333333;       /* Dark gray */
     --white: #ffffff;
-    --oxford-blue: #002147;  /* Dark blue */
-    --yale-blue: #0f4d92;    /* Medium blue */
-    --headline-color-on-white: #333333;
-    --font-size-large: 2rem;
-    --font-size-base: 1rem;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
-    color: var(--headline-color-on-white);
-    background-color: var(--white);
+    color: var(--text);
+    background-color: var(--background);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 header {
-    background-color: var(--king-kong);
-    padding: 0.5rem;
+    background-color: var(--primary);
+    padding: 1rem;
 }
 
 nav {
@@ -27,53 +26,51 @@ nav {
     margin: 0 auto;
 }
 
-.box-logo-header {
+.logo-box {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem;
+    gap: 1rem;
 }
 
-.logo-chamber {
+.logo {
     width: 60px;
     height: auto;
 }
 
-.nameHeader {
+h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: var(--white);
     margin: 0;
 }
 
-nav ul {
+.nav-list {
     display: none;
     flex-direction: column;
-    background-color: var(--king-kong);
-    margin: 0;
-    padding: 0.5rem 0;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    background-color: var(--primary);
 }
 
-nav ul li {
-    margin: 0.5rem 0;
+.nav-list.show {
+    display: flex;
 }
 
-.nav-a {
+.nav-list a {
     color: var(--white);
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
-    padding: 0.5rem 1rem;
-    display: block;
+    padding: 0.5rem;
 }
 
-.nav-a:hover {
-    color: var(--yale-blue);
+.nav-list a:hover {
+    color: var(--secondary);
 }
 
 #menu {
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>') no-repeat center;
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     border: none;
     cursor: pointer;
     margin-left: auto;
@@ -85,11 +82,21 @@ nav ul li {
 
 main {
     flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 1rem;
 }
 
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
 footer {
-    background-color: var(--king-kong);
+    background-color: var(--primary);
     color: var(--white);
     text-align: center;
     padding: 1rem;
@@ -100,22 +107,19 @@ footer p {
     margin: 0.25rem 0;
 }
 
-@media (min-width: 750px) {
-    .box-logo-header {
-        flex: 1;
-    }
+@media (min-width: 768px) {
     nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    nav ul {
+    .logo-box {
+        flex: 1;
+    }
+    .nav-list {
         display: flex;
         flex-direction: row;
-        padding: 0;
-    }
-    nav ul li {
-        margin: 0;
+        margin-top: 0;
     }
     #menu {
         display: none;
