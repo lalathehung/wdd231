@@ -1,58 +1,44 @@
 [
     {
-        "name": "+ Móvil (Cable & Wireless Panamá)",
-        "address": "España Tower C, piso Mezzanine, Panama",
-        "phone": "2656490",
-        "website": "https://www.masmovilpanama.com/",
-        "image": "https://panamcham.com/sites/default/files/styles/member_directory_logo/public/movil-lla-02.png?itok=8iSZ2QrW",
-        "membership": "Bronze"
+        "name": "Idaho Websites",
+        "address": "2115 S Vista Avenue Boise ID 83705",
+        "phone": "(208) 342-9386",
+        "website": "https://idahowebsites.com/",
+        "image": "images/idweblogo.webp"
     },
     {
-        "name": "3h Innovations",
-        "address": "Oficina 301, Dorado City Center, Ave. Ricardo J. Alfaro",
-        "phone": "6030 7922",
-        "website": "https://www.3hinnovationsgroup.com/",
-        "image": "https://static.wixstatic.com/media/3e16d7_2f9c558edc464698b2ee9fd330799a11~mv2.png/v1/fill/w_240,h_239,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/3h%204%20square%20icons.png",
-        "membership": "Silver"
+        "name": "Surge Web Design",
+        "address": "4072 E Arch Drive Meridian ID 83646",
+        "phone": "(208) 631-0640",
+        "website": "https://www.surgewebdesign.com/",
+        "image": "images/surge-logo.webp"
     },
     {
-        "name": "3M Panama Pacifico S de RL",
-        "address": "Área Panamá Pacifico, Arraiján, Panamerica Corporate Center Norte",
-        "phone": "378-9169",
-        "website": "https://www.3m.com.pa/3M/es_PA/inicio/",
-        "image": "https://panamcham.com/sites/default/files/styles/member_directory_logo/public/3m_0.png?itok=AfOFy1No",
-        "membership": "Gold"
+        "name": "Graphic Zen",
+        "address": "1788 E Summerplace Court Meridian ID 83646",
+        "phone": "(208) 631-4984",
+        "website": "https://graphiczen.com/",
+        "image": "images/graphiczen-logo.webp"
     },
     {
-        "name": "4ever Magic Corporation",
-        "address": "Nicanor A. de Obarrio Ave., F&F Tower, 12 Floor",
-        "phone": "396-4000",
-        "website": "https://4emagic.com/",
-        "image": "https://panamcham.com/sites/default/files/styles/member_directory_logo/public/4ever_magic.png?itok=P5KVPBbK",
-        "membership": "Bronze"
+        "name": "Peppershock Media",
+        "address": "1215 3rd Street Nampa ID 83651",
+        "phone": "(208) 461-5070",
+        "website": "https://www.peppershock.com/",
+        "image": "images/peppershock-logo.webp"
     },
     {
-        "name": "Air Europa",
-        "address": "Torre de las Américas, Planta baja",
-        "phone": "382-3291",
-        "website": "https://www.aireuropa.com",
-        "image": "https://panamcham.com/sites/default/files/styles/member_directory_logo/public/aireuropa.png?itok=m15coHIB",
-        "membership": "Silver"
+        "name": "Flash Tech Services",
+        "address": "Star Idaho 83669",
+        "phone": "(208) 488-5810",
+        "website": "https://flashtechnicalservices.com/",
+        "image": "images/flashtech-logo.webp"
     },
     {
-        "name": "ABB Panama Sales S.A.",
-        "address": "Costa del Este, Edificio Financial Park, Piso 19",
-        "phone": "N/A",
-        "website": "https://new.abb.com/central-america-caribbean",
-        "image": "https://panamcham.com/sites/default/files/styles/member_directory_logo/public/abb_1.png?itok=1zj1uIP2",
-        "membership": "Gold"
-    },
-    {
-        "name": "Abbott Laboratories International LLC",
-        "address": "Transistmica, Urbanización Industrial Orilla",
-        "phone": "229-1086",
-        "website": "https://www.abbott.com/",
-        "image": "https://panamcham.com/sites/default/files/styles/member_directory_logo/public/descarga_1.png?itok=Gxknep5c",
-        "membership": "Bronze"
+        "name": "Metro Express Car Wash",
+        "address": "1725 E Overland Road Meridian ID 83642",
+        "phone": "(208) 888-4073",
+        "website": "https://www.metroexpresscarwash.com/",
+        "image": "images/metroexpress-logo.webp"
     }
 ]
