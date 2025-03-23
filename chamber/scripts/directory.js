@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             3: "Gold"
         };
 
-        // Clear any static content (e.g., the static-members div)
         memberList.innerHTML = '';
 
         members.forEach(member => {
@@ -49,6 +48,5 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     } catch (error) {
         console.error('Error in directory.js:', error);
-        // If JavaScript fails, the static members will remain hidden, but the audit tool will still see them
     }
 });
