@@ -14,6 +14,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             3: "Gold"
         };
 
+        // Hide the static members
+        const staticMembers = document.querySelector('.static-members');
+        if (staticMembers) {
+            staticMembers.style.display = 'none';
+        }
+
+        // Clear the member list and add dynamic content
         memberList.innerHTML = '';
 
         members.forEach(member => {

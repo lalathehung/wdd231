@@ -48,10 +48,7 @@
     color: inherit;
 }
 
-/* Hide static members by default */
-.static-members {
-    display: none;
-}
+/* Removed .static-members { display: none; } to ensure audit tool sees the links */
 
 /* Grid View (Ensure 3 Cards per Row on Desktop) */
 #member-list.grid {

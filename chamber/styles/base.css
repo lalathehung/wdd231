@@ -1,7 +1,7 @@
 :root {
     --king-kong: #1a1a1a;
     --white: #ffffff;
-    --oxford-blue: #001a36; 
+    --oxford-blue: #00152e; /* Updated from #001a36 to pass contrast on #e6e6e6 */
     --yale-blue: #0f4d92;
     --headline-color-on-white: #333333;
     --font-size-large: 2rem;
@@ -110,6 +110,21 @@ footer {
 
 footer p {
     margin: 0.25rem 0;
+}
+
+/* Style for footer links */
+footer a {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: var(--yale-blue);
+    text-decoration: none;
+}
+
+footer a:visited {
+    color: var(--white);
 }
 
 @media (min-width: 750px) {
