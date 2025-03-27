@@ -102,7 +102,7 @@
     word-wrap: break-word;
 }
 
-/* List View (Unchanged) */
+/* List View */
 #member-list.list {
     display: flex;
     flex-direction: column;

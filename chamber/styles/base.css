@@ -1,8 +1,9 @@
 :root {
     --king-kong: #1a1a1a;
     --white: #ffffff;
-    --oxford-blue: #00152e; /* Updated from #001a36 to pass contrast on #e6e6e6 */
-    --yale-blue: #0f4d92;
+    --oxford-blue: #00152e; /* Updated previously to pass contrast on #e6e6e6 */
+    --yale-blue: #0f4d92; /* Used for .card-box a:hover, passes AA */
+    --hover-blue: #4a8cd6; /* New color for nav-a and footer a hover states */
     --headline-color-on-white: #333333;
     --font-size-large: 2rem;
     --font-size-base: 1rem;
@@ -71,7 +72,7 @@ nav ul li {
 }
 
 .nav-a:hover {
-    color: var(--yale-blue);
+    color: var(--hover-blue); /* Updated to pass AA on #1a1a1a */
 }
 
 .nav-a.active {
@@ -119,7 +120,7 @@ footer a {
 }
 
 footer a:hover {
-    color: var(--yale-blue);
+    color: var(--hover-blue); /* Updated to pass AA on #1a1a1a */
     text-decoration: none;
 }
 
