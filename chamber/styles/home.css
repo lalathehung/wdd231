@@ -7,7 +7,7 @@ main {
     align-content: center;
     margin: 0 auto;
     margin-top: 30px;
-    row-gap: 20px;
+    row-gap: 30px;
 }
 
 section {
@@ -46,45 +46,55 @@ article {
 }
 
 .hero-box-img img {
-    border-radius: 1px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px var(--film-noir);
     width: 100%;
     height: auto;
 }
 
-.hero-overlay {
-    grid-column: 1/4;
-    grid-row: 1/4;
-    display: flex;
-    flex-direction: column;
+.call-to-action {
+    grid-column: 2/3;
+    grid-row: 2/3;
     justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.5);
+    align-content: center;
+    background-color: rgba(31, 46, 59, 0.764);
     color: var(--white);
-    text-align: center;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--film-noir);
+    text-align: center;
 }
 
-.hero-overlay h2 {
-    font-size: var(--font-size-extra-large);
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+.call-to-action h3 {
+    padding: 0;
+    color: var(--white);
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: var(--font-size-large);
+}
+
+.call-to-action p {
+    padding: 0;
+    text-align: center;
+    margin: 5px 0;
 }
 
 .join-us {
     background-color: var(--big-fish-to-fry);
-    width: 200px;
-    height: 50px;
+    width: 120px;
+    height: 40px;
     border: 1px solid var(--lunar-base);
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: var(--font-size-base);
-    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
     transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--font-size-base);
     color: var(--king-kong);
     cursor: pointer;
 }
@@ -128,11 +138,6 @@ article {
 .event {
     padding: 15px;
     text-align: left;
-    border-bottom: 1px solid var(--lunar-base);
-}
-
-.event:last-child {
-    border-bottom: none;
 }
 
 .event-main h2,
@@ -147,7 +152,7 @@ article {
 }
 
 .event p {
-    margin: 0;
+    margin: 5px 0;
 }
 
 .weather-main {
@@ -190,10 +195,6 @@ article {
     margin-top: 5px;
 }
 
-.forecast p {
-    text-align: center;
-}
-
 .weather-forecast {
     grid-row: 3;
     display: flex;
@@ -217,8 +218,26 @@ article {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px var(--film-noir);
-    margin: 20px;
+    margin: 10px;
     padding: 15px;
+    background-color: var(--white);
+}
+
+.day-box h4 {
+    margin: 0;
+    font-size: var(--font-size-base);
+}
+
+.day-box figure {
+    margin: 10px 0;
+}
+
+.day-box figcaption {
+    margin-top: 5px;
+}
+
+.day-box p {
+    margin: 5px 0;
 }
 
 /* Spotlights */
@@ -231,7 +250,7 @@ article {
     gap: 20px;
     padding: 40px;
     margin-bottom: 50px;
-    background-color: #e6e6e6;
+    background-color: rgba(68, 57, 50, 0.5);
     border-radius: 8px;
 }
 
@@ -270,10 +289,10 @@ article {
 }
 
 .title-spot h4 {
-    padding: 10px;
+    padding: 5px;
     margin: 0;
     font-size: var(--font-size-base);
-    color: var(--king-kong);
+    color: var(--film-noir);
 }
 
 .spot-img {
@@ -311,12 +330,14 @@ article {
         grid-column: 2;
     }
 
-    .hero-overlay {
-        padding: 40px;
+    .call-to-action {
+        width: 450px;
+        height: 220px;
+        padding: 30px;
     }
 
-    .hero-overlay h2 {
-        font-size: 2.5rem;
+    .call-to-action h3 {
+        font-size: 1.5rem;
     }
 
     .event-main-box {
@@ -358,7 +379,8 @@ article {
 
     .main-day-box {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-around;
     }
 
     .spotlights-main-box {
@@ -374,6 +396,7 @@ article {
         margin-bottom: 50px;
         gap: 20px;
         max-width: 100%;
+        background-color: transparent;
     }
 
     .spot-card-01 {
@@ -393,7 +416,7 @@ article {
 
     .spot-card {
         width: 250px;
-        height: 300px;
+        height: 320px;
         padding: 20px;
         margin: 0;
         border-radius: 10px;

@@ -20,12 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <div class="title-spot">
                 <h3 id="business-name-0${index}"></h3>
-                <h4 id="tag-0${index}"></h4>
+                <h4 id="industry-0${index}"></h4>
             </div>
             <div class="spot-data">
-                <p>Email: <a href="" id="email-0${index}"></a></p>
                 <p>Phone: <span id="phone-0${index}"></span></p>
                 <p>URL: <a href="" id="url-0${index}"></a></p>
+                <p>Membership: <span id="membership-0${index}"></span></p>
             </div>
         `;
         return spotCard;
@@ -52,12 +52,11 @@ document.addEventListener("DOMContentLoaded", async () => {
             const member = shuffledData[i - 1];
             if (member) {
                 document.querySelector(`#business-name-0${i}`).textContent = member.name;
-                document.querySelector(`#tag-0${i}`).textContent = "Business Tag Line";
-                document.querySelector(`#email-0${i}`).textContent = `info@${member.name.toLowerCase().replace(/\s/g, '')}.com`;
-                document.querySelector(`#email-0${i}`).href = `mailto:info@${member.name.toLowerCase().replace(/\s/g, '')}.com`;
+                document.querySelector(`#industry-0${i}`).textContent = member.industry;
                 document.querySelector(`#phone-0${i}`).textContent = member.phone;
-                document.querySelector(`#url-0${i}`).textContent = member.website;
+                document.querySelector(`#url-0${i}`).textContent = "Visit Website";
                 document.querySelector(`#url-0${i}`).href = member.website;
+                document.querySelector(`#membership-0${i}`).textContent = member.membership === 3 ? "Gold" : "Silver";
                 // Add logo
                 const img = document.querySelector(`#img-0${i}-spot`);
                 img.src = member.image;
@@ -71,7 +70,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 // Weather: Current
 document.addEventListener("DOMContentLoaded", () => {
-    const urlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLon}&appid=${myKey}&units=imperial`;
+    const urlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLon}&appid=${myKey}&units=metric`;
 
     async function apiFetch() {
         try {
@@ -104,10 +103,10 @@ document.addEventListener("DOMContentLoaded", () => {
         eventMainBox.innerHTML = `
             <div class="current-weather">
                 <h2>Current Weather</h2>
-                <p><img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="${descriptions}">${parseFloat(data.main.temp).toFixed(0)}°F</p>
+                <p><img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="${descriptions}">${parseFloat(data.main.temp).toFixed(0)}°C</p>
                 <p>${descriptions}</p>
-                <p>High: ${parseFloat(data.main.temp_max).toFixed(0)}°</p>
-                <p>Low: ${parseFloat(data.main.temp_min).toFixed(0)}°</p>
+                <p>High: ${parseFloat(data.main.temp_max).toFixed(0)}°C</p>
+                <p>Low: ${parseFloat(data.main.temp_min).toFixed(0)}°C</p>
                 <p>Humidity: ${data.main.humidity}%</p>
                 <p>Sunrise: ${sunrise}</p>
                 <p>Sunset: ${sunset}</p>
@@ -120,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Weather: Forecast
 document.addEventListener("DOMContentLoaded", () => {
-    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLon}&appid=${myKey}&units=imperial`;
+    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLon}&appid=${myKey}&units=metric`;
 
     async function apiForecastFetch() {
         try {
@@ -143,10 +142,33 @@ document.addEventListener("DOMContentLoaded", () => {
         const dailyForecasts = forecastData.list.filter((_, index) => index % 8 === 0).slice(0, 3);
 
         weatherForecast.innerHTML = `
-            <h3>Weather Forecast</h3>
-            <p>Today: ${parseFloat(dailyForecasts[0].main.temp).toFixed(0)}°F</p>
-            <p>${weekdays[(day + 1) % 7]}: ${parseFloat(dailyForecasts[1].main.temp).toFixed(0)}°F</p>
-            <p>${weekdays[(day + 2) % 7]}: ${parseFloat(dailyForecasts[2].main.temp).toFixed(0)}°F</p>
+            <h3>3-Day Weather Forecast</h3>
+            <div class="main-day-box">
+                <div class="day-box">
+                    <h4>${weekdays[(day + 1) % 7]}</h4>
+                    <figure>
+                        <img src="https://openweathermap.org/img/wn/${dailyForecasts[0].weather[0].icon}.png" alt="${dailyForecasts[0].weather[0].description}">
+                        <figcaption>${dailyForecasts[0].weather[0].description}</figcaption>
+                    </figure>
+                    <p>Temperature: ${parseFloat(dailyForecasts[0].main.temp).toFixed(0)}°C</p>
+                </div>
+                <div class="day-box">
+                    <h4>${weekdays[(day + 2) % 7]}</h4>
+                    <figure>
+                        <img src="https://openweathermap.org/img/wn/${dailyForecasts[1].weather[0].icon}.png" alt="${dailyForecasts[1].weather[0].description}">
+                        <figcaption>${dailyForecasts[1].weather[0].description}</figcaption>
+                    </figure>
+                    <p>Temperature: ${parseFloat(dailyForecasts[1].main.temp).toFixed(0)}°C</p>
+                </div>
+                <div class="day-box">
+                    <h4>${weekdays[(day + 3) % 7]}</h4>
+                    <figure>
+                        <img src="https://openweathermap.org/img/wn/${dailyForecasts[2].weather[0].icon}.png" alt="${dailyForecasts[2].weather[0].description}">
+                        <figcaption>${dailyForecasts[2].weather[0].description}</figcaption>
+                    </figure>
+                    <p>Temperature: ${parseFloat(dailyForecasts[2].main.temp).toFixed(0)}°C</p>
+                </div>
+            </div>
         `;
     };
 
