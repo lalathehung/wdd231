@@ -15,17 +15,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const spotCard = document.createElement("div");
         spotCard.className = `spot-card spot-card-0${index}`;
         spotCard.innerHTML = `
+            <div class="title-spot">
+                <h4 id="business-name-0${index}"></h4>
+                <h3 id="tag-0${index}"></h3>
+            </div>
             <div class="spot-img">
                 <img src="" alt="" id="img-0${index}-spot">
             </div>
-            <div class="title-spot">
-                <h3 id="business-name-0${index}"></h3>
-                <h4 id="industry-0${index}"></h4>
-            </div>
             <div class="spot-data">
                 <p>Phone: <span id="phone-0${index}"></span></p>
-                <p>URL: <a href="" id="url-0${index}"></a></p>
-                <p>Membership: <span id="membership-0${index}"></span></p>
+                <p><a href="" id="url-0${index}"></a></p>
+                <p>Membership Level: <span id="member-since-0${index}"></span></p>
             </div>
         `;
         return spotCard;
@@ -41,23 +41,23 @@ document.addEventListener("DOMContentLoaded", async () => {
         const response = await fetch("data/members.json");
         const data = await response.json();
 
-        // Map membership levels: 1 = Bronze, 2 = Silver, 3 = Gold
+        // Filter for Silver and Gold members (membership levels 2 and 3)
         const eligibleMembers = data.filter(member => 
             member.membership === 2 || member.membership === 3
         );
 
+        // Shuffle and select 3 members
         const shuffledData = eligibleMembers.sort(() => 0.5 - Math.random()).slice(0, 3);
 
         for (let i = 1; i <= 3; i++) {
             const member = shuffledData[i - 1];
             if (member) {
                 document.querySelector(`#business-name-0${i}`).textContent = member.name;
-                document.querySelector(`#industry-0${i}`).textContent = member.industry;
+                document.querySelector(`#tag-0${i}`).textContent = "Business Tag Line"; // Placeholder, as your members.json doesn't have an industry field
                 document.querySelector(`#phone-0${i}`).textContent = member.phone;
-                document.querySelector(`#url-0${i}`).textContent = "Visit Website";
+                document.querySelector(`#url-0${i}`).textContent = "Visit the website";
                 document.querySelector(`#url-0${i}`).href = member.website;
-                document.querySelector(`#membership-0${i}`).textContent = member.membership === 3 ? "Gold" : "Silver";
-                // Add logo
+                document.querySelector(`#member-since-0${i}`).textContent = member.membership === 3 ? "Gold" : "Silver";
                 const img = document.querySelector(`#img-0${i}-spot`);
                 img.src = member.image;
                 img.alt = `${member.name} logo`;
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 // Weather: Current
 document.addEventListener("DOMContentLoaded", () => {
-    const urlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLon}&appid=${myKey}&units=metric`;
+    const urlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLon}&appid=${myKey}&units=imperial`;
 
     async function apiFetch() {
         try {
@@ -97,19 +97,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 .join(' ');
         }).join(', ');
 
-        const sunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        const sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-
         eventMainBox.innerHTML = `
             <div class="current-weather">
-                <h2>Current Weather</h2>
-                <p><img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="${descriptions}">${parseFloat(data.main.temp).toFixed(0)}°C</p>
-                <p>${descriptions}</p>
-                <p>High: ${parseFloat(data.main.temp_max).toFixed(0)}°C</p>
-                <p>Low: ${parseFloat(data.main.temp_min).toFixed(0)}°C</p>
+                <h2>The Current Weather in: <span id="city-name">${data.name}</span></h2>
+                <h4>${weekdays[day]}</h4>
+                <p>Temperature: <span id="current-temp">${parseFloat(data.main.temp).toFixed(0)}°F</span></p>
+                <figure>
+                    <img id="weather-icon" src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="${descriptions}">
+                    <figcaption>${descriptions}</figcaption>
+                </figure>
+                <p>High: ${parseFloat(data.main.temp_max).toFixed(0)}°F</p>
+                <p>Low: ${parseFloat(data.main.temp_min).toFixed(0)}°F</p>
                 <p>Humidity: ${data.main.humidity}%</p>
-                <p>Sunrise: ${sunrise}</p>
-                <p>Sunset: ${sunset}</p>
             </div>
         `;
     };
@@ -119,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Weather: Forecast
 document.addEventListener("DOMContentLoaded", () => {
-    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLon}&appid=${myKey}&units=metric`;
+    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLon}&appid=${myKey}&units=imperial`;
 
     async function apiForecastFetch() {
         try {
@@ -145,28 +144,28 @@ document.addEventListener("DOMContentLoaded", () => {
             <h3>3-Day Weather Forecast</h3>
             <div class="main-day-box">
                 <div class="day-box">
-                    <h4>${weekdays[(day + 1) % 7]}</h4>
+                    <h4 id="day-01">${weekdays[(day + 1) % 7]}</h4>
                     <figure>
-                        <img src="https://openweathermap.org/img/wn/${dailyForecasts[0].weather[0].icon}.png" alt="${dailyForecasts[0].weather[0].description}">
-                        <figcaption>${dailyForecasts[0].weather[0].description}</figcaption>
+                        <img id="weather-icon-1" src="https://openweathermap.org/img/wn/${dailyForecasts[0].weather[0].icon}@2x.png" alt="${dailyForecasts[0].weather[0].description}">
+                        <figcaption id="figcaption-1">${dailyForecasts[0].weather[0].description}</figcaption>
                     </figure>
-                    <p>Temperature: ${parseFloat(dailyForecasts[0].main.temp).toFixed(0)}°C</p>
+                    <p>Temperature: <span id="temp-1">${parseFloat(dailyForecasts[0].main.temp).toFixed(0)}°F</span></p>
                 </div>
                 <div class="day-box">
-                    <h4>${weekdays[(day + 2) % 7]}</h4>
+                    <h4 id="day-02">${weekdays[(day + 2) % 7]}</h4>
                     <figure>
-                        <img src="https://openweathermap.org/img/wn/${dailyForecasts[1].weather[0].icon}.png" alt="${dailyForecasts[1].weather[0].description}">
-                        <figcaption>${dailyForecasts[1].weather[0].description}</figcaption>
+                        <img id="weather-icon-2" src="https://openweathermap.org/img/wn/${dailyForecasts[1].weather[0].icon}@2x.png" alt="${dailyForecasts[1].weather[0].description}">
+                        <figcaption id="figcaption-2">${dailyForecasts[1].weather[0].description}</figcaption>
                     </figure>
-                    <p>Temperature: ${parseFloat(dailyForecasts[1].main.temp).toFixed(0)}°C</p>
+                    <p>Temperature: <span id="temp-2">${parseFloat(dailyForecasts[1].main.temp).toFixed(0)}°F</span></p>
                 </div>
                 <div class="day-box">
-                    <h4>${weekdays[(day + 3) % 7]}</h4>
+                    <h4 id="day-03">${weekdays[(day + 3) % 7]}</h4>
                     <figure>
-                        <img src="https://openweathermap.org/img/wn/${dailyForecasts[2].weather[0].icon}.png" alt="${dailyForecasts[2].weather[0].description}">
-                        <figcaption>${dailyForecasts[2].weather[0].description}</figcaption>
+                        <img id="weather-icon-3" src="https://openweathermap.org/img/wn/${dailyForecasts[2].weather[0].icon}@2x.png" alt="${dailyForecasts[2].weather[0].description}">
+                        <figcaption id="figcaption-3">${dailyForecasts[2].weather[0].description}</figcaption>
                     </figure>
-                    <p>Temperature: ${parseFloat(dailyForecasts[2].main.temp).toFixed(0)}°C</p>
+                    <p>Temperature: <span id="temp-3">${parseFloat(dailyForecasts[2].main.temp).toFixed(0)}°F</span></p>
                 </div>
             </div>
         `;
