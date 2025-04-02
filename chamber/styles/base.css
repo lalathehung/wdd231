@@ -5,8 +5,14 @@
     --yale-blue: #0f4d92; /* Used for .card-box a:hover, passes AA */
     --hover-blue: #4a8cd6; /* New color for nav-a and footer a hover states */
     --headline-color-on-white: #333333;
+    --film-noir: #443932; /* Added for home.css (used in shadows, text) */
+    --lunar-base: #868686; /* Added for home.css (used in borders) */
+    --big-fish-to-fry: #dadce0; /* Added for home.css (used in button backgrounds) */
+    --alice-blue: #f0f8ff; /* Added for home.css (used in active nav links) */
     --font-size-large: 2rem;
     --font-size-base: 1rem;
+    --font-size-small: 0.875rem; /* Added for home.css (used in spotlight data) */
+    --font-size-extra-large: 1.5rem; /* Added for home.css (used in headings) */
 }
 
 body {
@@ -21,6 +27,7 @@ body {
 header {
     background-color: var(--king-kong);
     padding: 0.5rem;
+    box-shadow: 0 10px 5px rgba(68, 57, 50, 0.4); /* Added shadow to match wireframe */
 }
 
 nav {
@@ -72,13 +79,17 @@ nav ul li {
 }
 
 .nav-a:hover {
-    color: var(--hover-blue); /* Updated to pass AA on #1a1a1a */
+    color: var(--hover-blue);
 }
 
 .nav-a.active {
     background-color: var(--yale-blue);
     color: var(--white);
     border-radius: 5px;
+}
+
+.dark-mode-toggle {
+    font-size: 1.2rem; /* Slightly larger icon for visibility */
 }
 
 #menu {
@@ -104,23 +115,27 @@ main {
 footer {
     background-color: var(--king-kong);
     color: var(--white);
-    text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
-footer p {
-    margin: 0.25rem 0;
+footer .footer-left,
+footer .footer-center,
+footer .footer-right {
+    text-align: center;
 }
 
-/* Style for footer links */
 footer a {
     color: var(--white);
     text-decoration: underline;
 }
 
 footer a:hover {
-    color: var(--hover-blue); /* Updated to pass AA on #1a1a1a */
+    color: var(--hover-blue);
     text-decoration: none;
 }
 
@@ -150,5 +165,10 @@ footer a:visited {
     }
     #menu {
         display: none;
+    }
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
     }
 }

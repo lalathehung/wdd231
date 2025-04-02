@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Welcome to the Hong Kong Chamber of Commerce, supporting local businesses and economic growth in Hong Kong." />
+    <meta name="author" content="Lok Yin Arthur Leung" />
+    <meta property="og:title" content="Hong Kong Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lalathehung.github.io/wdd231/chamber/images/logo.jpg">
+    <meta property="og:image:width" content="60">
+    <meta property="og:image:height" content="60">
+    <meta property="og:url" content="https://lalathehung.github.io/wdd231/chamber/index.html">
+    <meta property="og:description" content="Welcome to the Hong Kong Chamber of Commerce. Join us to enhance your business network and access exclusive resources.">
+    <title>Hong Kong Chamber of Commerce</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/home.js" defer></script>
+    <script src="https://kit.fontawesome.com/e0a574ddb0.js" crossorigin="anonymous"></script>
+</head>
+<body id="index-page">
+    <header>
+        <nav>
+            <div class="box-logo-header">
+                <img class="logo-chamber" src="images/logo.jpg" alt="Hong Kong Chamber of Commerce Logo" />
+                <p class="nameHeader">Hong Kong<br>Chamber of Commerce</p>
+                <button name="navigation button" id="menu" aria-label="Toggle menu"></button>
+            </div>
+            <ul>
+                <li><a class="nav-a active" href="index.html">Home</a></li>
+                <li><a class="nav-a" href="discover.html">Discover</a></li>
+                <li><a class="nav-a" href="directory.html">Directory</a></li>
+                <li><a class="nav-a" href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-main-box">
+            <picture class="hero-box-img">
+                <source media="(max-width: 600px)" srcset="images/hero-hk-410.webp">
+                <source media="(max-width: 800px)" srcset="images/hero-hk-600.webp">
+                <source media="(max-width: 1200px)" srcset="images/hero-hk-800.webp">
+                <source media="(min-width: 1201px)" srcset="images/hero-hk-1200.webp">
+                <img class="hero-home-img" src="images/hero-hk-410.webp" alt="Hong Kong cityscape">
+            </picture>
+            <div class="call-to-action">
+                <button class="join-us" name="join" onclick="window.location.href='join.html'">Keynote Tickets</button>
+            </div>
+        </section>
+        <section class="event-main-box">
+            <article class="event-main">
+                <h2>Events</h2>
+                <div id="events-list"></div>
+            </article>
+            <article class="weather-main" id="weather-main"></article>
+            <article class="weather-forecast" id="weather-forecast"></article>
+        </section>
+        <section class="spotlights-main-box"></section>
+    </main>
+    <footer>
+        <div class="footer-left">
+            <p>Hong Kong Chamber of Commerce</p>
+            <p>123 Business Road</p>
+            <p>Hong Kong</p>
+            <p><a href="mailto:info@hkcc.com">info@hkcc.com</a></p>
+            <p>+852 5119 5898</p>
+        </div>
+        <div class="footer-center">
+            <a href="https://youtube.com" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="footer-right">
+            <p>WDD231 W03 Assignment</p>
+            <p>Lok Yin Arthur Leung</p>
+            <p>© <span id="currentyear"></span> Hong Kong Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
