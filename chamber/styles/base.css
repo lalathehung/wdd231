@@ -22,6 +22,33 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    margin: 0;
+}
+
+#meeting-banner {
+    background-color: var(--yale-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+#meeting-banner p {
+    margin: 0;
+    font-size: var(--font-size-base);
+}
+
+#close-banner {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--white);
+    color: var(--king-kong);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 header {

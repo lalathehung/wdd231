@@ -1,12 +1,11 @@
 /* Home Page */
 main {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
     grid-template-rows: auto auto auto auto;
     justify-content: center;
     align-content: center;
     margin: 0 auto;
-    margin-top: 30px;
     row-gap: 20px;
 }
 
@@ -22,12 +21,8 @@ section h4 {
 .hero-main-box {
     grid-column: 2/3;
     grid-row: 2;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(3, auto);
-    justify-content: center;
-    align-content: center;
     position: relative;
+    width: 100%;
 }
 
 article {
@@ -40,21 +35,23 @@ article {
 }
 
 .hero-box-img {
-    grid-column: 1/4;
-    grid-row: 1/4;
-    margin: 0 auto;
+    width: 100%;
 }
 
 .hero-box-img img {
-    border-radius: 1px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px var(--film-noir);
     width: 100%;
     height: auto;
+    display: block;
 }
 
 .call-to-action {
-    grid-column: 1/4;
-    grid-row: 1/4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -110,9 +107,9 @@ article {
     text-align: center;
     gap: 20px;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 30px;
     color: var(--king-kong);
 }
 
@@ -124,6 +121,7 @@ article {
     background-color: #e6e6e6;
     border-radius: 8px;
     box-shadow: 0 4px 8px var(--film-noir);
+    width: 100%;
 }
 
 #events-list {
@@ -159,11 +157,6 @@ article {
 
 .weather-main {
     grid-row: 2;
-    width: 340px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .weather-main p {
@@ -177,7 +170,6 @@ article {
     justify-content: center;
     padding: 20px;
     width: 100%;
-    max-width: 350px;
     text-align: center;
 }
 
@@ -206,7 +198,7 @@ article {
 }
 
 .forecast {
-    width: 320px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -216,11 +208,12 @@ article {
 }
 
 .day-box {
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px var(--film-noir);
-    margin: 20px;
+    margin: 10px 0;
     padding: 15px;
 }
 
@@ -230,9 +223,8 @@ article {
     grid-row: 4;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
     gap: 20px;
-    padding: 40px;
+    padding: 40px 20px;
     margin-bottom: 50px;
     background-color: rgba(68, 57, 50, 0.56);
     border-radius: 8px;
@@ -248,7 +240,8 @@ article {
     padding: 20px;
     margin: 0 auto;
     text-align: center;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: auto;
     background-color: var(--white);
 }
@@ -316,8 +309,8 @@ article {
 
     .call-to-action {
         padding: 40px;
-        width: 450px;
-        height: 220px;
+        max-width: 450px;
+        margin: 0 auto;
     }
 
     .call-to-action h2 {
@@ -328,33 +321,24 @@ article {
         grid-row: 3;
         grid-column: 2;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
         gap: 20px;
     }
 
     .event-main {
         grid-row: 1/2;
         grid-column: 1/2;
-        width: 100%;
-        height: auto;
     }
 
     .weather-main {
         grid-row: 1/2;
         grid-column: 2/3;
-        width: 100%;
-        height: auto;
     }
 
     .weather-forecast {
         grid-row: 1/2;
         grid-column: 3/4;
-        width: 100%;
-        height: auto;
     }
 
     .forecast {
@@ -365,6 +349,11 @@ article {
         display: flex;
         flex-direction: row;
         gap: 20px;
+        justify-content: center;
+    }
+
+    .day-box {
+        margin: 0;
     }
 
     .spotlights-main-box {
@@ -373,36 +362,12 @@ article {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        margin-bottom: 50px;
         gap: 20px;
-        max-width: 100%;
-    }
-
-    .spot-card-01 {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .spot-card-02 {
-        grid-column: 2;
-        grid-row: 1;
-    }
-
-    .spot-card-03 {
-        grid-column: 3;
-        grid-row: 1;
+        padding: 40px;
     }
 
     .spot-card {
-        width: 250px;
+        max-width: 250px;
         height: 320px;
-        padding: 20px;
-        margin: 0;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px var(--king-kong);
     }
 }

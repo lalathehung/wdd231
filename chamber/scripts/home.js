@@ -6,6 +6,21 @@ const time = new Date();
 const day = time.getDay();
 const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
+// Meeting Banner
+document.addEventListener("DOMContentLoaded", () => {
+    const banner = document.getElementById("meeting-banner");
+    const closeButton = document.getElementById("close-banner");
+
+    // Show banner on Monday (1) and Tuesday (2)
+    if (day === 1 || day === 2) {
+        banner.style.display = "block";
+    }
+
+    closeButton.addEventListener("click", () => {
+        banner.style.display = "none";
+    });
+});
+
 // Spotlights
 document.addEventListener("DOMContentLoaded", () => {
     const spotlightsMainBox = document.querySelector(".spotlights-main-box");
@@ -53,7 +68,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             const member = shuffledData[i - 1];
             if (member) {
                 document.querySelector(`#business-name-0${i}`).textContent = member.name;
-                document.querySelector(`#tag-0${i}`).textContent = "Business Tag Line"; // Placeholder, as your members.json doesn't have an industry field
+                document.querySelector(`#tag-0${i}`).textContent = "Business Tag Line"; // Placeholder
                 document.querySelector(`#phone-0${i}`).textContent = member.phone;
                 document.querySelector(`#url-0${i}`).textContent = "Visit the website";
                 document.querySelector(`#url-0${i}`).href = member.website;
