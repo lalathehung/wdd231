@@ -2,7 +2,7 @@
 main {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto auto;
     justify-content: center;
     align-content: center;
     margin: 0 auto;
@@ -21,12 +21,13 @@ section h4 {
 
 .hero-main-box {
     grid-column: 2/3;
-    grid-row: 1;
+    grid-row: 2;
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(3, auto);
     justify-content: center;
     align-content: center;
+    position: relative;
 }
 
 article {
@@ -51,28 +52,41 @@ article {
     height: auto;
 }
 
-.call-to-action {
-    grid-column: 3/4;
-    grid-row: 2/3;
+.hero-overlay {
+    grid-column: 1/4;
+    grid-row: 1/4;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--white);
+    text-align: center;
     padding: 20px;
+}
+
+.hero-overlay h2 {
+    font-size: var(--font-size-extra-large);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .join-us {
     background-color: var(--big-fish-to-fry);
-    width: 150px;
-    height: 40px;
+    width: 200px;
+    height: 50px;
     border: 1px solid var(--lunar-base);
-    padding: 5px;
+    padding: 10px;
     text-align: center;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    font-size: var(--font-size-base);
+    font-family: 'Poppins', sans-serif;
     transition: background-color 0.3s ease, border-color 0.3s ease;
     color: var(--king-kong);
+    cursor: pointer;
 }
 
 .join-us:hover {
@@ -84,11 +98,11 @@ article {
 /* Event and Weather */
 .event-main-box {
     grid-column: 2/3;
-    grid-row: 2;
+    grid-row: 3;
     display: grid;
     grid-template-rows: auto auto auto;
     text-align: center;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
@@ -102,6 +116,7 @@ article {
     padding: 20px;
     margin: 0 auto;
     background-color: #e6e6e6;
+    border-radius: 8px;
 }
 
 #events-list {
@@ -113,10 +128,14 @@ article {
 .event {
     padding: 15px;
     text-align: left;
+    border-bottom: 1px solid var(--lunar-base);
+}
+
+.event:last-child {
+    border-bottom: none;
 }
 
 .event-main h2,
-.current-weather h3,
 .current-weather h2,
 .weather-forecast h3 {
     font-size: var(--font-size-extra-large);
@@ -205,7 +224,7 @@ article {
 /* Spotlights */
 .spotlights-main-box {
     grid-column: 2/3;
-    grid-row: 3;
+    grid-row: 4;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
@@ -213,6 +232,7 @@ article {
     padding: 40px;
     margin-bottom: 50px;
     background-color: #e6e6e6;
+    border-radius: 8px;
 }
 
 .spotlights-main-box p {
@@ -256,6 +276,16 @@ article {
     color: var(--king-kong);
 }
 
+.spot-img {
+    padding: 10px 0;
+}
+
+.spot-img img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 8px;
+}
+
 .spot-data {
     padding: 0px 20px;
 }
@@ -277,17 +307,20 @@ article {
 
 @media (min-width: 860px) {
     .hero-main-box {
-        grid-row: 1;
+        grid-row: 2;
         grid-column: 2;
     }
 
-    .call-to-action {
-        width: 200px;
-        height: auto;
+    .hero-overlay {
+        padding: 40px;
+    }
+
+    .hero-overlay h2 {
+        font-size: 2.5rem;
     }
 
     .event-main-box {
-        grid-row: 2;
+        grid-row: 3;
         grid-column: 2;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -329,7 +362,7 @@ article {
     }
 
     .spotlights-main-box {
-        grid-row: 3;
+        grid-row: 4;
         grid-column: 2;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -360,7 +393,7 @@ article {
 
     .spot-card {
         width: 250px;
-        height: 200px;
+        height: 300px;
         padding: 20px;
         margin: 0;
         border-radius: 10px;

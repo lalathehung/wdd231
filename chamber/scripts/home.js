@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const spotCard = document.createElement("div");
         spotCard.className = `spot-card spot-card-0${index}`;
         spotCard.innerHTML = `
+            <div class="spot-img">
+                <img src="" alt="" id="img-0${index}-spot">
+            </div>
             <div class="title-spot">
                 <h3 id="business-name-0${index}"></h3>
                 <h4 id="tag-0${index}"></h4>
@@ -49,12 +52,16 @@ document.addEventListener("DOMContentLoaded", async () => {
             const member = shuffledData[i - 1];
             if (member) {
                 document.querySelector(`#business-name-0${i}`).textContent = member.name;
-                document.querySelector(`#tag-0${i}`).textContent = "Business Tag Line"; // Placeholder
+                document.querySelector(`#tag-0${i}`).textContent = "Business Tag Line";
                 document.querySelector(`#email-0${i}`).textContent = `info@${member.name.toLowerCase().replace(/\s/g, '')}.com`;
                 document.querySelector(`#email-0${i}`).href = `mailto:info@${member.name.toLowerCase().replace(/\s/g, '')}.com`;
                 document.querySelector(`#phone-0${i}`).textContent = member.phone;
                 document.querySelector(`#url-0${i}`).textContent = member.website;
                 document.querySelector(`#url-0${i}`).href = member.website;
+                // Add logo
+                const img = document.querySelector(`#img-0${i}-spot`);
+                img.src = member.image;
+                img.alt = `${member.name} logo`;
             }
         }
     } catch (error) {
