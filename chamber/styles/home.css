@@ -61,8 +61,8 @@ article {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px var(--paragraph-background-color);
-    width: 100%; /* Full width on mobile */
-    height: auto; /* Auto height on mobile */
+    width: 100%;
+    height: auto;
 }
 
 .call-to-action h3 {
@@ -71,13 +71,13 @@ article {
     text-align: center;
     margin: 0;
     margin-bottom: 10px;
-    font-size: 1.5rem; /* Match reference site */
+    font-size: 1.5rem;
 }
 
 .call-to-action p {
     padding: 0;
-    text-align: center; /* Center text on mobile */
-    margin: 5px 0; /* Consistent spacing */
+    text-align: center; /* Center text on all views */
+    margin: 5px 0;
 }
 
 .join-us {
@@ -122,7 +122,7 @@ article {
 .weather-forecast {
     padding: 20px;
     margin: 0 auto;
-    background-color: var(--light-background);
+    background-color: #e6e6e6; /* Match reference site */
     border-radius: 8px;
     box-shadow: 0 4px 8px var(--paragraph-background-color);
     width: 100%;
@@ -309,7 +309,7 @@ article {
 .spot-card-02,
 .spot-card-03 {
     width: 250px;
-    height: 300px;
+    height: 320px;
     padding: 20px;
     margin: 0;
     border-radius: 10px;
@@ -348,11 +348,11 @@ article {
     }
 
     .call-to-action h3 {
-        font-size: 2rem; /* Match reference site */
+        font-size: 2rem;
     }
 
     .call-to-action p {
-        text-align: center; /* Center text on desktop */
+        text-align: center;
     }
 
     /* Event and Weather */
@@ -377,7 +377,7 @@ article {
         justify-content: center;
         align-items: center;
         text-align: center;
-        background-color: var(--light-background);
+        background-color: #e6e6e6;
         border-radius: 8px;
         box-shadow: 0 4px 8px var(--paragraph-background-color);
     }
