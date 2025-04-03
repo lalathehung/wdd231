@@ -61,6 +61,8 @@ article {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px var(--paragraph-background-color);
+    width: 100%; /* Full width on mobile */
+    height: auto; /* Auto height on mobile */
 }
 
 .call-to-action h3 {
@@ -69,12 +71,13 @@ article {
     text-align: center;
     margin: 0;
     margin-bottom: 10px;
+    font-size: 1.5rem; /* Match reference site */
 }
 
 .call-to-action p {
     padding: 0;
-    text-align: left;
-    margin: 0;
+    text-align: center; /* Center text on mobile */
+    margin: 5px 0; /* Consistent spacing */
 }
 
 .join-us {
@@ -106,17 +109,24 @@ article {
     display: grid;
     grid-template-rows: auto auto auto;
     text-align: center;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     margin: 0 auto;
     margin-top: 50px;
     color: var(--king-kong);
 }
 
-.event-main {
+.event-main,
+.weather-main,
+.weather-forecast {
     padding: 20px;
     margin: 0 auto;
+    background-color: var(--light-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--paragraph-background-color);
+    width: 100%;
+    min-height: 300px;
 }
 
 #events-list {
@@ -143,16 +153,11 @@ article {
 }
 
 .event p {
-    margin: 0;
+    margin: 5px 0;
 }
 
 .weather-main {
     grid-row: 2;
-    width: 340px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .weather-main p {
@@ -166,7 +171,6 @@ article {
     justify-content: center;
     padding: 20px;
     width: 100%;
-    max-width: 350px;
     text-align: center;
 }
 
@@ -197,7 +201,7 @@ article {
 }
 
 .forecast {
-    width: 320px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -207,11 +211,12 @@ article {
 }
 
 .day-box {
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px var(--paragraph-background-color);
-    margin: 20px;
+    margin: 10px 0;
     padding: 15px;
 }
 
@@ -238,7 +243,8 @@ article {
     padding: 20px;
     margin: 0 auto;
     text-align: center;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: auto;
 }
 
@@ -337,6 +343,16 @@ article {
     .call-to-action {
         width: 450px;
         height: 220px;
+        padding: 40px;
+        margin: 0 auto;
+    }
+
+    .call-to-action h3 {
+        font-size: 2rem; /* Match reference site */
+    }
+
+    .call-to-action p {
+        text-align: center; /* Center text on desktop */
     }
 
     /* Event and Weather */
@@ -354,12 +370,16 @@ article {
 
     .event-main,
     .weather-main {
-        width: 400px;
+        width: 100%;
         height: auto;
+        min-height: 300px;
         margin: 0 auto;
         justify-content: center;
         align-items: center;
         text-align: center;
+        background-color: var(--light-background);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px var(--paragraph-background-color);
     }
 
     .event-main {
