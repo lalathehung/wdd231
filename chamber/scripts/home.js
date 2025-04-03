@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const banner = document.getElementById("meeting-banner");
     const closeButton = document.getElementById("close-banner");
 
-    // Show banner on Monday (1) and Tuesday (2)
     if (day === 1 || day === 2) {
         banner.style.display = "block";
     }
@@ -23,8 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Spotlights
 document.addEventListener("DOMContentLoaded", () => {
-    const spotlightsMainBox = document.querySelector(".spotlights-main-box");
-    spotlightsMainBox.innerHTML = "";
+    const spotlights = document.querySelector(".spotlights");
+    spotlights.innerHTML = "";
 
     const createSpotCard = (index) => {
         const spotCard = document.createElement("div");
@@ -47,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     for (let i = 1; i <= 3; i++) {
-        spotlightsMainBox.appendChild(createSpotCard(i));
+        spotlights.appendChild(createSpotCard(i));
     }
 });
 
@@ -56,12 +55,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         const response = await fetch("data/members.json");
         const data = await response.json();
 
-        // Filter for Silver and Gold members (membership levels 2 and 3)
         const eligibleMembers = data.filter(member => 
             member.membership === 2 || member.membership === 3
         );
 
-        // Shuffle and select 3 members
         const shuffledData = eligibleMembers.sort(() => 0.5 - Math.random()).slice(0, 3);
 
         for (let i = 1; i <= 3; i++) {
@@ -102,8 +99,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const displayResults = (data) => {
-        const eventMainBox = document.querySelector("#weather-main");
-        eventMainBox.innerHTML = "";
+        const weather = document.querySelector("#weather");
+        weather.innerHTML = "";
 
         const descriptions = data.weather.map(event => {
             return event.description
@@ -112,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 .join(' ');
         }).join(', ');
 
-        eventMainBox.innerHTML = `
+        weather.innerHTML = `
             <div class="current-weather">
                 <h2>The Current Weather in: <span id="city-name">${data.name}</span></h2>
                 <h4>${weekdays[day]}</h4>
@@ -150,12 +147,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const displayResultsForecast = (forecastData) => {
-        const weatherForecast = document.querySelector("#weather-forecast");
-        weatherForecast.innerHTML = "";
+        const forecast = document.querySelector("#forecast");
+        forecast.innerHTML = "";
 
         const dailyForecasts = forecastData.list.filter((_, index) => index % 8 === 0).slice(0, 3);
 
-        weatherForecast.innerHTML = `
+        forecast.innerHTML = `
             <h3>3-Day Weather Forecast</h3>
             <div class="main-day-box">
                 <div class="day-box">
