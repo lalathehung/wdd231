@@ -20,7 +20,7 @@ section h4 {
 
 .hero-main-box {
     grid-column: 2/3;
-    grid-row: 1; /* Adjusted to account for removal of h1 */
+    grid-row: 2;
     position: relative;
     width: 100%;
 }
@@ -61,8 +61,6 @@ article {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px var(--paragraph-background-color);
-    width: 100%;
-    height: auto;
 }
 
 .call-to-action h3 {
@@ -71,13 +69,12 @@ article {
     text-align: center;
     margin: 0;
     margin-bottom: 10px;
-    font-size: 1.5rem;
 }
 
 .call-to-action p {
     padding: 0;
-    text-align: center;
-    margin: 5px 0;
+    text-align: left;
+    margin: 0;
 }
 
 .join-us {
@@ -105,13 +102,13 @@ article {
 /* Event and Weather */
 .event-main-box {
     grid-column: 2/3;
-    grid-row: 2; /* Adjusted to account for removal of h1 */
+    grid-row: 3;
     display: grid;
     grid-template-rows: auto auto auto;
     text-align: center;
-    gap: 20px;
+    gap: 20px; /* Increased gap for better spacing */
     justify-content: center;
-    align-items: stretch;
+    align-items: stretch; /* Ensure cards stretch to fill space */
     margin: 0 auto;
     margin-top: 50px;
     color: var(--king-kong);
@@ -122,11 +119,11 @@ article {
 .weather-forecast {
     padding: 20px;
     margin: 0 auto;
-    background-color: #e6e6e6;
+    background-color: var(--light-background);
     border-radius: 8px;
     box-shadow: 0 4px 8px var(--paragraph-background-color);
     width: 100%;
-    min-height: 300px;
+    min-height: 300px; /* Ensure consistent height */
 }
 
 #events-list {
@@ -223,7 +220,7 @@ article {
 /* Spotlights */
 .spotlights-main-box {
     grid-column: 2/3;
-    grid-row: 3; /* Adjusted to account for removal of h1 */
+    grid-row: 4;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
@@ -309,7 +306,7 @@ article {
 .spot-card-02,
 .spot-card-03 {
     width: 250px;
-    height: 320px;
+    height: 300px;
     padding: 20px;
     margin: 0;
     border-radius: 10px;
@@ -336,28 +333,18 @@ article {
     }
 
     .hero-main-box {
-        grid-row: 1;
+        grid-row: 2;
         grid-column: 2;
     }
 
     .call-to-action {
         width: 450px;
         height: 220px;
-        padding: 40px;
-        margin: 0 auto;
-    }
-
-    .call-to-action h3 {
-        font-size: 2rem;
-    }
-
-    .call-to-action p {
-        text-align: center;
     }
 
     /* Event and Weather */
     .event-main-box {
-        grid-row: 2;
+        grid-row: 3;
         grid-column: 2;
         display: grid;
         grid-template-columns: 1fr 1fr; /* 2 columns for events and weather */
@@ -370,14 +357,14 @@ article {
 
     .event-main,
     .weather-main {
-        width: 100%;
+        width: 100%; /* Full width of their grid cell */
         height: auto;
-        min-height: 300px;
+        min-height: 300px; /* Consistent height */
         margin: 0 auto;
         justify-content: center;
         align-items: center;
         text-align: center;
-        background-color: #e6e6e6;
+        background-color: var(--light-background);
         border-radius: 8px;
         box-shadow: 0 4px 8px var(--paragraph-background-color);
     }
@@ -409,7 +396,7 @@ article {
 
     /* Spotlights */
     .spotlights-main-box {
-        grid-row: 3;
+        grid-row: 4;
         grid-column: 2;
         display: grid;
         grid-template-columns: auto auto auto;
