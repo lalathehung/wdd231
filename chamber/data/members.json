@@ -5,7 +5,8 @@
         "phone": "(852) 2762 6900",
         "website": "https://www.tomleemusic.com.hk",
         "image": "https://lalathehung.github.io/wdd231/chamber/images/tomlee.jpg",
-        "membership": 1
+        "membership": 1,
+        "industry": "Music Retail"
     },
     {
         "name": "Television Broadcasts Limited",
@@ -13,7 +14,8 @@
         "phone": "(852) 2335 2288",
         "website": "https://www.tvb.com",
         "image": "https://lalathehung.github.io/wdd231/chamber/images/tvb.png",
-        "membership": 2
+        "membership": 2,
+        "industry": "Broadcasting"
     },
     {
         "name": "Vita Green",
@@ -21,7 +23,8 @@
         "phone": "(852) 2901 6000",
         "website": "https://www.vitagreen.com",
         "image": "https://lalathehung.github.io/wdd231/chamber/images/vitagreen.png",
-        "membership": 3
+        "membership": 3,
+        "industry": "Health Products"
     },
     {
         "name": "Vitasoy",
@@ -29,7 +32,8 @@
         "phone": "(852) 2468 9645",
         "website": "https://www.vitasoy.com",
         "image": "https://lalathehung.github.io/wdd231/chamber/images/vitasoy.png",
-        "membership": 1
+        "membership": 1,
+        "industry": "Beverages"
     },
     {
         "name": "VTech Electronics (HK) Limited",
@@ -37,7 +41,8 @@
         "phone": "(852) 2666 5558",
         "website": "https://hktoys.vtech.com",
         "image": "https://lalathehung.github.io/wdd231/chamber/images/vtech.png",
-        "membership": 2
+        "membership": 2,
+        "industry": "Electronics"
     },
     {
         "name": "CMB Wing Lung Bank",
@@ -45,7 +50,8 @@
         "phone": "(852) 2530 5798",
         "website": "https://www.cmbwinglungbank.com",
         "image": "https://lalathehung.github.io/wdd231/chamber/images/winglungbank.png",
-        "membership": 3
+        "membership": 3,
+        "industry": "Banking"
     },
     {
         "name": "Hong Kong Wing Wah Cake Shop",
@@ -53,6 +59,7 @@
         "phone": "(852) 2477 9947",
         "website": "https://www.wingwah.com/en/",
         "image": "https://lalathehung.github.io/wdd231/chamber/images/wingwah.png",
-        "membership": 1
+        "membership": 1,
+        "industry": "Bakery"
     }
 ]
