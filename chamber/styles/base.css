@@ -1,4 +1,4 @@
-::root {
+:root {
     /* CSS HEX */
     --black: #000000;
     --king-kong: #171210;
@@ -9,6 +9,7 @@
     --oxford-blue: #0a1f44;
     --alice-blue: #f0f8ff;
     --yale-blue: #00356b;
+    --eerie-black: #1a1a1a; /* Added to fix validation error */
 
     /* Fonts */
     --poppins-heading-font: "Poppins", sans-serif;
@@ -77,7 +78,7 @@ p {
     text-align: center;
     padding: 10px;
     position: relative;
-    display: none; /* Moved from inline style in index.html */
+    display: none;
 }
 
 #meeting-banner p {
