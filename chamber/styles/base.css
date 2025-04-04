@@ -74,10 +74,11 @@ p {
 
 main h1 {
     text-align: center; /* Center the text within the h1 */
-    margin: 20px 0; /* Add some spacing for visual balance */
+    margin: 20px auto; /* Center the h1 element with auto margins */
     font-size: var(--font-size-extra-large); /* Match directory page prominence */
     color: var(--king-kong); /* Match the color scheme */
-    width: 100%; /* Ensure the h1 takes up the full width of its grid column */
+    width: 100%; /* Ensure the h1 takes up the full width of its container */
+    max-width: 1024px; /* Match the max-width of the main container for consistency */
     box-sizing: border-box; /* Include padding/margin in width calculation */
 }
 
@@ -174,7 +175,7 @@ nav ul {
 }
 
 nav li {
-    display: none;
+    display: none; /* Hide navigation links by default on mobile */
     font-family: var(--poppins-heading-font);
     font-weight: var(--poppins-bold-font-weight);
     font-style: var(--poppins-regular-font-style);
@@ -203,11 +204,11 @@ nav li:last-child {
 }
 
 .open li {
-    display: block;
+    display: block; /* Show navigation links when the menu is open on mobile */
 }
 
 #menu.open::before {
-    content: "X";
+    content: "X"; /* Change the hamburger menu icon to "X" when open */
 }
 
 /* Footer */
@@ -247,7 +248,7 @@ footer a:hover {
     color: var(--yale-blue);
 }
 
-/* Larger Views */
+/* Larger Views (Desktop) */
 @media (min-width: 860px) {
     header {
         flex-wrap: wrap;
@@ -272,13 +273,13 @@ footer a:hover {
     }
 
     nav ul {
-        display: flex;
+        display: flex; /* Display navigation links side by side */
         align-items: center;
         justify-content: center;
     }
 
     nav ul li {
-        display: block;
+        display: block; /* Show navigation links on desktop */
         flex: 1 1 auto;
     }
 
@@ -332,7 +333,7 @@ footer a:hover {
     }
 
     #menu {
-        display: none;
+        display: none; /* Hide the hamburger menu on desktop */
     }
 
     footer {
