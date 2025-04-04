@@ -75,6 +75,11 @@ p {
 main h1 {
     text-align: center; /* Center the h1 in the main tag */
     margin: 20px 0; /* Add some spacing for visual balance */
+    background-color: var(--yale-blue); /* Add a background to make centering more distinct */
+    color: var(--white); /* White text for contrast */
+    padding: 10px 20px; /* Add padding for better appearance */
+    border-radius: var(--border-radius); /* Rounded corners */
+    box-shadow: var(--box-shadow); /* Add a shadow for depth */
 }
 
 #meeting-banner {
