@@ -10,6 +10,13 @@ main {
     row-gap: 20px;
 }
 
+main h1 {
+    grid-column: 2/3; /* Explicitly place the h1 in the middle column */
+    text-align: center; /* Ensure text is centered */
+    width: 100%; /* Ensure the h1 takes up the full width of the column */
+    box-sizing: border-box; /* Include padding/margin in width calculation */
+}
+
 section {
     margin: 0 auto;
 }
