@@ -14,15 +14,19 @@ const weekdays = [
     "Saturday",
 ];
 
-// Hamburger Menu Toggle
+// Hamburger Menu Toggle (Isolated to ensure it executes regardless of API errors)
 document.addEventListener("DOMContentLoaded", () => {
     const menuButton = document.getElementById("menu");
     const nav = document.querySelector("nav");
 
-    menuButton.addEventListener("click", () => {
-        nav.classList.toggle("open");
-        menuButton.classList.toggle("open");
-    });
+    if (menuButton && nav) {
+        menuButton.addEventListener("click", () => {
+            nav.classList.toggle("open");
+            menuButton.classList.toggle("open");
+        });
+    } else {
+        console.error("Menu button or nav element not found!");
+    }
 });
 
 // Meeting Banner
@@ -30,44 +34,48 @@ document.addEventListener("DOMContentLoaded", () => {
     const banner = document.getElementById("meeting-banner");
     const closeButton = document.getElementById("close-banner");
 
-    if (day === 1 || day === 2) {
-        banner.style.display = "block";
-    }
+    if (banner && closeButton) {
+        if (day === 1 || day === 2) {
+            banner.style.display = "block";
+        }
 
-    closeButton.addEventListener("click", () => {
-        banner.style.display = "none";
-    });
+        closeButton.addEventListener("click", () => {
+            banner.style.display = "none";
+        });
+    }
 });
 
 // Spotlights
 document.addEventListener("DOMContentLoaded", () => {
     const spotlightsMainBox = document.querySelector(".spotlights-main-box");
-    spotlightsMainBox.innerHTML = "";
+    if (spotlightsMainBox) {
+        spotlightsMainBox.innerHTML = "";
 
-    const createSpotCard = (index) => {
-        const spotCard = document.createElement("div");
-        spotCard.className = `spot-card spot-card-0${index}`;
+        const createSpotCard = (index) => {
+            const spotCard = document.createElement("div");
+            spotCard.className = `spot-card spot-card-0${index}`;
 
-        spotCard.innerHTML = `
-            <div class="title-spot">
-                <h4 id="business-name-0${index}"></h4>
-                <h3 id="tag0${index}"></h3>
-            </div>
-            <div class="spot-img">
-                <img src="" alt="" id="img-0${index}-spot" width="80px">
-            </div>
-            <div class="spot-data">
-                <p><span id="phone-0${index}"></span></p>
-                <p><a href="" id="url-0${index}"></a></p>
-                <p><span id="member-since-0${index}"></span></p>
-            </div>
-        `;
+            spotCard.innerHTML = `
+                <div class="title-spot">
+                    <h4 id="business-name-0${index}"></h4>
+                    <h3 id="tag0${index}"></h3>
+                </div>
+                <div class="spot-img">
+                    <img src="" alt="" id="img-0${index}-spot" width="80px">
+                </div>
+                <div class="spot-data">
+                    <p><span id="phone-0${index}"></span></p>
+                    <p><a href="" id="url-0${index}"></a></p>
+                    <p><span id="member-since-0${index}"></span></p>
+                </div>
+            `;
 
-        return spotCard;
-    };
+            return spotCard;
+        };
 
-    for (let i = 1; i <= 3; i++) {
-        spotlightsMainBox.appendChild(createSpotCard(i));
+        for (let i = 1; i <= 3; i++) {
+            spotlightsMainBox.appendChild(createSpotCard(i));
+        }
     }
 });
 
@@ -98,6 +106,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     try {
         const response = await fetch("data/members.json");
+        if (!response.ok) {
+            throw new Error(`Failed to fetch members.json: ${response.statusText}`);
+        }
         const data = await response.json();
 
         const shuffledData = data.sort(() => 0.5 - Math.random()).filter(member => member.membership === 2 || member.membership === 3);
@@ -147,7 +158,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
         });
     } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error("Error fetching members data:", error);
     }
 });
 
@@ -161,32 +172,39 @@ document.addEventListener("DOMContentLoaded", () => {
                 const data = await response.json();
                 displayResults(data);
             } else {
-                throw new Error(await response.text());
+                throw new Error(`Weather API request failed: ${await response.text()}`);
             }
         } catch (error) {
-            console.error(error);
+            console.error("Error fetching weather data:", error);
+            // Display a fallback message if the API fails
+            const eventMainBox = document.querySelector("#weather-main");
+            if (eventMainBox) {
+                eventMainBox.innerHTML = "<p>Unable to load weather data. Please try again later.</p>";
+            }
         }
     }
 
     const displayResults = (data) => {
         const eventMainBox = document.querySelector("#weather-main");
-        eventMainBox.innerHTML = "";
+        if (eventMainBox) {
+            eventMainBox.innerHTML = "";
 
-        const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-        let desc = data.weather[0].description;
+            const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+            let desc = data.weather[0].description;
 
-        eventMainBox.innerHTML = `
-            <div class="current-weather">
-                <h2>The current Weather in: <span id="city-name">${data.name}</span></h2>
-                <h4>${weekdays[day]}</h4>
-                <div class="weather-content"></div>
-                <p>Temperature <span id="current-temp">${parseFloat(data.main.temp).toFixed(0)}°F</span></p>
-                <figure>
-                    <img id="weather-icon" src="${iconsrc}" alt="${desc}">
-                    <figcaption>${desc}</figcaption>
-                </figure>
-            </div>
-        `;
+            eventMainBox.innerHTML = `
+                <div class="current-weather">
+                    <h2>The current Weather in: <span id="city-name">${data.name}</span></h2>
+                    <h4>${weekdays[day]}</h4>
+                    <div class="weather-content"></div>
+                    <p>Temperature <span id="current-temp">${parseFloat(data.main.temp).toFixed(0)}°F</span></p>
+                    <figure>
+                        <img id="weather-icon" src="${iconsrc}" alt="${desc}">
+                        <figcaption>${desc}</figcaption>
+                    </figure>
+                </div>
+            `;
+        }
     };
 
     apiFetch();
@@ -202,62 +220,69 @@ document.addEventListener("DOMContentLoaded", () => {
                 const forecastData = await response.json();
                 displayResultsForecast(forecastData);
             } else {
-                throw new Error(await response.text());
+                throw new Error(`Forecast API request failed: ${await response.text()}`);
             }
         } catch (error) {
-            console.log(error);
+            console.error("Error fetching forecast data:", error);
+            // Display a fallback message if the API fails
+            const weatherForecast = document.querySelector("#weather-forecast");
+            if (weatherForecast) {
+                weatherForecast.innerHTML = "<p>Unable to load forecast data. Please try again later.</p>";
+            }
         }
     }
 
     const displayResultsForecast = (forecastData) => {
         const weatherForecast = document.querySelector("#weather-forecast");
-        weatherForecast.innerHTML = "";
+        if (weatherForecast) {
+            weatherForecast.innerHTML = "";
 
-        const forecast = document.createElement("article");
-        forecast.className = "forecast";
-        forecast.innerHTML = `
-            <h3>3-Days Weather Forecast</h3>
-            <div class="main-day-box">
-                <div class="day-box">
-                    <h4 id="day-01">${weekdays[(day + 1) % 7]}</h4>
-                    <figure>
-                        <img id="weather-icon-1" src="" alt="">
-                        <figcaption id="figcaption-1"></figcaption>
-                    </figure>
-                    <p>Temperature: <span id="temp-1"></span></p>
+            const forecast = document.createElement("article");
+            forecast.className = "forecast";
+            forecast.innerHTML = `
+                <h3>3-Days Weather Forecast</h3>
+                <div class="main-day-box">
+                    <div class="day-box">
+                        <h4 id="day-01">${weekdays[(day + 1) % 7]}</h4>
+                        <figure>
+                            <img id="weather-icon-1" src="" alt="">
+                            <figcaption id="figcaption-1"></figcaption>
+                        </figure>
+                        <p>Temperature: <span id="temp-1"></span></p>
+                    </div>
+                    <div class="day-box">
+                        <h4 id="day-02">${weekdays[(day + 2) % 7]}</h4>
+                        <figure>
+                            <img id="weather-icon-2" src="" alt="">
+                            <figcaption id="figcaption-2"></figcaption>
+                        </figure>
+                        <p>Temperature: <span id="temp-2"></span></p>
+                    </div>
+                    <div class="day-box">
+                        <h4 id="day-03">${weekdays[(day + 3) % 7]}</h4>
+                        <figure>
+                            <img id="weather-icon-3" src="" alt="">
+                            <figcaption id="figcaption-3"></figcaption>
+                        </figure>
+                        <p>Temperature: <span id="temp-3"></span></p>
+                    </div>
                 </div>
-                <div class="day-box">
-                    <h4 id="day-02">${weekdays[(day + 2) % 7]}</h4>
-                    <figure>
-                        <img id="weather-icon-2" src="" alt="">
-                        <figcaption id="figcaption-2"></figcaption>
-                    </figure>
-                    <p>Temperature: <span id="temp-2"></span></p>
-                </div>
-                <div class="day-box">
-                    <h4 id="day-03">${weekdays[(day + 3) % 7]}</h4>
-                    <figure>
-                        <img id="weather-icon-3" src="" alt="">
-                        <figcaption id="figcaption-3"></figcaption>
-                    </figure>
-                    <p>Temperature: <span id="temp-3"></span></p>
-                </div>
-            </div>
-        `;
-        weatherForecast.appendChild(forecast);
+            `;
+            weatherForecast.appendChild(forecast);
 
-        const dailyForecasts = forecastData.list.slice(0, 3);
-        dailyForecasts.forEach((dailyData, index) => {
-            document.getElementById(
-                `weather-icon-${index + 1}`
-            ).src = `https://openweathermap.org/img/wn/${dailyData.weather[0].icon}@2x.png`;
-            document.getElementById(`figcaption-${index + 1}`).textContent =
-                dailyData.weather[0].description;
+            const dailyForecasts = forecastData.list.slice(0, 3);
+            dailyForecasts.forEach((dailyData, index) => {
+                document.getElementById(
+                    `weather-icon-${index + 1}`
+                ).src = `https://openweathermap.org/img/wn/${dailyData.weather[0].icon}@2x.png`;
+                document.getElementById(`figcaption-${index + 1}`).textContent =
+                    dailyData.weather[0].description;
 
-            document.getElementById(
-                `temp-${index + 1}`
-            ).textContent = `${parseFloat(dailyData.main.temp).toFixed(0)}°F`;
-        });
+                document.getElementById(
+                    `temp-${index + 1}`
+                ).textContent = `${parseFloat(dailyData.main.temp).toFixed(0)}°F`;
+            });
+        }
     };
 
     apiForecastFetch();
@@ -266,6 +291,9 @@ document.addEventListener("DOMContentLoaded", () => {
 async function getEvents() {
     try {
         const response = await fetch("data/events.json");
+        if (!response.ok) {
+            throw new Error(`Failed to fetch events.json: ${response.statusText}`);
+        }
         const data = await response.json();
         return data.events;
     } catch (error) {
@@ -278,28 +306,30 @@ async function displayEvents() {
     const events = await getEvents();
     const eventsContainer = document.getElementById("events-list");
 
-    eventsContainer.innerHTML = "";
+    if (eventsContainer) {
+        eventsContainer.innerHTML = "";
 
-    if (events.length === 0) {
-        eventsContainer.innerHTML = "<p>No upcoming events at this time.</p>";
-        return;
+        if (events.length === 0) {
+            eventsContainer.innerHTML = "<p>No upcoming events at this time.</p>";
+            return;
+        }
+
+        events.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+        const nextEvents = events.slice(0, 3);
+
+        nextEvents.forEach((event) => {
+            const eventElement = document.createElement("div");
+            eventElement.classList.add("event");
+
+            eventElement.innerHTML = `
+                <h3>${event.name}</h3>
+                <p>Date: ${new Date(event.date).toDateString()}</p>
+            `;
+
+            eventsContainer.appendChild(eventElement);
+        });
     }
-
-    events.sort((a, b) => new Date(a.date) - new Date(b.date));
-
-    const nextEvents = events.slice(0, 3);
-
-    nextEvents.forEach((event) => {
-        const eventElement = document.createElement("div");
-        eventElement.classList.add("event");
-
-        eventElement.innerHTML = `
-            <h3>${event.name}</h3>
-            <p>Date: ${new Date(event.date).toDateString()}</p>
-        `;
-
-        eventsContainer.appendChild(eventElement);
-    });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
