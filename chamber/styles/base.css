@@ -72,6 +72,11 @@ p {
     font-style: var(--open-sans-font-style);
 }
 
+main h1 {
+    text-align: center; /* Center the h1 in the main tag */
+    margin: 20px 0; /* Add some spacing for visual balance */
+}
+
 #meeting-banner {
     background-color: var(--yale-blue);
     color: var(--white);
@@ -118,20 +123,19 @@ header {
     justify-content: left;
 }
 
-.box-logo-header h1 {
-    display: inline-block;
-}
-
 .logo-chamber {
     width: 70px;
     padding: 10px 5px;
 }
 
-header h1 {
+.nameHeader {
     display: inline-block;
     text-align: left;
     padding: 5px;
     font-size: var(--font-size-base);
+    font-family: var(--poppins-heading-font);
+    font-weight: var(--poppins-bold-font-weight);
+    font-style: var(--poppins-regular-font-style);
 }
 
 /* Mobile Hamburger Menu */
@@ -258,7 +262,7 @@ footer a:hover {
         width: 80px;
     }
 
-    header h1 {
+    .nameHeader {
         padding: 10px 0;
         font-size: var(--font-size-large);
     }

@@ -14,6 +14,17 @@ const weekdays = [
     "Saturday",
 ];
 
+// Hamburger Menu Toggle
+document.addEventListener("DOMContentLoaded", () => {
+    const menuButton = document.getElementById("menu");
+    const nav = document.querySelector("nav");
+
+    menuButton.addEventListener("click", () => {
+        nav.classList.toggle("open");
+        menuButton.classList.toggle("open");
+    });
+});
+
 // Meeting Banner
 document.addEventListener("DOMContentLoaded", () => {
     const banner = document.getElementById("meeting-banner");
