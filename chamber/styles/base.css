@@ -73,8 +73,12 @@ p {
 }
 
 main h1 {
-    text-align: center; /* Center the h1 in the main tag */
+    text-align: center; /* Center the text within the h1 */
     margin: 20px 0; /* Add some spacing for visual balance */
+    font-size: var(--font-size-extra-large); /* Match directory page prominence */
+    color: var(--king-kong); /* Match the color scheme */
+    width: 100%; /* Ensure the h1 takes up the full width of its grid column */
+    box-sizing: border-box; /* Include padding/margin in width calculation */
 }
 
 #meeting-banner {
