@@ -1,15 +1,17 @@
 /* Join Page */
 main {
     max-width: 1024px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-    gap: 1em;
     margin: 0 auto;
     padding: 20px;
 }
 
+.content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 1em;
+}
+
 main h1 {
-    grid-column: 1 / -1; /* Span all columns to ensure centering within the grid */
     text-align: center;
     margin: 20px auto;
     font-size: var(--font-size-extra-large);
