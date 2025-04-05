@@ -8,6 +8,17 @@ main {
     padding: 20px;
 }
 
+main h1 {
+    grid-column: 1 / -1; /* Span all columns to ensure centering within the grid */
+    text-align: center;
+    margin: 20px auto;
+    font-size: var(--font-size-extra-large);
+    color: var(--king-kong);
+    width: 100%;
+    max-width: 1024px;
+    box-sizing: border-box;
+}
+
 .sub-title-form,
 .sub-title-member {
     color: var(--headline-color-on-white);
