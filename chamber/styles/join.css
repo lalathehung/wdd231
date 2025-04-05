@@ -7,7 +7,6 @@ main {
 
 .content-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     gap: 1em;
 }
 
@@ -182,4 +181,19 @@ dialog button {
     color: var(--white);
     border-radius: 5px;
     cursor: pointer;
+}
+
+/* Media Query for Desktop Layout */
+@media (min-width: 860px) {
+    .content-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    form {
+        grid-column: 1;
+    }
+
+    .membership-container {
+        grid-column: 2;
+    }
 }
