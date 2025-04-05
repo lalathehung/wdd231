@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Join | Hong Kong Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lalathehung.github.io/wdd231/chamber/images/logo.jpg">
+    <meta property="og:url" content="https://lalathehung.github.io/wdd231/chamber/join.html">
+    <meta property="og:description" content="Join the Hong Kong Chamber of Commerce to enhance your business network and access exclusive resources.">
+    <meta property="fb:app_id" content="your-app-id-here">
+    <title>Join | Hong Kong Chamber of Commerce</title>
+    <meta name="description" content="Join the Hong Kong Chamber of Commerce" />
+    <meta name="author" content="Lok Yin Arthur Leung" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/join.css" />
+    <script src="scripts/join.js" defer></script>
+    <link rel="icon" href="images/favicon.ico" sizes="48x48" type="image/ico">
+    <script src="https://kit.fontawesome.com/e0a574ddb0.js" crossorigin="anonymous"></script>
+</head>
+<body id="join-page">
+    <div id="meeting-banner">
+        <p>🤝 Join us for the Chamber of Commerce Meet & Greet this Wednesday at 7:00 PM!</p>
+        <button id="close-banner">Close</button>
+    </div>
+    <header>
+        <nav>
+            <div class="box-logo-header">
+                <img class="logo-chamber" src="images/logo.jpg" alt="Hong Kong Chamber of Commerce Logo" />
+                <p class="nameHeader">Hong Kong<br>Chamber of Commerce</p>
+                <button name="navigation button" id="menu" aria-label="Toggle menu"></button>
+            </div>
+            <ul>
+                <li><a class="nav-a" href="index.html">Home</a></li>
+                <li><a class="nav-a" href="discover.html">Discover</a></li>
+                <li><a class="nav-a" href="directory.html">Directory</a></li>
+                <li><a class="nav-a active" href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form method="get" action="thankyou.html">
+            <h2 class="sub-title-form">Membership Application</h2>
+            <label>
+                First Name:
+                <input type="text" name="firstName" title="Enter your first name" autocomplete="given-name" required placeholder="First">
+            </label>
+            <label>
+                Last Name:
+                <input type="text" name="lastName" title="Enter your last name" autocomplete="family-name" required placeholder="Last">
+            </label>
+            <label>
+                Organizational Title:
+                <input type="text" name="organizationTitle" title="Enter your organizational title (minimum 7 characters, letters, hyphens, spaces only)" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" required>
+            </label>
+            <label>
+                Email Address:
+                <input type="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@email.com" required>
+            </label>
+            <label>
+                Mobile Phone Number:
+                <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required placeholder="+852 1234 5678">
+            </label>
+            <label>
+                Business/Organization Name:
+                <input type="text" name="organization" title="Enter your business or organization name" autocomplete="organization" required>
+            </label>
+            <label>
+                Membership Level:
+                <select name="membershipLevel" required>
+                    <option value="" disabled selected>Select a membership level</option>
+                    <option value="NP">NP Membership (Non-Profit)</option>
+                    <option value="Bronze">Bronze Membership</option>
+                    <option value="Silver">Silver Membership</option>
+                    <option value="Gold">Gold Membership</option>
+                </select>
+            </label>
+            <label>
+                Business/Organization Description:
+                <textarea name="organizationDescription" title="Describe your business or organization" rows="4" cols="50"></textarea>
+            </label>
+            <input type="hidden" name="timestamp" id="timestamp" value="">
+            <button class="join-us" type="submit">Submit Application</button>
+        </form>
+
+        <section class="membership-container">
+            <h2 class="sub-title-member">Membership Levels</h2>
+            <div class="card">
+                <h3>Non-Profit Membership</h3>
+                <button class="css-button-arrow--black" id="npButton" aria-label="Learn more about Non-Profit Membership">
+                    <span class="visually-hidden">Learn More</span>
+                </button>
+            </div>
+            <div class="card">
+                <h3>Bronze Membership</h3>
+                <button class="css-button-arrow--black" id="bronzeButton" aria-label="Learn more about Bronze Membership">
+                    <span class="visually-hidden">Learn More</span>
+                </button>
+            </div>
+            <div class="card">
+                <h3>Silver Membership</h3>
+                <button class="css-button-arrow--black" id="silverButton" aria-label="Learn more about Silver Membership">
+                    <span class="visually-hidden">Learn More</span>
+                </button>
+            </div>
+            <div class="card">
+                <h3>Gold Membership</h3>
+                <button class="css-button-arrow--black" id="goldButton" aria-label="Learn more about Gold Membership">
+                    <span class="visually-hidden">Learn More</span>
+                </button>
+            </div>
+        </section>
+
+        <dialog id="npModal"></dialog>
+        <dialog id="bronzeModal"></dialog>
+        <dialog id="silverModal"></dialog>
+        <dialog id="goldModal"></dialog>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p>Hong Kong Chamber of Commerce</p>
+            <p>123 Business Road</p>
+            <p>Hong Kong</p>
+            <p><a href="mailto:info@hkcc.com">info@hkcc.com</a></p>
+            <p>+852 5119 5898</p>
+        </div>
+        <div class="footer-center">
+            <a href="https://youtube.com" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="footer-right">
+            <p>WDD231 Class Project</p>
+            <p>Lok Yin Arthur Leung</p>
+            <p>© <span id="currentyear"></span> Hong Kong Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>

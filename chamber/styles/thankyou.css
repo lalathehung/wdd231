@@ -1,0 +1,96 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+#menu {
+    display: none;
+}
+
+.thank-you-section {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #1712101d;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    font-family: var(--open-sans-paragraph-font);
+    color: var(--paragraph-color-on-white);
+    font-weight: bold;
+}
+
+.thank-you-section h2 {
+    font-size: var(--font-size-extra-large);
+    margin-bottom: 20px;
+    color: var(--headline-color-on-white);
+    font-family: var(--poppins-heading-font);
+    font-weight: var(--poppins-bold-font-weight);
+}
+
+.thank-you-section h3 {
+    font-size: var(--font-size-large);
+    margin-bottom: 15px;
+    color: var(--headline-color-on-white);
+    font-family: var(--poppins-heading-font);
+    font-weight: var(--poppins-bold-font-weight);
+}
+
+.thank-you-section p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: var(--font-size-base);
+}
+
+.form-data-display p {
+    margin: 10px 0;
+}
+
+.form-data-display span {
+    font-weight: normal;
+}
+
+.discover-link,
+.join-us {
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.discover-link {
+    color: var(--headline-color-on-white);
+}
+
+.thank-you-section a:hover {
+    color: var(--yale-blue);
+}
+
+.join-us {
+    background-color: var(--big-fish-to-fry);
+    width: 150px;
+    height: 40px;
+    border: 1px solid var(--lunar-base);
+    padding: 5px;
+    text-align: center;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    color: var(--king-kong);
+    font-family: var(--poppins-heading-font);
+    font-weight: var(--poppins-bold-font-weight);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.join-us:hover {
+    background-color: var(--yale-blue);
+    border-color: var(--lunar-base);
+    color: var(--white);
+}
+
+.discover-link:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
