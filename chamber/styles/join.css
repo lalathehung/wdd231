@@ -7,7 +7,7 @@ main {
 
 .content-wrapper {
     display: grid;
-    gap: 1em;
+    gap: 1.5em; /* Increased gap for better vertical spacing */
 }
 
 main h1 {
@@ -38,7 +38,6 @@ main h1 {
 }
 
 form {
-    min-width: 300px;
     margin: 20px;
     padding: 20px;
     border: 1px solid var(--king-kong);
@@ -187,6 +186,7 @@ dialog button {
 @media (min-width: 860px) {
     .content-wrapper {
         grid-template-columns: 1fr 1fr;
+        align-items: start; /* Align items to the top to balance the layout */
     }
 
     form {
@@ -195,5 +195,22 @@ dialog button {
 
     .membership-container {
         grid-column: 2;
+    }
+}
+
+/* Media Query for Mobile Layout */
+@media (max-width: 859px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .card {
+        margin: 10px;
+        padding: 10px;
     }
 }
