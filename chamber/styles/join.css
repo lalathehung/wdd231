@@ -52,6 +52,7 @@ label {
     font-family: var(--open-sans-paragraph-font);
     font-weight: var(--open-sans-font-weight);
     color: var(--paragraph-color-on-white);
+    word-wrap: break-word;
 }
 
 input,
@@ -64,6 +65,10 @@ select {
     border-radius: 5px;
     box-sizing: border-box;
     font-family: var(--open-sans-paragraph-font);
+}
+
+textarea {
+    max-width: 100%;
 }
 
 .membership-container {
@@ -87,7 +92,7 @@ select {
     font-family: var(--poppins-heading-font);
     font-weight: var(--poppins-bold-font-weight);
     margin-bottom: 10px;
-    word-wrap: break-word; /* Allow text to wrap */
+    word-wrap: break-word;
 }
 
 .card:hover {
@@ -202,7 +207,7 @@ dialog button {
 /* Media Query for Mobile Layout */
 @media (max-width: 859px) {
     main {
-        padding: 10px; /* Reduced padding to increase available width */
+        padding: 5px; /* Further reduced padding */
     }
 
     .content-wrapper {
@@ -220,10 +225,10 @@ dialog button {
     }
 
     .css-button-arrow--black {
-        min-width: 100px; /* Reduced min-width to fit within smaller viewport */
+        min-width: 80px; /* Further reduced min-width */
     }
 
     .join-us {
-        width: 120px; /* Reduced width to fit within smaller viewport */
+        width: 100px; /* Further reduced width */
     }
 }
