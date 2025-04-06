@@ -211,6 +211,10 @@ dialog button {
         padding: 5px;
     }
 
+    main h1 {
+        margin: 5px auto;
+    }
+
     .content-wrapper {
         grid-template-columns: 1fr;
     }
@@ -218,13 +222,13 @@ dialog button {
     form {
         margin: 5px;
         padding: 5px;
-        border: 0; /* Removed border to reduce width */
+        border: 0;
     }
 
     input,
     textarea,
     select {
-        width: calc(100% - 22px); /* Subtract padding and border */
+        width: calc(100% - 22px);
     }
 
     .card {
