@@ -218,10 +218,13 @@ dialog button {
     form {
         margin: 5px;
         padding: 5px;
+        border: 0; /* Removed border to reduce width */
     }
 
-    label {
-        font-size: 14px; /* Reduced font size to ensure wrapping */
+    input,
+    textarea,
+    select {
+        width: calc(100% - 22px); /* Subtract padding and border */
     }
 
     .card {
@@ -230,7 +233,11 @@ dialog button {
     }
 
     .card h3 {
-        font-size: 14px; /* Reduced font size to ensure wrapping */
+        font-size: 14px;
+    }
+
+    label {
+        font-size: 14px;
     }
 
     .css-button-arrow--black {
