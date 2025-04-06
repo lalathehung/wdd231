@@ -52,7 +52,8 @@ label {
     font-family: var(--open-sans-paragraph-font);
     font-weight: var(--open-sans-font-weight);
     color: var(--paragraph-color-on-white);
-    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 input,
@@ -92,7 +93,7 @@ textarea {
     font-family: var(--poppins-heading-font);
     font-weight: var(--poppins-bold-font-weight);
     margin-bottom: 10px;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .card:hover {
@@ -207,7 +208,7 @@ dialog button {
 /* Media Query for Mobile Layout */
 @media (max-width: 859px) {
     main {
-        padding: 5px; /* Further reduced padding */
+        padding: 5px;
     }
 
     .content-wrapper {
@@ -219,16 +220,24 @@ dialog button {
         padding: 5px;
     }
 
+    label {
+        font-size: 14px; /* Reduced font size to ensure wrapping */
+    }
+
     .card {
         margin: 5px;
         padding: 5px;
     }
 
+    .card h3 {
+        font-size: 14px; /* Reduced font size to ensure wrapping */
+    }
+
     .css-button-arrow--black {
-        min-width: 80px; /* Further reduced min-width */
+        min-width: 80px;
     }
 
     .join-us {
-        width: 100px; /* Further reduced width */
+        width: 100px;
     }
 }
