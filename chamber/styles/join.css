@@ -7,7 +7,7 @@ main {
 
 .content-wrapper {
     display: grid;
-    gap: 1.5em; /* Increased gap for better vertical spacing */
+    gap: 1.5em;
 }
 
 main h1 {
@@ -87,6 +87,7 @@ select {
     font-family: var(--poppins-heading-font);
     font-weight: var(--poppins-bold-font-weight);
     margin-bottom: 10px;
+    word-wrap: break-word; /* Allow text to wrap */
 }
 
 .card:hover {
@@ -186,7 +187,7 @@ dialog button {
 @media (min-width: 860px) {
     .content-wrapper {
         grid-template-columns: 1fr 1fr;
-        align-items: start; /* Align items to the top to balance the layout */
+        align-items: start;
     }
 
     form {
@@ -200,17 +201,29 @@ dialog button {
 
 /* Media Query for Mobile Layout */
 @media (max-width: 859px) {
+    main {
+        padding: 10px; /* Reduced padding to increase available width */
+    }
+
     .content-wrapper {
         grid-template-columns: 1fr;
     }
 
     form {
-        margin: 10px;
-        padding: 10px;
+        margin: 5px;
+        padding: 5px;
     }
 
     .card {
-        margin: 10px;
-        padding: 10px;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .css-button-arrow--black {
+        min-width: 100px; /* Reduced min-width to fit within smaller viewport */
+    }
+
+    .join-us {
+        width: 120px; /* Reduced width to fit within smaller viewport */
     }
 }
