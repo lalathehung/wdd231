@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <title>PEI Explorer Site Plan</title>
+    <style>
+        :root {
+            --calming-blue: hsl(200, 70%, 50%);
+            --light-beige: hsl(40, 40%, 95%);
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            background-color: var(--light-beige);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--calming-blue);
+        }
+
+        p, li, a, button {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-color);
+        }
+
+        button {
+            background-color: var(--calming-blue);
+            color: var(--light-beige);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: var(--light-beige);
+            color: var(--calming-blue);
+            border: 1px solid var(--calming-blue);
+        }
+
+        img {
+            width: 50%;
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Individual Project Site Plan</h1>
+    </header>
+    <section>
+        <h2>Site Name</h2>
+        <h3>PEI Explorer</h3>
+        <p>This name reflects the site’s focus on guiding visitors to explore Prince Edward Island’s top tourist attractions, offering an adventurous and informative experience.</p>
+    </section>
+    <section>
+        <h2>Site Purpose</h2>
+        <p>This website will highlight the top tourist attractions in Prince Edward Island, designed as a guide for visitors. The landing page will welcome users with an overview of PEI, its charm, and a featured attraction of the month. A second page will offer a dynamic list of attractions (e.g., beaches, lighthouses, historic sites) pulled from a JSON file or a public tourism API, displaying details like location, description, visitor ratings, and seasonal tips. The third page will include a visitor resources section with a form for users to submit their own travel tips or questions, with responses displayed on a confirmation page. The site will feature responsive design, optimized images with lazy loading, a modal for attraction details, and localStorage to save users’ favorite spots.</p>
+    </section>
+    <section>
+        <h2>Scenarios</h2>
+        <ul>
+            <li>
+                <strong>What are the must-visit attractions in PEI for a family vacation?</strong>
+                <p>This question will drive content about family-friendly attractions, including beaches, parks, and cultural sites, with tips for planning a family trip.</p>
+            </li>
+            <li>
+                <strong>Where can I find the best beaches in PEI for a summer trip?</strong>
+                <p>This scenario will guide content about PEI’s top beaches, including their locations, amenities, and seasonal activities, catering to beach enthusiasts.</p>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h2>Color Schema</h2>
+        <p>The color schema for this site includes two main colors:</p>
+        <ul>
+            <li>
+                <strong>Calming Blue (hsl(200, 70%, 50%))</strong>: Used for headings and buttons to evoke the serene coastal vibe of PEI.
+            </li>
+            <li>
+                <strong>Light Beige (hsl(40, 40%, 95%))</strong>: Used as the background color to provide a clean, warm contrast that highlights content.
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h2>Typography</h2>
+        <h3>Primary Font: Montserrat (sans-serif)</h3>
+        <ul>
+            <li><strong>Usage:</strong> Used for all headings to provide a bold, modern look.</li>
+            <li><strong>Applied to:</strong> Headings (h1, h2, h3, h4).</li>
+        </ul>
+        <h3>Secondary Font: Roboto (sans-serif)</h3>
+        <ul>
+            <li><strong>Usage:</strong> Used for body text, links, and buttons for readability and consistency.</li>
+            <li><strong>Applied to:</strong> Paragraphs, lists, links, buttons.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Wireframe</h2>
+        <p><strong>Mobile View:</strong></p>
+        <img src="images/mobile-wireframe.png" alt="Mobile wireframe of home page">
+        <p><strong>Desktop View:</strong></p>
+        <img src="images/desktop-wireframe.png" alt="Desktop wireframe of home page">
+        <p><em>Note: Wireframe images should be created and uploaded to your project repository (e.g., in an 'images' folder).</em></p>
+    </section>
+</body>
+</html>
