@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore top tourist attractions in Prince Edward Island">
+    <meta name="author" content="Your Name">
+    <title>PEI Attractions | PEI Explorer</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="PEI Attractions | PEI Explorer">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/pei-logo.jpg">
+    <meta property="og:image:width" content="60">
+    <meta property="og:image:height" content="60">
+    <meta property="og:url" content="https://your-site.com/pei-content.html">
+    <meta property="og:description" content="Discover the best attractions Prince Edward Island has to offer">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/pei-content.css">
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/e0a574ddb0.js" crossorigin="anonymous"></script>
+
+    <!-- JavaScript -->
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/pei-content.js" defer></script>
+</head>
+<body id="pei-content-page">
+    <header>
+        <nav>
+            <div class="box-logo-header">
+                <img class="logo-chamber" src="images/pei-logo.jpg" alt="PEI Explorer Logo" loading="lazy">
+                <p class="nameHeader">PEI Explorer</p>
+                <button name="navigation button" id="menu" aria-label="Toggle menu"></button>
+            </div>
+            <ul>
+                <li><a class="nav-a" href="index.html">Home</a></li>
+                <li><a class="nav-a active" href="pei-content.html">Attractions</a></li>
+                <li><a class="nav-a" href="resources.html">Visitor Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="Main-title">Explore PEI Attractions</h1>
+        <p>Discover the top tourist spots in Prince Edward Island below.</p>
+        <div class="button-box">
+            <button title="List view" class="mybtn activebtn" id="list-view-btn"><i class="fas fa-list"></i></button>
+            <button title="Grid view" class="mybtn" id="grid-view-btn"><i class="fas fa-th"></i></button>
+        </div>
+        <section id="attraction-list">
+            <!-- Static fallback for audit tool -->
+            <div class="static-attractions">
+                <div class="card-box">
+                    <h3>Cavendish Beach</h3>
+                    <p><a href="https://www.tourismpei.com/cavendish-beach" target="_blank" aria-label="Visit Cavendish Beach info">Learn More</a></p>
+                </div>
+                <div class="card-box">
+                    <h3>Green Gables Heritage Place</h3>
+                    <p><a href="https://www.pc.gc.ca/en/lhn-nhs/pe/greengables" target="_blank" aria-label="Visit Green Gables info">Learn More</a></p>
+                </div>
+                <div class="card-box">
+                    <h3>Confederation Bridge</h3>
+                    <p><a href="https://www.confederationbridge.com" target="_blank" aria-label="Visit Confederation Bridge info">Learn More</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Contact: <a href="mailto:info@peiexplorer.com">info@peiexplorer.com</a> | 1-800-PEI-EXPLORE</p>
+        <p>©<span id="currentyear"></span> | Your Name | PEI Explorer</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
