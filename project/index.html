@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="PEI Explorer">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/pei-logo.jpg">
+    <meta property="og:url" content="https://your-site.com/index.html">
+    <meta property="og:description" content="Welcome to PEI Explorer. Discover Prince Edward Island’s top attractions and plan your adventure today!">
+    <title>PEI Explorer | Welcome</title>
+    <meta name="description" content="Explore Prince Edward Island’s top tourist attractions" />
+    <meta name="author" content="Your Name" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <script src="scripts/home.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <link rel="icon" href="images/favicon.ico" sizes="48x48" type="image/ico">
+    <script src="https://kit.fontawesome.com/e0a574ddb0.js" crossorigin="anonymous"></script>
+</head>
+<body id="index-page">
+    <div id="meeting-banner">
+        <p>🌊 Plan your PEI adventure this week—check out our featured attraction!</p>
+        <button id="close-banner">Close</button>
+    </div>
+    <header>
+        <nav>
+            <div class="box-logo-header">
+                <img class="logo-chamber" src="images/pei-logo.jpg" alt="PEI Explorer Logo" loading="lazy" />
+                <p class="nameHeader">PEI Explorer</p>
+                <button name="navigation button" id="menu" aria-label="Toggle menu"></button>
+            </div>
+            <ul>
+                <li><a class="nav-a active" href="index.html">Home</a></li>
+                <li><a class="nav-a" href="pei-content.html">Attractions</a></li>
+                <li><a class="nav-a" href="resources.html">Visitor Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to PEI Explorer</h1>
+        <section class="hero-main-box">
+            <picture class="hero-box-img">
+                <source media="(max-width: 600px)" srcset="images/hero-pei-410.webp">
+                <source media="(max-width: 800px)" srcset="images/hero-pei-600.webp">
+                <source media="(max-width: 1200px)" srcset="images/hero-pei-800.webp">
+                <source media="(min-width: 1201px)" srcset="images/hero-pei-1200.webp">
+                <img class="hero-home-img" src="images/hero-pei-410.webp" alt="Prince Edward Island coast" loading="lazy">
+            </picture>
+            <div class="call-to-action">
+                <h3>Discover Prince Edward Island</h3>
+                <p>Explore stunning beaches, historic sites, and charming towns.</p>
+                <p>Start your adventure today—visit our Attractions page!</p>
+                <button class="explore-now" name="explore" onclick="window.location.href='pei-content.html'">Explore Now</button>
+            </div>
+        </section>
+        <section class="event-main-box">
+            <article class="event-main">
+                <h2>Featured Attraction</h2>
+                <div id="featured-attraction"></div>
+            </article>
+            <article class="weather-main" id="weather-main"></article>
+            <article class="weather-forecast" id="weather-forecast"></article>
+        </section>
+        <section class="spotlights-main-box"></section>
+    </main>
+    <footer>
+        <div class="footer-left">
+            <p>PEI Explorer</p>
+            <p>Charlottetown, PEI</p>
+            <p><a href="mailto:info@peiexplorer.com">info@peiexplorer.com</a></p>
+            <p>1-902-800-8000</p>
+        </div>
+        <div class="footer-center">
+            <a href="https://youtube.com" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="footer-right">
+            <p>WDD231 Class Project</p>
+            <p>Lok Yin Arthur Leung</p>
+            <p>© <span id="currentyear"></span> PEI Explorer</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
