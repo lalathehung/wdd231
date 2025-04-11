@@ -125,9 +125,23 @@ header {
     content: "≡";
 }
 
+#menu.open::before {
+    content: "×";
+}
+
+nav {
+    background-color: var(--nav-background-color);
+}
+
 nav ul {
     list-style: none;
-    display: none;
+    display: none; /* Hidden by default on mobile */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul.open { /* Show when 'open' class is added */
+    display: block;
 }
 
 nav li {
@@ -148,14 +162,6 @@ nav li {
 .nav-a.active {
     background-color: var(--calming-blue);
     color: var(--white);
-}
-
-.open li {
-    display: block;
-}
-
-#menu.open::before {
-    content: "×";
 }
 
 /* Footer */
@@ -185,12 +191,12 @@ footer {
 /* Desktop */
 @media (min-width: 860px) {
     nav ul {
-        display: flex;
+        display: flex; /* Always visible on desktop */
         justify-content: center;
     }
 
     #menu {
-        display: none;
+        display: none; /* Hide hamburger on desktop */
     }
 
     footer {

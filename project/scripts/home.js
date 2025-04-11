@@ -1,7 +1,7 @@
 // Weather API settings for Charlottetown, PEI
 const myKey = "90158c8799bb28ca5c3054efdcbe85fd"; // Your OpenWeatherMap API key
-const myLat = "46.2382"; // Charlottetown, PEI latitude
-const myLon = "-63.1311"; // Charlottetown, PEI longitude
+const myLat = "46.2382"; // Charlottetown latitude
+const myLon = "-63.1311"; // Charlottetown longitude
 
 const time = new Date();
 const day = time.getDay();
@@ -15,28 +15,28 @@ const weekdays = [
     "Saturday",
 ];
 
-// Hamburger Menu Toggle (Isolated to ensure it executes regardless of API errors)
+// Hamburger Menu Toggle (Fixed to target <nav ul>)
 document.addEventListener("DOMContentLoaded", () => {
     const menuButton = document.getElementById("menu");
-    const nav = document.querySelector("nav");
+    const navList = document.querySelector("nav ul"); // Target the <ul> inside <nav>
 
-    if (menuButton && nav) {
+    if (menuButton && navList) {
         menuButton.addEventListener("click", () => {
-            nav.classList.toggle("open");
-            menuButton.classList.toggle("open");
+            navList.classList.toggle("open"); // Toggle 'open' on <ul>
+            menuButton.classList.toggle("open"); // Toggle 'open' on button for icon change
         });
     } else {
-        console.error("Menu button or nav element not found!");
+        console.error("Menu button or nav list not found!");
     }
 });
 
-// Meeting Banner (PEI-themed)
+// Meeting Banner
 document.addEventListener("DOMContentLoaded", () => {
     const banner = document.getElementById("meeting-banner");
     const closeButton = document.getElementById("close-banner");
 
     if (banner && closeButton) {
-        if (day === 1 || day === 2 || day === 3) { // Show Monday-Wednesday
+        if (day === 1 || day === 2 || day === 3) { // Show Monday-Wednesday for PEI
             banner.style.display = "block";
         }
 
@@ -55,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const createSpotCard = (index) => {
             const spotCard = document.createElement("div");
             spotCard.className = `spot-card spot-card-0${index}`;
-
             spotCard.innerHTML = `
                 <div class="title-spot">
                     <h4 id="attraction-name-0${index}"></h4>
@@ -70,7 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p><span id="rating-0${index}"></span></p>
                 </div>
             `;
-
             return spotCard;
         };
 
@@ -80,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+// Fetch Spotlight Data
 document.addEventListener("DOMContentLoaded", async () => {
     const nameAttraction01 = document.querySelector("#attraction-name-01");
     const nameAttraction02 = document.querySelector("#attraction-name-02");
@@ -112,7 +111,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
         const data = await response.json();
 
-        const shuffledData = data.sort(() => 0.5 - Math.random()).slice(0, 3); // Randomly select 3 attractions
+        const shuffledData = data.sort(() => 0.5 - Math.random()).slice(0, 3); // Random 3 attractions
 
         const attractionNames = [nameAttraction01, nameAttraction02, nameAttraction03];
         const tags = [tag01, tag02, tag03];
@@ -122,35 +121,26 @@ document.addEventListener("DOMContentLoaded", async () => {
         const imgs = [img01, img02, img03];
 
         attractionNames.forEach((nameElement, index) => {
-            if (nameElement && shuffledData[index]) {
-                nameElement.innerHTML = `${shuffledData[index].name}`;
-            }
+            if (nameElement && shuffledData[index]) nameElement.innerHTML = `${shuffledData[index].name}`;
         });
 
         tags.forEach((tag, index) => {
-            if (tag && shuffledData[index]) {
-                // Simplified tag; could be enhanced with a 'type' field in attractions.json
-                tag.innerHTML = `${shuffledData[index].description.split(' ')[0]}`;
-            }
+            if (tag && shuffledData[index]) tag.innerHTML = `${shuffledData[index].description.split(' ')[0]}`; // Simplified tag
         });
 
         locations.forEach((location, index) => {
-            if (location && shuffledData[index]) {
-                location.innerHTML = `${shuffledData[index].location}`;
-            }
+            if (location && shuffledData[index]) location.innerHTML = `${shuffledData[index].location}`;
         });
 
         urls.forEach((url, index) => {
             if (url && shuffledData[index]) {
-                url.href = "attractions.html"; // Links to attractions page
+                url.href = "attractions.html";
                 url.innerHTML = "Explore";
             }
         });
 
         ratings.forEach((rating, index) => {
-            if (rating && shuffledData[index]) {
-                rating.innerHTML = `Rating: ${shuffledData[index].rating}/5`;
-            }
+            if (rating && shuffledData[index]) rating.innerHTML = `Rating: ${shuffledData[index].rating}/5`;
         });
 
         imgs.forEach((img, index) => {
@@ -166,7 +156,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 // Current Weather for Charlottetown
 document.addEventListener("DOMContentLoaded", () => {
-    const urlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLon}&appid=${myKey}&units=metric`;
+    const urlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLon}&appid=${myKey}&units=metric`; // Metric for PEI
 
     async function apiFetch() {
         try {
@@ -190,15 +180,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const eventMainBox = document.querySelector("#weather-main");
         if (eventMainBox) {
             eventMainBox.innerHTML = "";
-
             const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
             let desc = data.weather[0].description;
-
             eventMainBox.innerHTML = `
                 <div class="current-weather">
-                    <h2>Weather in Charlottetown</h2>
+                    <h2>The current Weather in Charlottetown</h2>
                     <h4>${weekdays[day]}</h4>
-                    <div class="weather-content"></div>
                     <p>Temperature: <span id="current-temp">${parseFloat(data.main.temp).toFixed(0)}°C</span></p>
                     <figure>
                         <img id="weather-icon" src="${iconsrc}" alt="${desc}" loading="lazy">
@@ -238,7 +225,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const weatherForecast = document.querySelector("#weather-forecast");
         if (weatherForecast) {
             weatherForecast.innerHTML = "";
-
             const forecast = document.createElement("article");
             forecast.className = "forecast";
             forecast.innerHTML = `
@@ -306,7 +292,6 @@ async function displayEvents() {
 
     if (eventsContainer) {
         eventsContainer.innerHTML = "";
-
         if (events.length === 0) {
             eventsContainer.innerHTML = "<p>No upcoming events at this time.</p>";
             return;
@@ -314,7 +299,6 @@ async function displayEvents() {
 
         events.sort((a, b) => new Date(a.date) - new Date(b.date));
         const nextEvents = events.slice(0, 3);
-
         nextEvents.forEach((event) => {
             const eventElement = document.createElement("div");
             eventElement.classList.add("event");
