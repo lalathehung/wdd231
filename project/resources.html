@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Visitor Resources | PEI Explorer">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:url" content="https://your-site-url/resources.html">
+    <meta property="og:description" content="Share your PEI travel tips and questions with PEI Explorer.">
+    <title>Visitor Resources | PEI Explorer</title>
+    <meta name="description" content="Submit travel tips or questions for PEI" />
+    <meta name="author" content="Lok Yin Arthur Leung" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/resources.css" />
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/resources.js" defer></script>
+    <link rel="icon" href="images/favicon.ico" sizes="48x48" type="image/ico">
+    <script src="https://kit.fontawesome.com/e0a574ddb0.js" crossorigin="anonymous"></script>
+</head>
+<body id="resources-page">
+    <header>
+        <nav>
+            <div class="box-logo-header">
+                <img class="logo-chamber" src="images/logo.png" alt="PEI Explorer Logo" loading="lazy" />
+                <p class="nameHeader">PEI Explorer</p>
+                <button name="navigation button" id="menu" aria-label="Toggle menu"></button>
+            </div>
+            <ul>
+                <li><a class="nav-a" href="index.html">Home</a></li>
+                <li><a class="nav-a" href="attractions.html">Attractions</a></li>
+                <li><a class="nav-a active" href="resources.html">Visitor Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Visitor Resources</h1>
+        <div class="content-wrapper">
+            <form method="get" action="thankyou.html">
+                <h2 class="sub-title-form">Share Your PEI Tips</h2>
+                <label>
+                    First Name:
+                    <input type="text" name="firstName" title="Enter your first name" autocomplete="given-name" required placeholder="First">
+                </label>
+                <label>
+                    Last Name:
+                    <input type="text" name="lastName" title="Enter your last name" autocomplete="family-name" required placeholder="Last">
+                </label>
+                <label>
+                    Email Address:
+                    <input type="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@email.com" required>
+                </label>
+                <label>
+                    Travel Tip or Question:
+                    <textarea name="tip" title="Share your travel tip or question" rows="4" required></textarea>
+                </label>
+                <input type="hidden" name="timestamp" id="timestamp" value="">
+                <button class="join-us" type="submit">Submit Tip</button>
+            </form>
+            <section class="tips-container">
+                <h2 class="sub-title-member">Why Share?</h2>
+                <p>Help other travelers by sharing your favorite PEI experiences or asking questions to plan your trip.</p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-left">
+            <p>PEI Explorer</p>
+            <p>123 Coastal Road</p>
+            <p>Charlottetown, PEI</p>
+            <p><a href="mailto:info@peiexplorer.com">info@peiexplorer.com</a></p>
+            <p>+1 902 555 1234</p>
+        </div>
+        <div class="footer-center">
+            <a href="https://youtube.com" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="footer-right">
+            <p>WDD231 Class Project</p>
+            <p>Lok Yin Arthur Leung</p>
+            <p>© <span id="currentyear"></span> PEI Explorer</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>

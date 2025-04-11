@@ -1,16 +1,16 @@
 :root {
-    /* CSS HSL Colors from Site Plan */
-    --calming-blue: hsl(200, 70%, 50%); /* Headings, buttons */
-    --light-beige: hsl(40, 40%, 95%); /* Background */
-    --calming-blue-dark: hsl(200, 70%, 30%); /* Hover states, secondary text */
-    --black: #000000;
+    /* Colors */
+    --calming-blue: hsl(200, 70%, 50%);
+    --light-beige: hsl(40, 40%, 95%);
+    --dark-gray: #333333;
     --white: #ffffff;
+    --light-gray: #e0e0e0;
 
     /* Fonts */
     --montserrat-heading-font: "Montserrat", sans-serif;
     --montserrat-bold-font-weight: 700;
     --montserrat-regular-font-weight: 400;
-    --roboto-paragraph-font: "Roboto", sans-serif;
+    --roboto-body-font: "Roboto", sans-serif;
     --roboto-font-weight: 400;
 
     --font-size-base: 1rem;
@@ -19,46 +19,37 @@
     --font-size-extra-large: 1.5rem;
 
     /* Text Colors */
-    --headline-color-on-white: var(--calming-blue);
-    --headline-color-on-color: var(--white);
-    --paragraph-color-on-white: var(--calming-blue-dark);
-    --paragraph-color-on-color: var(--white);
+    --headline-color: var(--dark-gray);
+    --paragraph-color: var(--dark-gray);
+    --link-color: var(--calming-blue);
+    --link-hover-color: #0077b6;
 
     /* Background Colors */
-    --paragraph-background-color: var(--light-beige);
-    --paragraph-background-white: var(--white);
-
-    /* Navigation Colors */
-    --nav-link-color: var(--calming-blue);
-    --nav-background-color: var(--light-beige);
-    --nav-hover-link-color: var(--white);
-    --nav-hover-background-color: var(--calming-blue);
-
-    /* Button Colors */
-    --btn-background-color: var(--calming-blue);
-    --btn-background-white: var(--white);
-    --btn-font-on-color: var(--light-beige);
-    --btn-font-on-white: var(--calming-blue);
+    --background-color: var(--light-beige);
+    --nav-background-color: var(--white);
+    --button-background: var(--calming-blue);
+    --button-hover-background: #0077b6;
 
     /* Common Styles */
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     --border-radius: 10px;
-    --transition: transform 0.2s ease-in-out;
+    --transition: all 0.3s ease;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-button {
+body {
+    background-color: var(--background-color);
+    font-family: var(--roboto-body-font);
+    color: var(--paragraph-color);
+}
+
+h1, h2, h3, h4, h5, button {
     font-family: var(--montserrat-heading-font);
     font-weight: var(--montserrat-bold-font-weight);
-    font-size: var(--font-size-base);
+    color: var(--headline-color);
 }
 
-p {
-    font-family: var(--roboto-paragraph-font);
+p, a, li {
+    font-family: var(--roboto-body-font);
     font-weight: var(--roboto-font-weight);
 }
 
@@ -66,10 +57,7 @@ main h1 {
     text-align: center;
     margin: 20px auto;
     font-size: var(--font-size-extra-large);
-    color: var(--calming-blue);
-    width: 100%;
     max-width: 1024px;
-    box-sizing: border-box;
 }
 
 #meeting-banner {
@@ -83,7 +71,6 @@ main h1 {
 
 #meeting-banner p {
     margin: 0;
-    font-size: var(--font-size-base);
 }
 
 #close-banner {
@@ -92,7 +79,7 @@ main h1 {
     top: 50%;
     transform: translateY(-50%);
     background-color: var(--white);
-    color: var(--calming-blue);
+    color: var(--dark-gray);
     border: none;
     padding: 5px 10px;
     cursor: pointer;
@@ -100,90 +87,62 @@ main h1 {
 }
 
 /* Header */
-header,
-footer {
-    background-color: var(--light-beige);
-    color: var(--calming-blue);
-}
-
 header {
-    width: 100%;
+    background-color: var(--nav-background-color);
     box-shadow: var(--box-shadow);
-    font-size: var(--font-size-small);
 }
 
 .box-logo-header {
     display: flex;
     align-items: center;
-    justify-content: left;
+    padding: 10px;
 }
 
 .logo-chamber {
-    width: 70px;
-    padding: 10px 5px;
+    width: 60px;
 }
 
 .nameHeader {
-    display: inline-block;
-    text-align: left;
-    padding: 5px;
-    font-size: var(--font-size-base);
     font-family: var(--montserrat-heading-font);
     font-weight: var(--montserrat-bold-font-weight);
+    font-size: var(--font-size-large);
+    margin-left: 10px;
 }
 
-/* Mobile Hamburger Menu */
+/* Navigation */
 #menu {
     display: block;
-    font-size: 40px;
-    text-decoration: none;
-    padding: 8px 12px;
-    background-color: var(--light-beige);
-    color: var(--calming-blue);
-    font-family: var(--montserrat-heading-font);
+    font-size: 2rem;
+    background: none;
+    border: none;
     position: absolute;
-    top: 1.6rem;
-    right: 1.5rem;
+    top: 1rem;
+    right: 1rem;
     cursor: pointer;
-    border: 0;
-    font-weight: bold;
 }
 
 #menu::before {
     content: "≡";
 }
 
-nav {
-    background-color: var(--nav-background-color);
-}
-
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    list-style: none;
+    display: none;
 }
 
 nav li {
-    display: none; /* Hide navigation links by default on mobile */
     font-family: var(--montserrat-heading-font);
-    font-weight: var(--montserrat-bold-font-weight);
 }
 
 .nav-a {
     display: block;
-    color: var(--nav-link-color);
-    text-align: center;
-    padding: 8px 16px;
+    color: var(--dark-gray);
+    padding: 10px;
     text-decoration: none;
 }
 
-.nav-a:hover:not(.active) {
-    background-color: var(--nav-hover-background-color);
-    color: var(--nav-hover-link-color);
-}
-
-nav li:last-child {
-    border-bottom: none;
+.nav-a:hover {
+    background-color: var(--light-gray);
 }
 
 .nav-a.active {
@@ -192,135 +151,50 @@ nav li:last-child {
 }
 
 .open li {
-    display: block; /* Show navigation links when the menu is open on mobile */
+    display: block;
 }
 
 #menu.open::before {
-    content: "X"; /* Change the hamburger menu icon to "X" when open */
+    content: "×";
 }
 
 /* Footer */
 footer {
+    background-color: var(--white);
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    border-top: 1px solid var(--calming-blue-dark);
-    padding: 10px;
 }
 
-footer p {
-    margin: 0;
-}
-
-footer p:first-child {
-    display: block;
-    margin-top: 5px;
-}
-
-footer .footer-left,
-footer .footer-center,
-footer .footer-right {
+.footer-left, .footer-center, .footer-right {
     text-align: center;
+    margin: 10px 0;
 }
 
-footer .footer-center a {
+.footer-center a {
     font-size: 1.5rem;
     margin: 0 10px;
-    transition: color 0.3s ease;
-    color: var(--calming-blue);
-    text-decoration: none;
+    color: var(--dark-gray);
 }
 
-footer a:hover {
-    color: var(--calming-blue-dark);
+.footer-center a:hover {
+    color: var(--link-hover-color);
 }
 
-/* Larger Views (Desktop) */
+/* Desktop */
 @media (min-width: 860px) {
-    header {
-        flex-wrap: wrap;
-        justify-content: left;
-        gap: 10px;
-        padding: 5px;
-    }
-
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    .logo-chamber {
-        width: 80px;
-    }
-
-    .nameHeader {
-        padding: 10px 0;
-        font-size: var(--font-size-large);
-    }
-
     nav ul {
-        display: flex; /* Display navigation links side by side */
-        align-items: center;
+        display: flex;
         justify-content: center;
     }
 
-    nav ul li {
-        display: block; /* Show navigation links on desktop */
-        flex: 1 1 auto;
-    }
-
-    .nav-a {
-        position: relative;
-        transition: color 0.2s ease;
-        text-align: center;
-        padding: 8px 16px;
-        text-decoration: none;
-        margin-bottom: 5px;
-    }
-
-    .nav-a:hover {
-        color: var(--nav-hover-link-color);
-    }
-
-    .nav-a:hover::after,
-    .nav-a:hover::before {
-        width: 100%;
-        left: 0;
-    }
-
-    .nav-a::after,
-    .nav-a::before {
-        content: "";
-        position: absolute;
-        top: calc(100% + 5px);
-        width: 0;
-        right: 0;
-        height: 3px;
-    }
-
-    .nav-a::before {
-        transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
-        background: var(--calming-blue-dark);
-    }
-
-    .nav-a::after {
-        transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
-        background: var(--calming-blue);
-    }
-
-    nav li:last-child {
-        border-bottom: none;
-    }
-
     #menu {
-        display: none; /* Hide the hamburger menu on desktop */
+        display: none;
     }
 
     footer {
         flex-direction: row;
         justify-content: space-between;
-        padding: 20px;
     }
 }

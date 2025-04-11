@@ -1,58 +1,29 @@
 [
     {
+        "id": "1",
         "name": "Cavendish Beach",
         "location": "Cavendish, PEI",
-        "description": "A stunning sandy beach perfect for swimming and sunbathing.",
-        "rating": 4.7,
-        "website": "https://www.tourismpei.com/cavendish-beach",
-        "image": "images/cavendish-beach.jpg"
+        "image": "images/cavendish-beach.jpg",
+        "description": "A stunning red sand beach perfect for families, with gentle waves and nearby amenities.",
+        "rating": 4.8,
+        "seasonalTip": "Visit in summer for warm weather and festivals."
     },
     {
+        "id": "2",
         "name": "Green Gables Heritage Place",
         "location": "Cavendish, PEI",
-        "description": "The iconic home from Anne of Green Gables, surrounded by beautiful trails.",
-        "rating": 4.8,
-        "website": "https://www.pc.gc.ca/en/lhn-nhs/pe/greengables",
-        "image": "images/green-gables.jpg"
-    },
-    {
-        "name": "Confederation Bridge",
-        "location": "Borden-Carleton, PEI",
-        "description": "An engineering marvel connecting PEI to mainland Canada.",
+        "image": "images/green-gables.jpg",
+        "description": "Explore the historic site that inspired Anne of Green Gables, with guided tours.",
         "rating": 4.5,
-        "website": "https://www.confederationbridge.com",
-        "image": "images/confederation-bridge.jpg"
+        "seasonalTip": "Spring offers fewer crowds and beautiful blooms."
     },
     {
-        "name": "Basin Head Provincial Park",
-        "location": "Souris, PEI",
-        "description": "Famous for its 'singing sands' and warm waters.",
-        "rating": 4.6,
-        "website": "https://www.tourismpei.com/provincial-park/basin-head",
-        "image": "images/basin-head.jpg"
-    },
-    {
-        "name": "Prince Edward Island National Park",
-        "location": "North Shore, PEI",
-        "description": "Features beaches, dunes, and coastal trails.",
-        "rating": 4.9,
-        "website": "https://www.pc.gc.ca/en/pn-np/pe/pei-ipe",
-        "image": "images/pei-national-park.jpg"
-    },
-    {
-        "name": "Charlottetown Waterfront",
+        "id": "3",
+        "name": "Confederation Centre",
         "location": "Charlottetown, PEI",
-        "description": "A vibrant area with shops, dining, and historic charm.",
-        "rating": 4.4,
-        "website": "https://www.discovercharlottetown.com",
-        "image": "images/charlottetown-waterfront.jpg"
-    },
-    {
-        "name": "Point Prim Lighthouse",
-        "location": "Point Prim, PEI",
-        "description": "PEI’s oldest lighthouse with scenic ocean views.",
-        "rating": 4.3,
-        "website": "https://www.tourismpei.com/point-prim-lighthouse",
-        "image": "images/point-prim-lighthouse.jpg"
+        "image": "images/charlottetown.jpg",
+        "description": "A cultural hub with theater, art galleries, and historical exhibits.",
+        "rating": 4.7,
+        "seasonalTip": "Check for summer performances like Anne of Green Gables: The Musical."
     }
 ]

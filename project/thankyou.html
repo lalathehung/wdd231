@@ -3,29 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="PEI Explorer">
+    <meta property="og:title" content="Thank You | PEI Explorer">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/logo.png">
-    <meta property="og:url" content="https://your-site-url/index.html">
-    <meta property="og:description" content="Explore Prince Edward Island’s top attractions with PEI Explorer. Discover beaches, historic sites, and more!">
-    <title>PEI Explorer - Discover Prince Edward Island</title>
-    <meta name="description" content="Guide to Prince Edward Island’s tourist attractions" />
+    <meta property="og:url" content="https://your-site-url/thankyou.html">
+    <meta property="og:description" content="Thank you for sharing your PEI travel tips with PEI Explorer.">
+    <title>Thank You | PEI Explorer</title>
+    <meta name="description" content="Thank you for submitting your PEI travel tip" />
     <meta name="author" content="Lok Yin Arthur Leung" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/base.css" />
-    <link rel="stylesheet" href="styles/home.css" />
-    <script src="scripts/home.js" defer></script>
+    <link rel="stylesheet" href="styles/thankyou.css" />
+    <script src="scripts/thankyou.js" defer></script>
     <link rel="icon" href="images/favicon.ico" sizes="48x48" type="image/ico">
     <script src="https://kit.fontawesome.com/e0a574ddb0.js" crossorigin="anonymous"></script>
 </head>
-<body id="index-page">
-    <div id="meeting-banner">
-        <p>🌊 Plan your PEI adventure! Check out our upcoming events below.</p>
-        <button id="close-banner">Close</button>
-    </div>
+<body>
     <header>
         <nav>
             <div class="box-logo-header">
@@ -34,39 +30,26 @@
                 <button name="navigation button" id="menu" aria-label="Toggle menu"></button>
             </div>
             <ul>
-                <li><a class="nav-a active" href="index.html">Home</a></li>
+                <li><a class="nav-a" href="index.html">Home</a></li>
                 <li><a class="nav-a" href="attractions.html">Attractions</a></li>
                 <li><a class="nav-a" href="resources.html">Visitor Resources</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Welcome to PEI Explorer</h1>
-        <section class="hero-main-box">
-            <picture class="hero-box-img">
-                <source media="(max-width: 600px)" srcset="images/pei-coast-410.webp">
-                <source media="(max-width: 800px)" srcset="images/pei-coast-600.webp">
-                <source media="(max-width: 1200px)" srcset="images/pei-coast-800.webp">
-                <source media="(min-width: 1201px)" srcset="images/pei-coast-1200webp">
-                <img class="hero-home-img" src="images/pei-coast-410.webp" alt="PEI coastline" loading="lazy">
-            </picture>
-            <div class="call-to-action">
-                <h3>Discover Prince Edward Island</h3>
-                <p>Experience the charm of PEI with its red sand beaches, historic lighthouses, and vibrant culture.</p>
-                <p>Start exploring today!</p>
-                <button class="join-us" onclick="window.location.href='attractions.html'">Explore Attractions</button>
+    <main class="thank-you-container">
+        <section class="thank-you-section">
+            <h2>Thank You!</h2>
+            <p>We appreciate your contribution to PEI Explorer. Your travel tip or question has been submitted.</p>
+            <div class="form-data-display">
+                <h3>Your Submitted Information:</h3>
+                <p><strong>First Name:</strong> <span id="first-name"></span></p>
+                <p><strong>Last Name:</strong> <span id="last-name"></span></p>
+                <p><strong>Email:</strong> <span id="email"></span></p>
+                <p><strong>Travel Tip/Question:</strong> <span id="tip"></span></p>
+                <p><strong>Submission Date:</strong> <span id="timestamp"></span></p>
             </div>
-        </section>
-        <section class="event-main-box">
-            <article class="event-main">
-                <h2>Upcoming PEI Events</h2>
-                <div id="events-list"></div>
-            </article>
-            <article class="featured-main">
-                <h2>Featured Attraction: Cavendish Beach</h2>
-                <p>Enjoy family-friendly fun and stunning red sand shores at Cavendish Beach, a summer must-visit.</p>
-                <a href="attractions.html" class="join-us">See More Attractions</a>
-            </article>
+            <p>Explore more of PEI’s attractions <a class="discover-link" href="attractions.html">here</a>.</p>
+            <a href="index.html" class="join-us">Return to Home</a>
         </section>
     </main>
     <footer>
