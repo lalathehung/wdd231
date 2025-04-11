@@ -1,0 +1,66 @@
+/* Thank You Page */
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.thank-you-section {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.thank-you-section h2 {
+    font-size: var(--font-size-extra-large);
+    margin-bottom: 20px;
+}
+
+.thank-you-section h3 {
+    font-size: var(--font-size-large);
+    margin-bottom: 15px;
+}
+
+.thank-you-section p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.form-data-display p {
+    margin: 10px 0;
+}
+
+.form-data-display span {
+    font-weight: normal;
+}
+
+.discover-link {
+    color: var(--calming-blue);
+    text-decoration: none;
+}
+
+.discover-link:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+.join-us {
+    background-color: var(--calming-blue);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-family: var(--montserrat-heading-font);
+    transition: var(--transition);
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.join-us:hover {
+    background-color: var(--link-hover-color);
+}

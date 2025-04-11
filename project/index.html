@@ -6,10 +6,10 @@
     <meta property="og:title" content="PEI Explorer">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/logo.png">
-    <meta property="og:url" content="https://your-site-url/index.html">
-    <meta property="og:description" content="Explore Prince Edward Island’s top attractions with PEI Explorer. Discover beaches, historic sites, and more!">
+    <meta property="og:url" content="https://lalathehung.github.io/wdd231/project/index.html">
+    <meta property="og:description" content="Explore Prince Edward Island top attractions with PEI Explorer. Discover beaches, historic sites, and more!">
     <title>PEI Explorer - Discover Prince Edward Island</title>
-    <meta name="description" content="Guide to Prince Edward Island’s tourist attractions" />
+    <meta name="description" content="Guide to Prince Edward Island tourist attractions" />
     <meta name="author" content="Lok Yin Arthur Leung" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/home.css" />
-    <script src="scripts/home.js" defer></script>
     <link rel="icon" href="images/favicon.ico" sizes="48x48" type="image/ico">
     <script src="https://kit.fontawesome.com/e0a574ddb0.js" crossorigin="anonymous"></script>
 </head>
@@ -47,7 +46,7 @@
                 <source media="(max-width: 600px)" srcset="images/pei-coast-410.webp">
                 <source media="(max-width: 800px)" srcset="images/pei-coast-600.webp">
                 <source media="(max-width: 1200px)" srcset="images/pei-coast-800.webp">
-                <source media="(min-width: 1201px)" srcset="images/pei-coast-1200webp">
+                <source media="(min-width: 1201px)" srcset="images/pei-coast-1200.webp">
                 <img class="hero-home-img" src="images/pei-coast-410.webp" alt="PEI coastline" loading="lazy">
             </picture>
             <div class="call-to-action">
@@ -62,12 +61,15 @@
                 <h2>Upcoming PEI Events</h2>
                 <div id="events-list"></div>
             </article>
+            <article class="weather-main" id="weather-main"></article>
+            <article class="weather-forecast" id="weather-forecast"></article>
             <article class="featured-main">
                 <h2>Featured Attraction: Cavendish Beach</h2>
                 <p>Enjoy family-friendly fun and stunning red sand shores at Cavendish Beach, a summer must-visit.</p>
                 <a href="attractions.html" class="join-us">See More Attractions</a>
             </article>
         </section>
+        <section class="spotlights-main-box"></section>
     </main>
     <footer>
         <div class="footer-left">
@@ -89,5 +91,7 @@
             <p id="lastModified"></p>
         </div>
     </footer>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/home.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,32 @@
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    display: block;
+}
+h1, h2 {
+    margin: 0;
+    font-size: inherit;
+}
+a {
+    background-color: transparent;
+}
+img {
+    border-style: none;
+}
+button {
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
