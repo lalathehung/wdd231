@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Enhance Title Behavior
     const mainTitle = document.querySelector('.Main-title');
     if (mainTitle) {
-        mainTitle.classList.add('main-title-enhanced'); // Mimic chamber or plan.html prominence
+        mainTitle.classList.remove('Main-title'); // Remove smaller font
+        mainTitle.classList.add('main-title-enhanced'); // Mimic chamber/plan
     }
 
     // Attractions Logic
