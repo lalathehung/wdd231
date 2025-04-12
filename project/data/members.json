@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Tom Lee Music",
+        "address": "City Centre Building, 144-149 Gloucester Rd",
+        "phone": "(852) 2762 6900",
+        "website": "https://www.tomleemusic.com.hk",
+        "image": "https://lalathehung.github.io/wdd231/chamber/images/tomlee.jpg",
+        "membership": 1,
+        "industry": "Music Retail"
+    },
+    {
+        "name": "Television Broadcasts Limited",
+        "address": "77 Chun Choi Street, Tseung Kwan O",
+        "phone": "(852) 2335 2288",
+        "website": "https://www.tvb.com",
+        "image": "https://lalathehung.github.io/wdd231/chamber/images/tvb.png",
+        "membership": 2,
+        "industry": "Broadcasting"
+    },
+    {
+        "name": "Vita Green",
+        "address": "18 Dai Hei Street, Tai Po",
+        "phone": "(852) 2901 6000",
+        "website": "https://www.vitagreen.com",
+        "image": "https://lalathehung.github.io/wdd231/chamber/images/vitagreen.png",
+        "membership": 3,
+        "industry": "Health Products"
+    },
+    {
+        "name": "Vitasoy",
+        "address": "1 Kin Wong Street, Tuen Mun",
+        "phone": "(852) 2468 9645",
+        "website": "https://www.vitasoy.com",
+        "image": "https://lalathehung.github.io/wdd231/chamber/images/vitasoy.png",
+        "membership": 1,
+        "industry": "Beverages"
+    },
+    {
+        "name": "VTech Electronics (HK) Limited",
+        "address": "Room B1, 6/F Tai Ping Industrial Centre Block 1, 57 Ting Kok Road, Tai Po",
+        "phone": "(852) 2666 5558",
+        "website": "https://hktoys.vtech.com",
+        "image": "https://lalathehung.github.io/wdd231/chamber/images/vtech.png",
+        "membership": 2,
+        "industry": "Electronics"
+    },
+    {
+        "name": "CMB Wing Lung Bank",
+        "address": "45 Des Voeux Road Central",
+        "phone": "(852) 2530 5798",
+        "website": "https://www.cmbwinglungbank.com",
+        "image": "https://lalathehung.github.io/wdd231/chamber/images/winglungbank.png",
+        "membership": 3,
+        "industry": "Banking"
+    },
+    {
+        "name": "Hong Kong Wing Wah Cake Shop",
+        "address": "5/F, Flourish Food Manufactory Centre, 18 Tai Lee Street, Yuen Long",
+        "phone": "(852) 2477 9947",
+        "website": "https://www.wingwah.com/en/",
+        "image": "https://lalathehung.github.io/wdd231/chamber/images/wingwah.png",
+        "membership": 1,
+        "industry": "Bakery"
+    }
+]
