@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directory of PEI Explorer Tourism Attractions">
+    <meta name="author" content="Lok Yin Arthur Leung">
+    <title>Attractions | PEI Explorer</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Attractions | PEI Explorer">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lalathehung.github.io/wdd231/project/images/logo.jpg">
+    <meta property="og:image:width" content="60">
+    <meta property="og:image:height" content="60">
+    <meta property="og:url" content="https://lalathehung.github.io/wdd231/project/attractions.html">
+    <meta property="og:description" content="Explore top tourism attractions with PEI Explorer">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/attractions.css">
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/e0a574ddb0.js" crossorigin="anonymous"></script>
+
+    <!-- JavaScript -->
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/attractions.js" defer></script>
+</head>
+<body id="directory-page">
+    <header>
+        <nav>
+            <div class="box-logo-header">
+                <img class="logo-chamber" src="images/logo.jpg" alt="PEI Explorer Logo">
+                <p class="nameHeader">PEI<br>Explorer</p>
+                <button name="navigation button" id="menu" aria-label="Toggle menu"></button>
+            </div>
+            <ul>
+                <li><a class="nav-a" href="index.html">Home</a></li>
+                <li><a class="nav-a active" href="attractions.html">Attractions</a></li>
+                <li><a class="nav-a" href="plan.html">Plan Your Visit</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="Main-title">Attractions - PEI Explorer</h1>
+        <p>Explore our featured attractions below or <a href="plan.html">plan your visit with PEI Explorer</a> to discover more.</p>
+        <div class="button-box">
+            <button title="List view" class="mybtn activebtn" id="list-view-btn"><i class="fas fa-list"></i></button>
+            <button title="Grid view" class="mybtn" id="grid-view-btn"><i class="fas fa-th"></i></button>
+        </div>
+        <section id="member-list">
+            <!-- Static fallback for audit tool -->
+            <div class="static-members">
+                <div class="card-box">
+                    <h3>Green Gables Heritage Place</h3>
+                    <p><a href="https://www.pc.gc.ca/en/lhn-nhs/pe/greengables" target="_blank" aria-label="Visit Green Gables Heritage Place website">https://www.pc.gc.ca/en/lhn-nhs/pe/greengables</a></p>
+                </div>
+                <div class="card-box">
+                    <h3>Confederation Bridge</h3>
+                    <p><a href="https://www.confederationbridge.com" target="_blank" aria-label="Visit Confederation Bridge website">https://www.confederationbridge.com</a></p>
+                </div>
+                <div class="card-box">
+                    <h3>Prince Edward Island National Park</h3>
+                    <p><a href="https://www.pc.gc.ca/en/pn-np/pe/pei-ipe" target="_blank" aria-label="Visit Prince Edward Island National Park website">https://www.pc.gc.ca/en/pn-np/pe/pei-ipe</a></p>
+                </div>
+                <div class="card-box">
+                    <h3>Charlottetown Festival</h3>
+                    <p><a href="https://www.confederationcentre.com" target="_blank" aria-label="Visit Charlottetown Festival website">https://www.confederationcentre.com</a></p>
+                </div>
+                <div class="card-box">
+                    <h3>Basin Head Provincial Park</h3>
+                    <p><a href="https://www.tourismpei.com/provincial-parks" target="_blank" aria-label="Visit Basin Head Provincial Park website">https://www.tourismpei.com/provincial-parks</a></p>
+                </div>
+                <div class="card-box">
+                    <h3>PEI Lobster Tours</h3>
+                    <p><a href="https://www.peilobstertours.com" target="_blank" aria-label="Visit PEI Lobster Tours website">https://www.peilobstertours.com</a></p>
+                </div>
+                <div class="card-box">
+                    <h3>Victoria-by-the-Sea</h3>
+                    <p><a href="https://www.victoriabythesea.ca" target="_blank" aria-label="Visit Victoria-by-the-Sea website">https://www.victoriabythesea.ca</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Contact: <a href="mailto:info@peiexplorer.com">info@peiexplorer.com</a> | +1 902-555-1234</p>
+        <p>©<span id="currentyear"></span> 🐻 Lok Yin Arthur Leung 🐻 | WDD 231 | Prince Edward Island</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

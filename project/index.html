@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="Hong Kong Chamber of Commerce">
+    <meta property="og:title" content="PEI Explorer">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://lalathehung.github.io/wdd231/chamber/images/logo.jpg">
-    <meta property="og:url" content="https://lalathehung.github.io/wdd231/chamber/index.html">
-    <meta property="og:description" content="Welcome to the Hong Kong Chamber of Commerce. Join us to enhance your business network and access exclusive resources.">
+    <meta property="og:image" content="https://lalathehung.github.io/wdd231/project/images/logo.jpg">
+    <meta property="og:url" content="https://lalathehung.github.io/wdd231/project/index.html">
+    <meta property="og:description" content="Welcome to PEI Explorer. Discover Prince Edward Island’s top attractions, events, and experiences.">
     <meta property="fb:app_id" content="your-app-id-here">
-    <title>Hong Kong Chamber of Commerce</title>
-    <meta name="description" content="Chamber directory, Hong Kong" />
+    <title>PEI Explorer</title>
+    <meta name="description" content="Tourism guide for Prince Edward Island" />
     <meta name="author" content="Lok Yin Arthur Leung" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,44 +24,43 @@
 </head>
 <body id="index-page">
     <div id="meeting-banner">
-        <p>🤝 Join us for the Chamber of Commerce Meet & Greet this Wednesday at 7:00 PM!</p>
+        <p>🌊 Join us for the PEI Explorer Coastal Festival this Wednesday at 7:00 PM!</p>
         <button id="close-banner">Close</button>
     </div>
     <header>
         <nav>
             <div class="box-logo-header">
-                <img class="logo-chamber" src="images/logo.jpg" alt="Hong Kong Chamber of Commerce Logo" />
-                <p class="nameHeader">Hong Kong<br>Chamber of Commerce</p>
+                <img class="logo-chamber" src="images/logo.jpg" alt="PEI Explorer Logo" />
+                <p class="nameHeader">PEI<br>Explorer</p>
                 <button name="navigation button" id="menu" aria-label="Toggle menu"></button>
             </div>
             <ul>
                 <li><a class="nav-a active" href="index.html">Home</a></li>
-                <li><a class="nav-a" href="discover.html">Discover</a></li>
-                <li><a class="nav-a" href="directory.html">Directory</a></li>
-                <li><a class="nav-a" href="join.html">Join</a></li>
+                <li><a class="nav-a" href="attractions.html">Attractions</a></li>
+                <li><a class="nav-a" href="plan.html">Plan Your Visit</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Hong Kong Chamber of Commerce</h1>
+        <h1>PEI Explorer</h1>
         <section class="hero-main-box">
             <picture class="hero-box-img">
-                <source media="(max-width: 600px)" srcset="images/hero-hk-410.webp">
-                <source media="(max-width: 800px)" srcset="images/hero-hk-600.webp">
-                <source media="(max-width: 1200px)" srcset="images/hero-hk-800.webp">
-                <source media="(min-width: 1201px)" srcset="images/hero-hk-1200.webp">
-                <img class="hero-home-img" src="images/hero-hk-410.webp" alt="Hong Kong cityscape">
+                <source media="(max-width: 600px)" srcset="images/hero-pei-410.webp">
+                <source media="(max-width: 800px)" srcset="images/hero-pei-600.webp">
+                <source media="(max-width: 1200px)" srcset="images/hero-pei-800.webp">
+                <source media="(min-width: 1201px)" srcset="images/hero-pei-1200.webp">
+                <img class="hero-home-img" src="images/hero-pei-410.webp" alt="Prince Edward Island coastline">
             </picture>
             <div class="call-to-action">
-                <h3>Join the Hong Kong Chamber of Commerce today!</h3>
-                <p>Enhance your business network, access exclusive resources, and drive local economic growth.</p>
-                <p>Click here to become a member and start making a difference.</p>
-                <button class="join-us" name="join" onclick="window.location.href='join.html'">Join us</button>
+                <h3>Discover Prince Edward Island today!</h3>
+                <p>Explore stunning beaches, historic sites, and vibrant festivals with PEI Explorer.</p>
+                <p>Click here to plan your visit and start your adventure.</p>
+                <button class="join-us" name="plan" onclick="window.location.href='join.html'">Plan Your Visit</button>
             </div>
         </section>
         <section class="event-main-box">
             <article class="event-main">
-                <h2>Current Events</h2>
+                <h2>Upcoming Events</h2>
                 <div id="events-list"></div>
             </article>
             <article class="weather-main" id="weather-main"></article>
@@ -71,11 +70,11 @@
     </main>
     <footer>
         <div class="footer-left">
-            <p>Hong Kong Chamber of Commerce</p>
-            <p>123 Business Road</p>
-            <p>Hong Kong</p>
-            <p><a href="mailto:info@hkcc.com">info@hkcc.com</a></p>
-            <p>+852 5119 5898</p>
+            <p>PEI Explorer</p>
+            <p>123 Coastal Road</p>
+            <p>Charlottetown, PE</p>
+            <p><a href="mailto:info@peiexplorer.com">info@peiexplorer.com</a></p>
+            <p>+1 902-555-1234</p>
         </div>
         <div class="footer-center">
             <a href="https://youtube.com" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
@@ -85,7 +84,7 @@
         <div class="footer-right">
             <p>WDD231 Class Project</p>
             <p>Lok Yin Arthur Leung</p>
-            <p>© <span id="currentyear"></span> Hong Kong Chamber of Commerce</p>
+            <p>© <span id="currentyear"></span> PEI Explorer</p>
             <p id="lastModified"></p>
         </div>
     </footer>
