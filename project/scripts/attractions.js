@@ -4,11 +4,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const nav = document.querySelector('nav');
 
     if (menuButton && nav) {
-        menuButton.innerHTML = '<i class="fas fa-bars" style="font-size: 1.5rem; color: var(--king-kong);"></i>';
         menuButton.addEventListener('click', () => {
             nav.classList.toggle('open');
-            const isOpen = menuButton.classList.toggle('open');
-            menuButton.innerHTML = isOpen ? '<i class="fas fa-times" style="font-size: 1.5rem; color: var(--king-kong);"></i>' : '<i class="fas fa-bars" style="font-size: 1.5rem; color: var(--king-kong);"></i>';
+            menuButton.classList.toggle('open');
             console.log('Menu button classList:', menuButton.classList.toString()); // Debug
         });
     } else {
@@ -18,8 +16,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Enhance Title Behavior
     const mainTitle = document.querySelector('.Main-title');
     if (mainTitle) {
-        mainTitle.classList.remove('Main-title');
-        mainTitle.classList.add('main-title-enhanced');
+        mainTitle.classList.remove('Main-title'); // Remove smaller font
+        mainTitle.classList.add('main-title-enhanced'); // Mimic chamber/plan
     }
 
     // Attractions Logic
