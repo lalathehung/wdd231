@@ -13,6 +13,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.error('Menu button or nav element not found on PEI Explorer attractions page!');
     }
 
+    // Enhance Title Behavior
+    const mainTitle = document.querySelector('.Main-title');
+    if (mainTitle) {
+        mainTitle.classList.add('main-title-enhanced'); // Mimic chamber or plan.html prominence
+    }
+
     // Attractions Logic
     const attractionList = document.getElementById('member-list');
     const gridBtn = document.getElementById('grid-view-btn');
