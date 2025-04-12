@@ -4,13 +4,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const nav = document.querySelector('nav');
 
     if (menuButton && nav) {
-        // Initialize button with hamburger icon
-        menuButton.innerHTML = '<i class="fas fa-bars"></i>';
         menuButton.addEventListener('click', () => {
             nav.classList.toggle('open');
-            const isOpen = menuButton.classList.toggle('open');
-            // Update button content to show X or hamburger
-            menuButton.innerHTML = isOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            menuButton.classList.toggle('open');
             console.log('Menu button classList:', menuButton.classList.toString()); // Debug
         });
     } else {
