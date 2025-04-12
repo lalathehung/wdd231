@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <h3 id="tag0${index}"></h3>
                 </div>
                 <div class="spot-img">
-                    <img src="" alt="" id="img-0${index}-spot" width="80px">
+                    <img src="" alt="" id="img-0${index}-spot" width="80px" loading="lazy">
                 </div>
                 <div class="spot-data">
                     <p><span id="phone-0${index}"></span></p>
@@ -154,7 +154,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         imgs.forEach((img, index) => {
             if (img && shuffledData[index]) {
                 img.src = `${shuffledData[index].image}`;
-                img.alt = `${shuffledData[index].name} image`;
+                img.alt = `Image of ${shuffledData[index].name}`; // Improved for #2
+                img.setAttribute('loading', 'lazy'); // Added for #7
             }
         });
     } catch (error) {
@@ -198,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="weather-content"></div>
                     <p>Temperature <span id="current-temp">${parseFloat(data.main.temp).toFixed(0)}°C</span></p>
                     <figure>
-                        <img id="weather-icon" src="${iconsrc}" alt="${desc}">
+                        <img id="weather-icon" src="${iconsrc}" alt="${desc}" loading="lazy">
                         <figcaption>${desc}</figcaption>
                     </figure>
                 </div>
@@ -243,7 +244,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="day-box">
                         <h4 id="day-01">${weekdays[(day + 1) % 7]}</h4>
                         <figure>
-                            <img id="weather-icon-1" src="" alt="">
+                            <img id="weather-icon-1" src="" alt="" loading="lazy">
                             <figcaption id="figcaption-1"></figcaption>
                         </figure>
                         <p>Temperature: <span id="temp-1"></span></p>
@@ -251,7 +252,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="day-box">
                         <h4 id="day-02">${weekdays[(day + 2) % 7]}</h4>
                         <figure>
-                            <img id="weather-icon-2" src="" alt="">
+                            <img id="weather-icon-2" src="" alt="" loading="lazy">
                             <figcaption id="figcaption-2"></figcaption>
                         </figure>
                         <p>Temperature: <span id="temp-2"></span></p>
@@ -259,7 +260,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="day-box">
                         <h4 id="day-03">${weekdays[(day + 3) % 7]}</h4>
                         <figure>
-                            <img id="weather-icon-3" src="" alt="">
+                            <img id="weather-icon-3" src="" alt="" loading="lazy">
                             <figcaption id="figcaption-3"></figcaption>
                         </figure>
                         <p>Temperature: <span id="temp-3"></span></p>
@@ -273,6 +274,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.getElementById(
                     `weather-icon-${index + 1}`
                 ).src = `https://openweathermap.org/img/wn/${dailyData.weather[0].icon}@2x.png`;
+                document.getElementById(
+                    `weather-icon-${index + 1}`
+                ).alt = `${dailyData.weather[0].description}`; // Improved for #2
                 document.getElementById(`figcaption-${index + 1}`).textContent =
                     dailyData.weather[0].description;
 

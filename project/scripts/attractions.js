@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const card = document.createElement('div');
             card.classList.add('card-box');
             card.innerHTML = `
-                <img src="${attraction.image}" alt="${attraction.name} image">
+                <img src="${attraction.image}" alt="Image of ${attraction.name}" loading="lazy">
                 <h3>${attraction.name}</h3>
                 <p>${attraction.address}</p>
                 <p>${attraction.phone}</p>
