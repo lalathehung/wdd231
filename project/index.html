@@ -3,57 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="PEI Explorer">
+    <meta property="og:title" content="Hong Kong Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/logo.png">
-    <meta property="og:url" content="https://lalathehung.github.io/wdd231/project/index.html">
-    <meta property="og:description" content="Explore Prince Edward Island’s top attractions with PEI Explorer. Discover beaches, historic sites, and more!">
-    <title>PEI Explorer - Discover Prince Edward Island</title>
-    <meta name="description" content="Guide to Prince Edward Island’s tourist attractions" />
+    <meta property="og:image" content="https://lalathehung.github.io/wdd231/chamber/images/logo.jpg">
+    <meta property="og:url" content="https://lalathehung.github.io/wdd231/chamber/index.html">
+    <meta property="og:description" content="Welcome to the Hong Kong Chamber of Commerce. Join us to enhance your business network and access exclusive resources.">
+    <meta property="fb:app_id" content="your-app-id-here">
+    <title>Hong Kong Chamber of Commerce</title>
+    <meta name="description" content="Chamber directory, Hong Kong" />
     <meta name="author" content="Lok Yin Arthur Leung" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/home.css" />
+    <script src="scripts/home.js" defer></script>
     <link rel="icon" href="images/favicon.ico" sizes="48x48" type="image/ico">
     <script src="https://kit.fontawesome.com/e0a574ddb0.js" crossorigin="anonymous"></script>
 </head>
 <body id="index-page">
     <div id="meeting-banner">
-        <p>🌊 Plan your PEI adventure! Check out our upcoming events below.</p>
+        <p>🤝 Join us for the Chamber of Commerce Meet & Greet this Wednesday at 7:00 PM!</p>
         <button id="close-banner">Close</button>
     </div>
     <header>
         <nav>
             <div class="box-logo-header">
-                <img class="logo-chamber" src="images/logo.png" alt="PEI Explorer Logo" loading="lazy" />
-                <p class="nameHeader">PEI Explorer</p>
+                <img class="logo-chamber" src="images/logo.jpg" alt="Hong Kong Chamber of Commerce Logo" />
+                <p class="nameHeader">Hong Kong<br>Chamber of Commerce</p>
                 <button name="navigation button" id="menu" aria-label="Toggle menu"></button>
             </div>
             <ul>
                 <li><a class="nav-a active" href="index.html">Home</a></li>
-                <li><a class="nav-a" href="attractions.html">Attractions</a></li>
-                <li><a class="nav-a" href="resources.html">Visitor Resources</a></li>
+                <li><a class="nav-a" href="discover.html">Discover</a></li>
+                <li><a class="nav-a" href="directory.html">Directory</a></li>
+                <li><a class="nav-a" href="join.html">Join</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>PEI Explorer</h1>
+        <h1>Hong Kong Chamber of Commerce</h1>
         <section class="hero-main-box">
             <picture class="hero-box-img">
-                <source media="(max-width: 600px)" srcset="images/pei-coast-410.webp">
-                <source media="(max-width: 800px)" srcset="images/pei-coast-600.webp">
-                <source media="(max-width: 1200px)" srcset="images/pei-coast-800.webp">
-                <source media="(min-width: 1201px)" srcset="images/pei-coast-1200.webp">
-                <img class="hero-home-img" src="images/pei-coast-410.webp" alt="PEI coastline" loading="lazy">
+                <source media="(max-width: 600px)" srcset="images/hero-hk-410.webp">
+                <source media="(max-width: 800px)" srcset="images/hero-hk-600.webp">
+                <source media="(max-width: 1200px)" srcset="images/hero-hk-800.webp">
+                <source media="(min-width: 1201px)" srcset="images/hero-hk-1200.webp">
+                <img class="hero-home-img" src="images/hero-hk-410.webp" alt="Hong Kong cityscape">
             </picture>
             <div class="call-to-action">
-                <h3>Discover Prince Edward Island today!</h3>
-                <p>Experience the charm of PEI with its red sand beaches, historic lighthouses, and vibrant culture.</p>
-                <p>Click here to explore top attractions.</p>
-                <button class="join-us" onclick="window.location.href='attractions.html'">Explore</button>
+                <h3>Join the Hong Kong Chamber of Commerce today!</h3>
+                <p>Enhance your business network, access exclusive resources, and drive local economic growth.</p>
+                <p>Click here to become a member and start making a difference.</p>
+                <button class="join-us" name="join" onclick="window.location.href='join.html'">Join us</button>
             </div>
         </section>
         <section class="event-main-box">
@@ -63,21 +66,16 @@
             </article>
             <article class="weather-main" id="weather-main"></article>
             <article class="weather-forecast" id="weather-forecast"></article>
-            <article class="featured-main">
-                <h2>Featured Attraction</h2>
-                <p>Enjoy family-friendly fun and stunning red sand shores at Cavendish Beach.</p>
-                <a href="attractions.html" class="join-us">See More</a>
-            </article>
         </section>
         <section class="spotlights-main-box"></section>
     </main>
     <footer>
         <div class="footer-left">
-            <p>PEI Explorer</p>
-            <p>123 Coastal Road</p>
-            <p>Charlottetown, PEI</p>
-            <p><a href="mailto:info@peiexplorer.com">info@peiexplorer.com</a></p>
-            <p>+1 902 555 1234</p>
+            <p>Hong Kong Chamber of Commerce</p>
+            <p>123 Business Road</p>
+            <p>Hong Kong</p>
+            <p><a href="mailto:info@hkcc.com">info@hkcc.com</a></p>
+            <p>+852 5119 5898</p>
         </div>
         <div class="footer-center">
             <a href="https://youtube.com" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
@@ -87,11 +85,9 @@
         <div class="footer-right">
             <p>WDD231 Class Project</p>
             <p>Lok Yin Arthur Leung</p>
-            <p>© <span id="currentyear"></span> PEI Explorer</p>
+            <p>© <span id="currentyear"></span> Hong Kong Chamber of Commerce</p>
             <p id="lastModified"></p>
         </div>
     </footer>
-    <script src="scripts/dates.js" defer></script>
-    <script src="scripts/home.js" defer></script>
 </body>
 </html>

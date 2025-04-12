@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directory of Hong Kong Chamber of Commerce Members">
+    <meta name="author" content="Lok Yin Arthur Leung">
+    <title>Directory | Hong Kong Chamber of Commerce</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Directory | Hong Kong Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lalathehung.github.io/wdd231/chamber/images/logo.jpg">
+    <meta property="og:image:width" content="60">
+    <meta property="og:image:height" content="60">
+    <meta property="og:url" content="https://lalathehung.github.io/wdd231/chamber/directory.html">
+    <meta property="og:description" content="Explore members of the Hong Kong Chamber of Commerce">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/directory.css">
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/e0a574ddb0.js" crossorigin="anonymous"></script>
+
+    <!-- JavaScript -->
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+</head>
+<body id="directory-page">
+    <header>
+        <nav>
+            <div class="box-logo-header">
+                <img class="logo-chamber" src="images/logo.jpg" alt="Hong Kong Chamber Logo">
+                <p class="nameHeader">Hong Kong<br>Chamber of Commerce</p>
+                <button name="navigation button" id="menu" aria-label="Toggle menu"></button>
+            </div>
+            <ul>
+                <li><a class="nav-a" href="index.html">Home</a></li>
+                <li><a class="nav-a" href="discover.html">Discover</a></li>
+                <li><a class="nav-a active" href="directory.html">Directory</a></li>
+                <li><a class="nav-a" href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="Main-title">Directory - Hong Kong Chamber of Commerce</h1>
+        <p>Explore our members below or <a href="join.html">join the Hong Kong Chamber of Commerce</a> to be listed.</p>
+        <div class="button-box">
+            <button title="List view" class="mybtn activebtn" id="list-view-btn"><i class="fas fa-list"></i></button>
+            <button title="Grid view" class="mybtn" id="grid-view-btn"><i class="fas fa-th"></i></button>
+        </div>
+        <section id="member-list">
+            <!-- Static fallback for audit tool -->
+            <div class="static-members">
+                <div class="card-box">
+                    <h3>Tom Lee Music</h3>
+                    <p><a href="https://www.tomleemusic.com.hk" target="_blank" aria-label="Visit Tom Lee Music website">https://www.tomleemusic.com.hk</a></p>
+                </div>
+                <div class="card-box">
+                    <h3>Television Broadcasts Limited</h3>
+                    <p><a href="https://www.tvb.com" target="_blank" aria-label="Visit Television Broadcasts Limited website">https://www.tvb.com</a></p>
+                </div>
+                <div class="card-box">
+                    <h3>Vita Green</h3>
+                    <p><a href="https://www.vitagreen.com" target="_blank" aria-label="Visit Vita Green website">https://www.vitagreen.com</a></p>
+                </div>
+                <div class="card-box">
+                    <h3>Vitasoy</h3>
+                    <p><a href="https://www.vitasoy.com" target="_blank" aria-label="Visit Vitasoy website">https://www.vitasoy.com</a></p>
+                </div>
+                <div class="card-box">
+                    <h3>VTech Electronics (HK) Limited</h3>
+                    <p><a href="https://hktoys.vtech.com" target="_blank" aria-label="Visit VTech Electronics website">https://hktoys.vtech.com</a></p>
+                </div>
+                <div class="card-box">
+                    <h3>CMB Wing Lung Bank</h3>
+                    <p><a href="https://www.cmbwinglungbank.com" target="_blank" aria-label="Visit CMB Wing Lung Bank website">https://www.cmbwinglungbank.com</a></p>
+                </div>
+                <div class="card-box">
+                    <h3>Hong Kong Wing Wah Cake Shop</h3>
+                    <p><a href="https://www.wingwah.com/en/" target="_blank" aria-label="Visit Hong Kong Wing Wah Cake Shop website">https://www.wingwah.com/en/</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Contact: <a href="mailto:info@hkcc.com">info@hkcc.com</a> | +852 5119 5898</p>
+        <p>©<span id="currentyear"></span> 🐻 Lok Yin Arthur Leung 🐻 | WDD 231 | Hong Kong</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
