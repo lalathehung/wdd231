@@ -176,7 +176,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         } catch (error) {
             console.error("Error fetching weather data for PEI Explorer:", error);
-            // Display a fallback message if the API fails
             const eventMainBox = document.querySelector("#weather-main");
             if (eventMainBox) {
                 eventMainBox.innerHTML = "<p>Unable to load weather data. Please try again later.</p>";
@@ -224,7 +223,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         } catch (error) {
             console.error("Error fetching forecast data for PEI Explorer:", error);
-            // Display a fallback message if the API fails
             const weatherForecast = document.querySelector("#weather-forecast");
             if (weatherForecast) {
                 weatherForecast.innerHTML = "<p>Unable to load forecast data. Please try again later.</p>";

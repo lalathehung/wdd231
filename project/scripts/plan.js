@@ -18,20 +18,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const modalContent = {
         npModal: {
-            title: "Non-Profit Membership Benefits",
-            content: "Free access to community events, networking opportunities, and basic resources for non-profit organizations.",
+            title: "Explorer Package Benefits",
+            content: "Access to basic itineraries, event listings, and a welcome guide for first-time visitors to Prince Edward Island.",
         },
         bronzeModal: {
-            title: "Bronze Membership Benefits",
-            content: "Access to exclusive networking events, discounted training sessions, and basic advertising opportunities.",
+            title: "Adventurer Package Benefits",
+            content: "Includes Explorer benefits plus curated day trips, discounted attraction tickets, and access to seasonal events.",
         },
         silverModal: {
-            title: "Silver Membership Benefits",
-            content: "Includes Bronze benefits plus priority event registration, enhanced advertising (e.g., spotlight positions), and marketing support.",
+            title: "Discoverer Package Benefits",
+            content: "Includes Adventurer benefits plus personalized travel recommendations, priority booking for tours, and a PEI Explorer newsletter.",
         },
         goldModal: {
-            title: "Gold Membership Benefits",
-            content: "Includes Silver benefits plus full premium support, elite event invitations, significant event discounts, and top-tier advertising opportunities.",
+            title: "Voyager Package Benefits",
+            content: "Includes Discoverer benefits plus exclusive guided experiences, VIP event access, and a complimentary PEI Explorer travel kit.",
         },
     };
 
