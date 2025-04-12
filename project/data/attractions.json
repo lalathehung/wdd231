@@ -4,7 +4,7 @@
         "address": "8619 Cavendish Road, Cavendish, PE C0A 1N0",
         "phone": "(902) 963-7874",
         "website": "https://www.pc.gc.ca/en/lhn-nhs/pe/greengables",
-        "image": "images/green-gables.jpg",
+        "image": "https://lalathehung.github.io/wdd231/project/images/green-gables.jpg",
         "category": 3,
         "industry": "Historical Site"
     },
@@ -13,7 +13,7 @@
         "address": "Trans-Canada Hwy, Borden-Carleton, PE C0B 1X0",
         "phone": "(902) 437-7300",
         "website": "https://www.confederationbridge.com",
-        "image": "images/confederation-bridge.jpg",
+        "image": "https://lalathehung.github.io/wdd231/project/images/confederation-bridge.jpg",
         "category": 2,
         "industry": "Landmark"
     },
@@ -22,7 +22,7 @@
         "address": "Dalvay By The Sea, Stanhope, PE C0A 1P0",
         "phone": "(902) 672-6350",
         "website": "https://www.pc.gc.ca/en/pn-np/pe/pei-ipe",
-        "image": "images/pei-national-park.jpg",
+        "image": "https://lalathehung.github.io/wdd231/project/images/pei-national-park.jpg",
         "category": 3,
         "industry": "National Park"
     },
@@ -31,7 +31,7 @@
         "address": "145 Richmond Street, Charlottetown, PE C1A 1J1",
         "phone": "(902) 628-1864",
         "website": "https://www.confederationcentre.com",
-        "image": "images/charlottetown-festival.jpg",
+        "image": "https://lalathehung.github.io/wdd231/project/images/charlottetown-festival.jpg",
         "category": 2,
         "industry": "Cultural Event"
     },
@@ -40,7 +40,7 @@
         "address": "336 Basin Head Road, Souris, PE C0A 2B0",
         "phone": "(902) 687-7030",
         "website": "https://www.tourismpei.com/provincial-parks",
-        "image": "images/basin-head.jpg",
+        "image": "https://lalathehung.github.io/wdd231/project/images/basin-head.jpg",
         "category": 1,
         "industry": "Beach"
     },
@@ -49,7 +49,7 @@
         "address": "1 Great George Street, Charlottetown, PE C1A 8G1",
         "phone": "(902) 969-5627",
         "website": "https://www.peilobstertours.com",
-        "image": "images/lobster-tours.jpg",
+        "image": "https://lalathehung.github.io/wdd231/project/images/lobster-tours.jpg",
         "category": 2,
         "industry": "Tour Operator"
     },
@@ -58,7 +58,7 @@
         "address": "Main Street, Victoria, PE C0A 2G0",
         "phone": "(902) 658-2789",
         "website": "https://www.victoriabythesea.ca",
-        "image": "images/victoria-by-the-sea.jpg",
+        "image": "https://lalathehung.github.io/wdd231/project/images/victoria-by-the-sea.jpg",
         "category": 1,
         "industry": "Village"
     }
