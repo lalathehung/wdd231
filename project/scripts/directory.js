@@ -1,4 +1,18 @@
 document.addEventListener('DOMContentLoaded', async () => {
+    // Hamburger Menu Toggle
+    const menuButton = document.getElementById('menu');
+    const nav = document.querySelector('nav');
+
+    if (menuButton && nav) {
+        menuButton.addEventListener('click', () => {
+            nav.classList.toggle('open');
+            menuButton.classList.toggle('open');
+        });
+    } else {
+        console.error('Menu button or nav element not found!');
+    }
+
+    // Directory Logic
     const memberList = document.getElementById('member-list');
     const gridBtn = document.getElementById('grid-view-btn');
     const listBtn = document.getElementById('list-view-btn');
@@ -9,9 +23,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         const members = await response.json();
 
         const membershipLabels = {
-            1: "Bronze",
-            2: "Silver",
-            3: "Gold"
+            1: 'Bronze',
+            2: 'Silver',
+            3: 'Gold'
         };
 
         // Hide the static members
