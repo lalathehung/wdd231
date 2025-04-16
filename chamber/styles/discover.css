@@ -126,4 +126,19 @@
     .local-photos {
         order: 1;
     }
+
+    main h1 {
+        margin: 5px auto;
+    }
+}
+
+/* Match h1 styling with join page */
+main h1 {
+    text-align: center;
+    margin: 20px auto;
+    font-size: var(--font-size-extra-large);
+    color: var(--king-kong);
+    width: 100%;
+    max-width: 1024px;
+    box-sizing: border-box;
 }
