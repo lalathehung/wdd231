@@ -1,0 +1,129 @@
+.discover {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.article-01, .article-02, .article-03, .article-04 {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 15px;
+}
+
+.article-01 h3, .article-02 h3, .article-03 h3, .article-04 h3 {
+    color: var(--king-kong);
+    font-family: var(--poppins-heading-font);
+    font-weight: var(--poppins-bold-font-weight);
+    margin-bottom: 10px;
+}
+
+.article-01 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.article-01 li {
+    margin-bottom: 5px;
+    font-family: var(--open-sans-paragraph-font);
+}
+
+#article-02 img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+#calendar {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--open-sans-paragraph-font);
+}
+
+#calendar caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--yale-blue);
+    color: var(--white);
+    font-family: var(--poppins-heading-font);
+    font-weight: var(--poppins-bold-font-weight);
+}
+
+#calendar caption a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+#calendar th, #calendar td {
+    border: 1px solid var(--king-kong);
+    padding: 5px;
+    text-align: center;
+}
+
+#calendar th {
+    background-color: var(--big-fish-to-fry);
+    color: var(--king-kong);
+}
+
+#calendar td.hoy {
+    background-color: var(--yale-blue);
+    color: var(--white);
+}
+
+.local-photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.local-photos figure {
+    margin: 0;
+}
+
+.local-photos img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.local-photos figcaption {
+    text-align: center;
+    font-family: var(--open-sans-paragraph-font);
+    color: var(--king-kong);
+    margin-top: 5px;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@media (max-width: 859px) {
+    .discover {
+        grid-template-columns: 1fr;
+    }
+
+    .side-bar {
+        order: 2;
+    }
+
+    .local-photos {
+        order: 1;
+    }
+}

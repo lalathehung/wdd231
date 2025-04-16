@@ -1,4 +1,14 @@
 /* Join Page */
+* {
+    box-sizing: border-box; /* Ensure all elements include padding and border in width */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 main {
     max-width: 1024px;
     margin: 0 auto;
@@ -54,6 +64,7 @@ label {
     color: var(--paragraph-color-on-white);
     overflow-wrap: break-word;
     hyphens: auto;
+    max-width: 100%;
 }
 
 input,
@@ -66,6 +77,7 @@ select {
     border-radius: 5px;
     box-sizing: border-box;
     font-family: var(--open-sans-paragraph-font);
+    max-width: 100%;
 }
 
 textarea {
@@ -94,6 +106,7 @@ textarea {
     font-weight: var(--poppins-bold-font-weight);
     margin-bottom: 10px;
     overflow-wrap: break-word;
+    max-width: 100%;
 }
 
 .card:hover {
@@ -228,7 +241,8 @@ dialog button {
     input,
     textarea,
     select {
-        width: calc(100% - 22px);
+        width: calc(100% - 12px);
+        padding: 5px;
     }
 
     .card {
@@ -238,10 +252,12 @@ dialog button {
 
     .card h3 {
         font-size: 14px;
+        word-break: break-all;
     }
 
     label {
         font-size: 14px;
+        word-break: break-all;
     }
 
     .css-button-arrow--black {

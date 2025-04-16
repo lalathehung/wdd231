@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="Discover | Hong Kong Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lalathehung.github.io/wdd231/chamber/images/logo.jpg">
+    <meta property="og:url" content="https://lalathehung.github.io/wdd231/chamber/discover.html">
+    <meta property="og:description" content="Discover more about Hong Kong and the Chamber of Commerce, including events and local attractions.">
+    <meta property="fb:app_id" content="your-app-id-here">
+    <title>Discover | Hong Kong Chamber of Commerce</title>
+    <meta name="description" content="Discover Hong Kong with the Chamber of Commerce" />
+    <meta name="author" content="Lok Yin Arthur Leung" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/discover.css" />
+    <script src="scripts/home.js" defer></script>
+    <script src="scripts/discover.js" defer></script>
+    <link rel="icon" href="images/favicon.ico" sizes="48x48" type="image/ico">
+    <script src="https://kit.fontawesome.com/e0a574ddb0.js" crossorigin="anonymous"></script>
+</head>
+<body id="discover-page">
+    <div id="meeting-banner">
+        <p>🤝 Join us for the Chamber of Commerce Meet & Greet this Wednesday at 7:00 PM!</p>
+        <button id="close-banner">Close</button>
+    </div>
+    <header>
+        <nav>
+            <div class="box-logo-header">
+                <img class="logo-chamber" src="images/logo.jpg" alt="Hong Kong Chamber of Commerce Logo" />
+                <p class="nameHeader">Hong Kong<br>Chamber of Commerce</p>
+                <button name="navigation button" id="menu" aria-label="Toggle menu"></button>
+            </div>
+            <ul>
+                <li><a class="nav-a" href="index.html">Home</a></li>
+                <li><a class="nav-a active" href="discover.html">Discover</a></li>
+                <li><a class="nav-a" href="directory.html">Directory</a></li>
+                <li><a class="nav-a" href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="discover">
+        <section class="side-bar">
+            <article class="article-01">
+                <header>
+                    <h3>Demographics</h3>
+                </header>
+                <ul>
+                    <li><strong>Region:</strong> Hong Kong SAR, China</li>
+                    <li><strong>Currencies:</strong> Hong Kong Dollar (HKD)</li>
+                    <li><strong>Official Languages:</strong> Chinese (Cantonese), English</li>
+                    <li><strong>Population:</strong> 7,498,100 (2023 est.)</li>
+                    <li><strong>Dialing Code:</strong> +852</li>
+                </ul>
+            </article>
+            <article id="article-02" class="article-02">
+                <!-- Dynamic content (image and description) will be inserted here by discover.js -->
+            </article>
+            <article class="article-03">
+                <table id="calendar">
+                    <caption></caption>
+                    <thead>
+                        <tr>
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </article>
+        </section>
+        <section class="local-photos">
+            <figure>
+                <img data-src="images/victoria-harbour.jpg" src="images/placeholder.jpg" alt="Victoria Harbour at night" class="lazy-image" loading="lazy">
+                <figcaption>Victoria Harbour at night</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images/the-peak.jpg" src="images/placeholder.jpg" alt="View from The Peak" class="lazy-image" loading="lazy">
+                <figcaption>View from The Peak</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images/ten-thousand-buddhas.jpg" src="images/placeholder.jpg" alt="Ten Thousand Buddhas Monastery" class="lazy-image" loading="lazy">
+                <figcaption>Ten Thousand Buddhas Monastery</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images/stanley-market.jpg" src="images/placeholder.jpg" alt="Stanley Market" class="lazy-image" loading="lazy">
+                <figcaption>Stanley Market</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images/lantau-island.jpg" src="images/placeholder.jpg" alt="Lantau Island and Big Buddha" class="lazy-image" loading="lazy">
+                <figcaption>Lantau Island and Big Buddha</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images/hong-kong-park.jpg" src="images/placeholder.jpg" alt="Hong Kong Park" class="lazy-image" loading="lazy">
+                <figcaption>Hong Kong Park</figcaption>
+            </figure>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-left">
+            <p>Hong Kong Chamber of Commerce</p>
+            <p>123 Business Road</p>
+            <p>Hong Kong</p>
+            <p><a href="mailto:info@hkcc.com">info@hkcc.com</a></p>
+            <p>+852 5119 5898</p>
+        </div>
+        <div class="footer-center">
+            <a href="https://youtube.com" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="footer-right">
+            <p>WDD231 Class Project</p>
+            <p>Lok Yin Arthur Leung</p>
+            <p>© <span id="currentyear"></span> Hong Kong Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
