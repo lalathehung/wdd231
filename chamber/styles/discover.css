@@ -6,6 +6,10 @@
     margin: 0 auto;
 }
 
+main {
+    padding: 20px; /* Add padding to match other pages */
+}
+
 .side-bar {
     display: flex;
     flex-direction: column;
@@ -117,6 +121,10 @@
 @media (max-width: 859px) {
     .discover {
         grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 5px; /* Match mobile padding with other pages */
     }
 
     .side-bar {
